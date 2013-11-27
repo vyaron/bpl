@@ -1,0 +1,27 @@
+<form name="form" ng-submit="save(model)" novalidate1>
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h3>Add Contact</h3>
+    </div>
+    <div class="modal-body">
+
+            <label>Name:
+                <input ng-model="contact.name" type="text" name="name" required/>
+            </label>
+
+            <div ng-show="form.name.$dirty && form.name.$invalid" class="error">
+                <span ng-show="form.name.$error.required">Enter contact full name.</span>
+            </div>
+
+            <label>Image URL:
+                <input ng-model="contact.image_url" type="text" name="image_url" required/>
+            </label>
+            <div ng-show="form.image_url.$dirty && form.image_url.$invalid" class="error">
+                <span ng-show="form.image_url.$error.required">Enter contact image relative path.</span>
+            </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="submit" ng-disabled1="form.$invalid">Save</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</form>

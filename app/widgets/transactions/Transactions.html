@@ -1,0 +1,61 @@
+<div class='row-fluid'>
+
+<h4>Transactions</h4>
+
+<div class="control-group input-append pull-right" ng-show="transactions">
+  <label for="inputDatepicker" class="label" style="margin-right:6px;">From:</label>
+  <input type="text" ng-model="datepicker.date" data-date-format="dd/mm/yyyy" bs-datepicker ng-change="dateChanged()">
+  <button type="button" class="btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
+</div>
+
+<table class="table">
+	<tr>
+		<th>Contact</th>				
+		<th>Amount</th>
+		<th>Date</th>
+		<th>Balance</th>		
+	
+	</tr>
+
+	<tr ng-repeat="trans in transactions">
+		<td>
+			<button class="btn btn-link" data-toggle="modal" ng-click="showTransPopup(trans)" title="{{trans.contact}}">{{trans.contact | truncate}}</button>
+		</td>				
+		<td class="{{(trans.amount | currencyAmountClass)}}">{{trans.amount | currency}}</td>
+		<td>{{trans.date}}</td>
+		<td class="{{(trans.balance | currencyAmountClass)}}">{{trans.balance | currency}}</td>		
+	</tr>
+</table>
+
+<!-- Modal -->
+<div id="modalTrans"  class="modal" ng-show="selectedTrans">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="hideTransPopup()">x</button>
+    <h3 id="myModalLabel">
+    	{{selectedTrans.contact}} 
+    	<span class="{{selectedTrans.amount | currencyAmountClass}}">{{selectedTrans.amount  | currency}}</span>
+    </h3>
+  </div>
+  <div class="modal-body">
+    <p>Occured at {{selectedTrans.date}} </p>
+
+	<div ng-show="selectedTrans.contact == 'ATM'">
+		<img src="common/img/map.png" />
+	</div>    
+	<div ng-show="selectedTrans.contact == 'Paycheck'">
+		<img src="common/img/cheque.jpg" />
+	</div>    
+    
+  </div>
+
+
+  <div class="modal-footer">
+    <button class="btn" ng-click="hideTransPopup()">Close</button>
+  </div>
+
+</div>
+
+
+
+
+</div>

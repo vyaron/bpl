@@ -1,0 +1,31 @@
+/* app css stylesheet */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.green{color: #BBE9AC}
+.red{color: #DD1144}
+.bplRed{color: #E60000}
+
+
+.modal {
+  background-color: #212121;
+}
+
+.modal-footer {
+	background-color: #212121;	
+}
+
+.day {color: #333}
+
+/*Contacts*/
+.contacts{list-style: none; margin: 10px 0;}
+.contacts > li{display: block; float: left; text-align: center; margin-left: 25px; padding: 10px;}
+.contacts > li:first-child{margin-left: 0;}
+/*.contacts > li:hover{background-color: darkgray; background-color: rgba(255,255,255,0.5);}*/
+
+.contacts li h3{margin-top: 0;}
+.contacts li  img{width: 100px; height: auto;}
+
+.error{font-size: 10px; color: darkred; margin-bottom: 10px; background-color: #d3d3d3; padding: 1px 6px; border-radius: 3px;}
+

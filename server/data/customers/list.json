@@ -1,0 +1,40 @@
+[
+{
+	"_comment"	: "TESTs standard customer",
+	"id" 		: "101",
+	"name" 	: "Muki Ben David",
+	"accounts" : [
+		             {
+		            	 "id": "188103",
+		            	 "balance": 12200
+			
+		             },
+		             {
+		            	 "id": "188104",
+		            	 "balance": -2500
+		             }
+	             ]
+	
+},
+{
+	"_comment"	: "TESTs standard customer",
+	"id" 		: "102",
+	"name" 	: "Puki Longbottom",
+	"accounts" : [
+		             {
+		            	 "id": "199100",
+		            	 "balance": 3300
+			
+		             },
+		             {
+		            	 "id": "199101",
+		            	 "balance": -5000
+		             }
+	             ]
+	
+}
+
+
+
+
+]

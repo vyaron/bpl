@@ -1,0 +1,18 @@
+<div>
+    <ul class="contacts clearfix">
+        <li ng-repeat="contact in contacts">
+            <h3>{{ contact.name }}</h3>
+            <div>
+                <img ng-src="{{ contact.image_url }}"/>
+            </div>
+            <button class="btn btn-link" ng-click="edit(contact)">Edit</button>
+            <button class="btn btn-link" ng-click="delete(contact)">Delete</button>
+        </li>
+    </ul>
+
+    <pagination ng-if="contacts.length" total-items="total" page="page" items-per-page="max" on-select-page="setPage(page)"></pagination>
+
+    <hr/>
+
+    <button class="btn btn-primary" ng-click="add()">Add</button>
+</div>

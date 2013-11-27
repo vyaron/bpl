@@ -1,0 +1,39 @@
+[
+	             {
+	            	 "date": "2013-08-16",
+	            	 "amount": -100,
+	            	 "contact": "Gas",
+	            	 "balance": 12200
+		
+	             },
+	             {
+	            	 "date": "2013-08-10",
+	            	 "amount": 10000,
+	            	 "contact": "Paycheck",
+	            	 "balance": 12300
+		
+	             },			             
+	             {
+	            	 "date": "2013-08-9",
+	            	 "amount": -400,
+	            	 "contact": "ATM",
+	            	 "balance": 2300
+		
+	             },			             
+	             {
+	            	 "date": "2013-08-7",
+	            	 "amount": -800,
+	            	 "contact": "Electricity",
+	            	 "balance": 3500
+		
+	             },			             
+	             {
+	            	 "date": "2013-08-4",
+	            	 "amount": -100,
+	            	 "contact": "Very Long contact",
+	            	 "balance": 3600
+		
+	             }			             
+
+]
+	
