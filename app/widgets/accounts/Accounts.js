@@ -1,33 +1,32 @@
 'use strict';
 
 
-angular.module('bplApp.widgets.accounts', [])
+angular.module('bplApp.widgets')
 
 // Display customer acounts
 // params: displayType (sideBySide or dropdown)
 
-.directive('bplAccountsDtv', function() {
+.directive('accounts', function() {
 	return {
-	    	templateUrl: 'widgets/accounts/Accounts.html',
+	    	templateUrl: 'widgets/accounts/accounts.html',
 	    	replace: true,
-	    	controller: 'AccountCtrl',
+	    	controller: 'accounts',
 	    	scope: {
-
+                   displayType: '@'
 	    	}
     	};
 	} 
 )
 
-.controller('AccountCtrl', ['$scope', '$attrs', 'CurrUser', 'PubSubService', 'AccountsResource', function($scope, $attrs, CurrUser, PubSubService, AccountsResource) {
-    // TODO: enquire why we can't use the directive scope @ attribute assignment to scope.
-    $scope.displayType = $attrs['displayType'] || "sideBySide";
+.controller('accounts', ['$scope', 'PubSubService', 'AccountsResource', function($scope, PubSubService, AccountsResource) {
+    // Set the prefs including a default display type
+    $scope.prefs = {displayType : $scope.displayType?  $scope.displayType : "sideBySide"};
     // Get the data
-    AccountsResource.list({}, function(data) {
-        $scope.accounts = data;
-
+    AccountsResource.list(function(accounts) {
+        $scope.accounts = accounts;
         $scope.accountSelected = function() {
             PubSubService.publish(PubSubService.CHANEL_ACCOUNT_SELECTED, this.selectedAccount);
         };
     });
 
-}])
+}]);

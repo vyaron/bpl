@@ -42,8 +42,8 @@
  </example>
  */
 angular.module('bplApp.services').
-    factory('CustomersResource', ['BasicResource', function(BasicResource){
-        var params = {resourceName : 'customers'};
+    factory('CustomersResource', ['BasicResource', 'CurrUser', function(BasicResource, CurrUser){
+        var params = {resourceName : 'customers', id: CurrUser.getId()};
 
         var CustomersResource = BasicResource.get(angular.extend(params));
 
@@ -135,6 +135,12 @@ angular.module('bplApp.services').
 
             return fullName.trim();
         };
+        CustomersResource.prototype.getImgUrl = function(){
+            return this.id? 'img/customer/' + this.id + '.jpg' : '';
+        };
+
+
+
 
         return CustomersResource;
     }]);

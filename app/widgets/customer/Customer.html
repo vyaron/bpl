@@ -1,17 +1,17 @@
 <div class='row-fluid'>
 	<div class='span2'>
-		<img ng-src='{{imgCustomer}}' />
+		<img ng-src='{{customer.getImgUrl()}}' />
 		
 	</div>	
 	<div class='offset2'>
 		<h1>{{customer.name}}</h1>
 		<div class='clearfix'>
-			<div bpl-accounts-dtv display-type="sideBySide"></div>
+			<div accounts display-type="sideBySide"></div>
 		</div>
 
 		<hr/>
 		<div ng-if="prefs.showAccountSelection">
-			<div bpl-accounts-dtv display-type="dropdown"></div>
+			<div accounts display-type="dropdown"></div>
 		</div>		
 	</div>	
 	

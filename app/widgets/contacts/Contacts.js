@@ -1,14 +1,12 @@
 'use strict';
 
-angular.module('bplApp.widgets.contacts', [])
-    //.controller('ContactsPopupCtrl', )
-    .controller('bplContactsCtrlPopupCtrl', ['$scope', '$modalInstance', 'serverValidationService', 'contact', function($scope, $modalInstance, serverValidationService, contact) {
+angular.module('bplApp.widgets')
+    .controller('contactsPopup', ['$scope', '$modalInstance', 'ServerValidationService', 'contact', function($scope, $modalInstance, ServerValidationService, contact) {
         $scope.contact = contact;
 
         $scope.save = function () {
             var form = this.form;
 
-            //$modalInstance.close($scope.contact);
             if ($scope.contact.id) {
                 $scope.contact.$update(function(){
                     $modalInstance.close();
@@ -18,7 +16,7 @@ angular.module('bplApp.widgets.contacts', [])
                 $scope.contact.$save({'forceError' : false}, function(){
                     $modalInstance.close();
                 }, function(res){
-                    serverValidationService.handleRes(form, res);
+                    ServerValidationService.handleRes(form, res);
                 });
             }
         };
@@ -27,7 +25,7 @@ angular.module('bplApp.widgets.contacts', [])
             $modalInstance.dismiss('cancel');
         };
     }])
-    .controller('bplContactsCtrl', ['$scope', '$modal', 'ContactsResource', function($scope, $modal, ContactsResource) {
+    .controller('contacts', ['$scope', '$modal', 'ContactsResource', function($scope, $modal, ContactsResource) {
         var contactIns;
         $scope.contacts = [];
 
@@ -48,10 +46,7 @@ angular.module('bplApp.widgets.contacts', [])
                 var offset = parseInt(rangeParts[0]);
                 var limit = parseInt(rangeParts[1]);
 
-                //TODO: support case server limit < max (widget limit)
-                //$scope.max = Math.max(0, limit - offset);
                 $scope.page = Math.round(offset/$scope.max) + 1;
-
                 //cl('page: ' + $scope.page + ' | max: ' + $scope.max + ' | total: ' + $scope.total);
             });
         };
@@ -60,7 +55,7 @@ angular.module('bplApp.widgets.contacts', [])
            var showPopup = function(){
                 var modalInstance = $modal.open({
                     templateUrl: 'widgets/contacts/popup.html',
-                    controller: 'bplContactsCtrlPopupCtrl',
+                    controller: 'contactsPopup',
                     resolve : {
                         contact : function(){
                             return contactIns;
@@ -74,15 +69,6 @@ angular.module('bplApp.widgets.contacts', [])
                     cl('Modal dismissed at: ' + new Date());
                 });
             };
-
-//            var save = function(contact){
-//                if (contact.id) contact.$update(function(){
-//                    $scope.setPage($scope.page);
-//                });
-//                else contact.$save({'forceError' : true}, function(){
-//                    $scope.setPage($scope.page);
-//                });
-//            };
 
             $scope.add = function(){
                 contactIns = new ContactsResource({name : '', image_url : 'img/customer/102.jpg'});
@@ -100,11 +86,11 @@ angular.module('bplApp.widgets.contacts', [])
                 });
             };
     }])
-    .directive('bplContacts', function() {
+    .directive('contacts', function() {
         return {
             templateUrl: 'widgets/contacts/contacts.html',
             replace: true,
-            controller: 'bplContactsCtrl',
+            controller: 'contacts',
             scope: {
                 max: '@'
             }

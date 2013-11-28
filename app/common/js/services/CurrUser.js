@@ -4,10 +4,10 @@
  */
 angular.module('bplApp.services')
 
-    .factory('CurrUser', ['$rootScope', function($rootScope) {
+    .factory('CurrUser', [function() {
         return {
             'getId': function() {
-                return $rootScope.userId;
+                return 101;
             }
         };
     }])

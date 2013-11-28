@@ -1,8 +1,12 @@
 'use strict';
 
+
+// TODO: make a global Log object
 var cl = function(mix) {
 	console.log(mix);
 };
+
+
 
 // This is our main module
 angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.filters', 'bplApp.services', 'bplApp.directives', 'bplApp.widgets', 'ui.bootstrap'])
@@ -21,13 +25,12 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.f
 	//$httpProvider.defaults.cache = $cacheFactory('myNewDefaultCache', { capacity: 100 });
 }])
 
-.run(['$http', '$rootScope', '$cookies', 'DataCacheFactory', function ($http, $rootScope, $cookies, DataCacheFactory) {
+.run(['$http', '$cookies', 'DataCacheFactory', function ($http, $cookies, DataCacheFactory) {
     //cl($cookies);
-    $cookies.bpl = "asdQWEASD";
+    $cookies.bpl = "bpl-session-dummy-hash";
 
 	$http.defaults.cache = DataCacheFactory;
 	// Set the loggein user
-	$rootScope.userId = 101;
     cl("bplApp is Loaded");
 	
 }]);
@@ -35,4 +38,4 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.f
 angular.module('bplApp.controllers', []);
 angular.module('bplApp.directives', []);
 angular.module('bplApp.services', ['ngResource']);
-angular.module('bplApp.widgets', ['bplApp.widgets.customer', 'bplApp.widgets.accounts', 'bplApp.widgets.transactions', 'bplApp.widgets.contacts']);
+angular.module('bplApp.widgets', []);

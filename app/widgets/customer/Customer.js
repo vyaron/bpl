@@ -1,39 +1,26 @@
 'use strict';
 
 
-angular.module('bplApp.widgets.customer', [])
+angular.module('bplApp.widgets')
 // Display customer details including acounts
 // params: showAccountSelection (boolean) - wether or not to show a dropdown for selecting current account
-.directive('bplCustomerDtv', function() {
+.directive('customer', function() {
     return {
-        templateUrl: 'widgets/customer/Customer.html',
+        templateUrl: 'widgets/customer/customer.html',
         replace: true,
-        controller: 'CustomerCtrl',
+        controller: 'customer',
         scope: {
-            showAccountSelection: '='
+            showAccountSelection: '@'
         }
     };
 })
 
-.controller('CustomerCtrl', ['$scope', 'CurrUser', 'PubSubService','PrefsService', 'CustomersResource', function($scope, CurrUser, PubSubService, PrefsService, CustomersResource) {
+.controller('customer', ['$scope','CustomersResource', function($scope, CustomersResource) {
 
-
-	// From Prefs and from directive property
-	var showAccountSelection = PrefsService.SHOW_ACCOUNTS_SELECTION;
-	if ('showAccountSelection' in $scope && typeof $scope.showAccountSelection != 'undefined') {
-		showAccountSelection = $scope.showAccountSelection;
-	}
-
-	// Prepare Prefs on the scope 
-	$scope.prefs = {
-		showAccountSelection : showAccountSelection	
-	};
+    // Set the prefs including a default display type
+    $scope.prefs = {showAccountSelection : $scope.showAccountSelection?  $scope.showAccountSelection : false};
 
 	// Get the data
-    $scope.customer = CustomersResource.get({ id: CurrUser.getId() });
-    $scope.customer.$promise.then(function(customer) {
-		$scope.imgCustomer = 'img/customer/' + customer.id + '.jpg';
-	});    
+    $scope.customer = CustomersResource.get();
 
-	
 }]);

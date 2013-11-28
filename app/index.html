@@ -15,14 +15,17 @@
   <link rel="stylesheet" href="common/css/app.css"/>
 
   <link rel="shortcut icon" href="common/img/favicon.png">
+
+
+    <link rel="stylesheet" href="widgets/contacts/contacts.css"/>
 </head>
 <body class="container ng-cloak">
 
-	<!--<div bpl-customer-dtv show-account-selection="true"></div>-->
-<!--<div bpl-accounts-dtv ></div>-->
+	<div customer show-account-selection="true"></div>
+<!--<div accounts></div>-->
 
-    <div bpl-contacts max="2"></div>
-	<!--<div bpl-transactions-dtv></div>-->
+    <!--<div contacts max="2"></div>-->
+	<div transactions></div>
 
 
 
@@ -61,11 +64,11 @@
     <script src="common/js/services/resources/AccountsResource.js"></script>
     <script src="common/js/services/resources/TransactionsResource.js"></script>
 
-    <script src="widgets/customer/Customer.js"></script>
+    <script src="widgets/customer/customer.js"></script>
 
     <!-- Other components -->
-    <script src="widgets/transactions/Transactions.js"></script>
-    <script src="widgets/accounts/Accounts.js"></script>
+    <script src="widgets/transactions/transactions.js"></script>
+    <script src="widgets/accounts/accounts.js"></script>
 
     <script src="widgets/contacts/contacts.js"></script>
     <!--<script src="widgets/contacts/contactsI18N.js"></script>-->

@@ -1,19 +1,19 @@
 'use strict';
 
 
-angular.module('bplApp.widgets.transactions', [])
+angular.module('bplApp.widgets')
 // Display transactions list
 // params: none
-    .directive('bplTransactionsDtv', function() {
+    .directive('transactions', function() {
         return {
-            templateUrl: 'widgets/transactions/Transactions.html',
+            templateUrl: 'widgets/transactions/transactions.html',
             replace: true,
-            controller: 'TransactionCtrl'
+            controller: 'transactions'
         };
     }
 
 )
-.controller('TransactionCtrl', ['$scope', 'PubSubService', 'TransactionsResource', function($scope, PubSubService, TransactionsResource) {
+.controller('transactions', ['$scope', 'PubSubService', 'TransactionsResource', function($scope, PubSubService, TransactionsResource) {
 
 	// Subscribe to chanel
 	PubSubService.subscribe($scope, PubSubService.CHANEL_ACCOUNT_SELECTED, function(event, args) {

@@ -1,6 +1,6 @@
 <div>
 
-	<div ng-if="displayType=='dropdown'">
+	<div ng-if="prefs.displayType=='dropdown'">
 
 		<h4>Select an account</h4>
 		<select ng-change='accountSelected()' ng-model='selectedAccount'>
@@ -9,7 +9,7 @@
 		</select>
 	</div>
 
-	<div ng-if="displayType=='sideBySide'">
+	<div ng-if="prefs.displayType=='sideBySide'">
 			<div class='span3' ng-repeat='account in accounts'>
 				<h4 class=''>Account: {{account.id}}</h4>
 				<div class='{{account.balance | currencyAmountClass}}'>
