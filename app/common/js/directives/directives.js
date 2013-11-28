@@ -57,15 +57,4 @@ angular.module('bplApp.directives')
     	}
 	}; 
     
-})
-    .directive('hello', function() {
-        return {
-            //template : '<div>Hello {{name}}</div>',
-            templateUrl : 'common/templates/hello.html',
-            replace : true,
-            scope : {name : '@'}
-        };
-    });
-
-
-
+});

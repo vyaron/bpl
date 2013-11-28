@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
+      <file leaf-file-name="contacts.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/widgets/contacts/contacts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="33" selection-start="769" selection-end="769" vertical-scroll-proportion="-0.23419204" vertical-offset="557" max-vertical-offset="1411">
+            <state line="17" column="6" selection-start="630" selection-end="630" vertical-scroll-proportion="0.34363854" vertical-offset="0" max-vertical-offset="841">
               <folding />
             </state>
           </provider>
@@ -42,22 +42,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/widgets/transactions/TransactionCtrl.js" />
-        <option value="$PROJECT_DIR$/app/widgets/transactions/Transactions.js" />
-        <option value="$PROJECT_DIR$/app/widgets/contacts/Contacts.js" />
-        <option value="$PROJECT_DIR$/app/common/css/app.css" />
-        <option value="$PROJECT_DIR$/app/widgets/contacts/contacts.less" />
-        <option value="$PROJECT_DIR$/app/widgets/accounts/accounts.html" />
-        <option value="$PROJECT_DIR$/app/widgets/contacts/contacts.js" />
-        <option value="$PROJECT_DIR$/app/widgets/contacts/popup.html" />
-        <option value="$PROJECT_DIR$/app/common/js/services/Resources/CustomersResource.js" />
-        <option value="$PROJECT_DIR$/app/widgets/customer/customer.js" />
-        <option value="$PROJECT_DIR$/app/widgets/customer/customer.html" />
-        <option value="$PROJECT_DIR$/app/widgets/accounts/accounts.js" />
-        <option value="$PROJECT_DIR$/app/widgets/transactions/transactions.js" />
+        <option value="$PROJECT_DIR$/app/resources/CustomersBasicResource.js" />
+        <option value="$PROJECT_DIR$/app/common/js/services/BasicResource.js" />
         <option value="$PROJECT_DIR$/app/common/js/services/CurrUser.js" />
+        <option value="$PROJECT_DIR$/app/common/js/services/HttpInterceptor.js" />
+        <option value="$PROJECT_DIR$/app/common/js/services/Log.js" />
+        <option value="$PROJECT_DIR$/app/common/js/services/PubSubService.js" />
+        <option value="$PROJECT_DIR$/app/common/js/services/ServerValidationService.js" />
+        <option value="$PROJECT_DIR$/app/common/js/services/Translate.js" />
+        <option value="$PROJECT_DIR$/app/common/i18n/ru.js" />
+        <option value="$PROJECT_DIR$/app/common/i18n/he.js" />
+        <option value="$PROJECT_DIR$/app/common/i18n/en.js" />
         <option value="$PROJECT_DIR$/app/common/js/app.js" />
+        <option value="$PROJECT_DIR$/app/widgets/contacts/contactsI18N.js" />
+        <option value="$PROJECT_DIR$/app/widgets/accounts/accounts.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/widgets/contacts/contacts.js" />
       </list>
     </option>
   </component>
@@ -178,7 +178,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="widgets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contacts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BPL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BPL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="widgets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -198,17 +224,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\angular\BPL\app\common\i18n" />
+      <recent name="C:\dev\angular\BPL\app\common\js" />
+      <recent name="C:\dev\angular\BPL\app" />
       <recent name="C:\WS\NodeJS\BPL\server\data\customers\101" />
       <recent name="C:\WS\NodeJS\BPL\app\common\js\services\Resources" />
-      <recent name="C:\WS\NodeJS\BPL\server\data" />
-      <recent name="C:\WS\NodeJS\BPL\app\widgets\contacts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\angular\BPL\app\common\i18n" />
+      <recent name="C:\dev\angular\BPL\app\common\js\services" />
       <recent name="C:\dev\angular\BPL\server\data\accounts" />
       <recent name="C:\dev\angular\BPL\server\data\transactions\188104" />
       <recent name="C:\dev\angular\BPL\server\data\transactions\188103" />
-      <recent name="C:\WS\NodeJS\BPL\app\common\templates" />
-      <recent name="C:\WS\NodeJS\BPL\app\common\js\services" />
     </key>
   </component>
   <component name="RunManager">
@@ -271,7 +298,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-8" width="1296" height="1040" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32597622" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -279,7 +306,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32560706" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2609375" sideWeight="0.67439294" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2609375" sideWeight="0.67439294" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -327,116 +354,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/contacts.html">
+    <entry file="file://$PROJECT_DIR$/app/common/js/services/HttpInterceptor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="6" selection-start="630" selection-end="630" vertical-scroll-proportion="0.34363854" vertical-offset="0" max-vertical-offset="841">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/js/services/ServerValidationService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="10" selection-start="587" selection-end="587" vertical-scroll-proportion="0.43539" vertical-offset="0" max-vertical-offset="859">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/accounts/accounts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="287" selection-end="287" vertical-scroll-proportion="0.21896955" vertical-offset="0" max-vertical-offset="854">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="37" selection-start="720" selection-end="744" vertical-scroll-proportion="0.48295453" vertical-offset="0" max-vertical-offset="1547">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/contactsI18N.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="4" selection-start="228" selection-end="228" vertical-scroll-proportion="0.15454546" vertical-offset="0" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/popup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="29" selection-start="586" selection-end="586" vertical-scroll-proportion="0.29859486" vertical-offset="0" max-vertical-offset="854">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/contacts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="36" selection-start="359" selection-end="359" vertical-scroll-proportion="0.1764706" vertical-offset="0" max-vertical-offset="1802">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/js/services/resources/CustomersResource.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="0" selection-start="4371" selection-end="4371" vertical-scroll-proportion="0.8454546" vertical-offset="1687" max-vertical-offset="2567">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/accounts/accounts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="4" selection-start="889" selection-end="889" vertical-scroll-proportion="0.59886366" vertical-offset="0" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/customer/customer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="305" selection-end="305" vertical-scroll-proportion="0.2587822" vertical-offset="0" max-vertical-offset="854">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/customer/customer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="44" selection-start="758" selection-end="758" vertical-scroll-proportion="0.44431818" vertical-offset="0" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/transactions/transactions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="10" selection-start="298" selection-end="298" vertical-scroll-proportion="0.21568628" vertical-offset="0" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/js/services/CurrUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="206" selection-end="206" vertical-scroll-proportion="0.17386363" vertical-offset="0" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.1764706" vertical-offset="0" max-vertical-offset="867">
+        <state line="30" column="4" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/common/js/services/Log.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="51" selection-start="413" selection-end="417" vertical-scroll-proportion="0.36704546" vertical-offset="0" max-vertical-offset="880">
+        <state line="5" column="29" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/js/services/PubSubService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="3" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/js/services/ServerValidationService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="33" selection-start="171" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/i18n/en.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="27" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/contacts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="27" selection-start="1555" selection-end="1555" vertical-scroll-proportion="0.39716312" vertical-offset="429" max-vertical-offset="1819">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/js/filters/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="18" selection-start="1031" selection-end="1040" vertical-scroll-proportion="0.7147727" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/i18n.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="4" selection-start="221" selection-end="221" vertical-scroll-proportion="0.15454546" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/widgets/accounts/accounts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="12" selection-start="59" selection-end="59" vertical-scroll-proportion="0.07962529" vertical-offset="0" max-vertical-offset="854">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/js/services/Translate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="18" selection-start="779" selection-end="785" vertical-scroll-proportion="0.425" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/i18n/ru.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.019318182" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/i18n/he.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.07727273" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="37" selection-start="596" selection-end="596" vertical-scroll-proportion="0.3137255" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/popup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="30" selection-start="726" selection-end="730" vertical-scroll-proportion="0.35831383" vertical-offset="0" max-vertical-offset="854">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="33" selection-start="769" selection-end="769" vertical-scroll-proportion="-0.23419204" vertical-offset="557" max-vertical-offset="1411">
+        <state line="27" column="26" selection-start="919" selection-end="919" vertical-scroll-proportion="0.47775176" vertical-offset="51" max-vertical-offset="1598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/contacts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="6" selection-start="630" selection-end="630" vertical-scroll-proportion="0.34363854" vertical-offset="0" max-vertical-offset="841">
           <folding />
         </state>
       </provider>

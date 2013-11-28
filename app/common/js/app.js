@@ -9,7 +9,7 @@ var cl = function(mix) {
 
 
 // This is our main module
-angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.filters', 'bplApp.services', 'bplApp.directives', 'bplApp.widgets', 'ui.bootstrap'])
+angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.services', 'bplApp.resources', 'bplApp.directives', 'bplApp.widgets', 'ui.bootstrap'])
 
 .constant('ENTITIES', {MONSTER : 'monster', CUSTOMER : 'customer', CONTACT: 'contact', ACCOUNT : 'account', TRANSACTION : 'transaction'})
 
@@ -35,7 +35,9 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.f
 	
 }]);
 
+angular.module('bplApp.filters', []);
 angular.module('bplApp.controllers', []);
 angular.module('bplApp.directives', []);
-angular.module('bplApp.services', ['ngResource']);
+angular.module('bplApp.services', []);
+angular.module('bplApp.resources', ['ngResource', 'bplApp.services']);
 angular.module('bplApp.widgets', []);

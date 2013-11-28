@@ -3,6 +3,7 @@
  * Created by Yaron on 27/11/13.
  */
 
+// TODO: make it none-anuglar
 
 angular.module('bplApp.services')
 

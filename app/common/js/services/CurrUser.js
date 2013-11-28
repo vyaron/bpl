@@ -10,4 +10,4 @@ angular.module('bplApp.services')
                 return 101;
             }
         };
-    }])
+    }]);

@@ -21,15 +21,15 @@
 </head>
 <body class="container ng-cloak">
 
-	<div customer show-account-selection="true"></div>
-<!--<div accounts></div>-->
+	<!--<div customer show-account-selection="true"></div>-->
+    <!--<div accounts></div>-->
 
-    <!--<div contacts max="2"></div>-->
+    <div contacts max="2"></div>
 	<div transactions></div>
 
+    {{"hello world" | translate:'he'}}
 
-
-
+    <div>
     <!-- 3rd party  -->
     <script src="common/lib/jquery/jquery.js"></script>
     <script src="common/lib/angular/angular.js"></script>
@@ -48,7 +48,6 @@
     <script src="common/js/directives/directives.js"></script>
 
     <script src="common/js/services/PubSubService.js"></script>
-    <script src="common/js/services/PrefsService.js"></script>
     <script src="common/js/services/CurrUser.js"></script>
     <script src="common/js/services/DataCacheFactory.js"></script>
     <script src="common/js/services/HttpInterceptor.js"></script>
@@ -56,13 +55,25 @@
     <script src="common/js/services/ServerValidationService.js"></script>
     <script src="common/js/services/Translate.js"></script>
 
+
+    <script src="common/i18n/en.js"></script>
+    <script src="common/i18n/he.js"></script>
+    <script src="common/i18n/ru.js"></script>
+
+
+
+
     <!-- Resources (Data Services)  -->
-    <script src="common/js/services/resources/BasicResource.js"></script>
-    <script src="common/js/services/resources/CustomersBasicResource.js"></script>
-    <script src="common/js/services/resources/CustomersResource.js"></script>
-    <script src="common/js/services/resources/ContactsResource.js"></script>
-    <script src="common/js/services/resources/AccountsResource.js"></script>
-    <script src="common/js/services/resources/TransactionsResource.js"></script>
+    <script src="common/js/services/BasicResource.js"></script>
+    <script src="resources/CustomersBasicResource.js"></script>
+    <script src="resources/CustomersResource.js"></script>
+    <script src="resources/ContactsResource.js"></script>
+    <script src="resources/AccountsResource.js"></script>
+    <script src="resources/TransactionsResource.js"></script>
+
+
+
+
 
     <script src="widgets/customer/customer.js"></script>
 
@@ -71,7 +82,7 @@
     <script src="widgets/accounts/accounts.js"></script>
 
     <script src="widgets/contacts/contacts.js"></script>
-    <!--<script src="widgets/contacts/contactsI18N.js"></script>-->
-
+    <script src="widgets/contacts/i18n.js"></script>
+    </div>
 </body>
 </html>

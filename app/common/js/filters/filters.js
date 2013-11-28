@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bplApp.filters', [])
+angular.module('bplApp.filters')
 
 // Convert boolean to V or X symbols
 .filter('checkmark', function() {

@@ -13,6 +13,7 @@ angular.module('bplApp.services')
         },
         // Gets called when a previous interceptor threw an error or resolved with a rejection
         'requestError': function(rejection) {
+            //cl("Intercepted - Request Error");
             return $q.reject(rejection);
         },
         'response': function(response) {
@@ -27,4 +28,4 @@ angular.module('bplApp.services')
             return $q.reject(rejection);
         }
     };
-}])
+}]);
