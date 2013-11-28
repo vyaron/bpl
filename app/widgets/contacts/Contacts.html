@@ -1,18 +1,25 @@
-<div>
-    <ul class="contacts clearfix">
-        <li ng-repeat="contact in contacts">
+<div class="row">
+    <ul class="nav contacts">
+        <li class="col-xs-3 minWidth100 text-center" ng-repeat="contact in contacts">
             <h3>{{ contact.name }}</h3>
-            <div>
+
+            <div class="thumbnail">
                 <img ng-src="{{ contact.image_url }}"/>
             </div>
-            <button class="btn btn-link" ng-click="edit(contact)">Edit</button>
-            <button class="btn btn-link" ng-click="delete(contact)">Delete</button>
+            <div class="btn-group">
+                <button class="col-xs-6 btn btn-sm btn-default" ng-click="edit(contact)"><i class="fa fa-pencil"></i>
+                    <small class="hidden-xs">Edit</small>
+                </button>
+                <button class="col-xs-6 btn btn-sm btn-danger" ng-click="delete(contact)"><i class="fa fa-trash-o"></i>
+                    <small class="hidden-xs">Delete</small>
+                </button>
+            </div>
         </li>
     </ul>
-
-    <pagination ng-if="contacts.length" total-items="total" page="page" items-per-page="max" on-select-page="setPage(page)"></pagination>
-
+    <div class="text-center small">
+        <pagination ng-if="contacts.length" total-items="total" page="page" items-per-page="max"
+                    on-select-page="setPage(page)"></pagination>
+    </div>
     <hr/>
-
-    <button class="btn btn-primary" ng-click="add()">Add</button>
+    <button class="btn  btn-sm btn-primary" ng-click="add()">Add</button>
 </div>

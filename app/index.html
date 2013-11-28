@@ -21,10 +21,22 @@
 </head>
 <body class="container ng-cloak">
 {{"hello world" | translate:'he'}}
-<div customer show-account-selection="true"></div>
-<div accounts></div>
-<div contacts max="2"></div>
-<div transactions></div>
+<div class="row">
+    <div customer show-account-selection="true"></div>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <div accounts></div>
+    </div>
+    <div class="col-xs-6">
+        <div contacts max="2"></div>
+    </div>
+</div>
+<div class="row">
+    <div transactions></div>
+</div>
+
+
 <footer>
     <!-- External Javascript   -->
     <script type="text/javascript" src="common/bower_components/jquery/jquery.min.js"></script>
