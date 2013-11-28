@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bplApp.widgets.customer', [])
+angular.module('bplApp.widgets.contacts', [])
     //.controller('ContactsPopupCtrl', )
     .controller('bplContactsCtrlPopupCtrl', ['$scope', '$modalInstance', 'serverValidationService', 'contact', function($scope, $modalInstance, serverValidationService, contact) {
         $scope.contact = contact;
@@ -102,7 +102,7 @@ angular.module('bplApp.widgets.customer', [])
     }])
     .directive('bplContacts', function() {
         return {
-            templateUrl: 'widgets/contacts/Contacts.html',
+            templateUrl: 'widgets/contacts/contacts.html',
             replace: true,
             controller: 'bplContactsCtrl',
             scope: {
