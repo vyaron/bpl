@@ -1,9 +1,1068 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52224fe4-4928-44a0-a16c-7c6da013aa02" name="Default" comment="" />
+    <list default="true" id="52224fe4-4928-44a0-a16c-7c6da013aa02" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/ico/apple-touch-icon-144-precomposed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/carousel.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/ico/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/assets/github-16px.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/grid.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/jumbotron-narrow.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/jumbotron.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/justified-nav.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/navbar-fixed.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/navbar-static.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/navbar.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/non-responsive.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/offcanvas.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/sign-in.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/starter-template.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/sticky-footer-navbar.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/sticky-footer.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/screenshots/theme.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-animate/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-cookies/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-mocks/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-resource/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-route/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-sanitize/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-scenario/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-touch/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/lib/darkstrap-upgrade_to_3.0/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/lib/darkstrap-upgrade_to_3.0/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/CNAME" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/DOCS-LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/lib/darkstrap-upgrade_to_3.0/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-animate/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-cookies/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-mocks/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-resource/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-route/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-sanitize/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-scenario/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-touch/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/carousel/docs/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/lib/darkstrap-upgrade_to_3.0/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_config.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/accordion/accordion-group.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/accordion/accordion.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/accordion/accordion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/accordion/test/accordion.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/ads.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/affix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/affix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/alert/alert.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/alert/alert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/alert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/alert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/alert/test/alert.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/alerts.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-animate/angular-animate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-animate/angular-animate.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-animate/angular-animate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-cookies/angular-cookies.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-cookies/angular-cookies.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-mocks/angular-mocks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/test-lib/angular-mocks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-resource/angular-resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-resource/angular-resource.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-route/angular-route.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-route/angular-route.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-sanitize/angular-sanitize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-sanitize/angular-sanitize.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-sanitize/angular-sanitize.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-scenario/angular-scenario.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-touch/angular-touch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-touch/angular-touch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular/angular.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/test-lib/angular.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular/angular.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular/angular.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/assets/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/js/application.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/modal/backdrop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/badges.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/progressbar/bar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/bindHtml/bindHtml.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/dist/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/dist/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/bootstrap.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/dist/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-animate/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-cookies/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-mocks/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-resource/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-route/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-sanitize/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-scenario/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-touch/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/breadcrumbs.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/browserstack.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/button-groups.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/button.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/button.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/buttons/buttons.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/buttons.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/buttons/test/buttons.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/carousel/carousel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/carousel/carousel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/carousel/carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/carousel.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/carousel/test/carousel.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/changelog.tpl.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/close.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/code.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/collapse/collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/collapse/test/collapse.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/component-animations.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/components.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/css.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/customize.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/js/customizer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/lib/darkstrap-upgrade_to_3.0/darkstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/lib/darkstrap-upgrade_to_3.0/darkstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/lib/darkstrap-upgrade_to_3.0/darkstrap.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/datepicker/datepicker.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/datepicker/datepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/datepicker/test/datepicker.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_layouts/default.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/assets/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/accordion/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/alert/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/buttons/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/carousel/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/collapse/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/datepicker/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/dropdownToggle/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/modal/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/pagination/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/popover/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/progressbar/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/rating/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/tabs/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/timepicker/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/tooltip/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/typeahead/docs/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/accordion/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/alert/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/buttons/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/carousel/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/collapse/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/datepicker/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/dropdownToggle/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/modal/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/pagination/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/popover/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/progressbar/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/rating/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/tabs/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/timepicker/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/tooltip/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/typeahead/docs/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/css/docs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/dropdownToggle/dropdownToggle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/dropdownToggle/test/dropdownToggle.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/dropdowns.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/js/filesaver.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/forms.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/getting-started.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/glyphicons.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/grid/grid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/grid.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/test-lib/helpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/js/holder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_layouts/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/js/ie8-responsive-file-warning.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/carousel/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/grid/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/jumbotron/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/jumbotron-narrow/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/justified-nav/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/navbar/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/navbar-fixed-top/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/navbar-static-top/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/non-responsive/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/offcanvas/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/signin/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/starter-template/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/sticky-footer/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/sticky-footer-navbar/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/theme/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/input-groups.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/javascript.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/test-lib/jquery-1.8.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/jquery-migrate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/jquery-migrate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/vendor/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/jquery.min.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-scenario/jstd-scenario-adapter-config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-scenario/jstd-scenario-adapter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/js/jszip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/jumbotron-narrow/jumbotron-narrow.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/jumbotron/jumbotron.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/jumbotron.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/justified-nav/justified-nav.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/labels.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/js/less.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/list-group.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/media.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/modal/modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/modal/test/modal.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/modal/test/modalWindow.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/modals.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/nav-about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/nav-components.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/nav-css.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/nav-customize.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/nav-getting-started.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/nav-javascript.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/nav-main.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/docs/nav.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/navbar-fixed-top/navbar-fixed-top.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/navbar-static-top/navbar-static-top.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/navbar/navbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/navbar.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/navs.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/non-responsive/non-responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/normalize.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/offcanvas/offcanvas.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/offcanvas/offcanvas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/old-bs-docs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/jquery/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/pagination/pager.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/pager.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/pagination/test/pager.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/pagination/pagination.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/pagination/pagination.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/pagination.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/pagination/test/pagination.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/panels.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/phantom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/assets/plunker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/popover/popover.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/popover/popover.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/popover.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/popover.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/popover/test/popover.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/popovers.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/datepicker/popup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/position/position.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/print.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/progress-bars.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/progressbar/progress.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/progressbar/progressbar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/progressbar/test/progressbar.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/css/pygments-manni.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/vendor/qunit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/vendor/qunit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/assets/rainbow-generic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/assets/rainbow-html.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/assets/rainbow-javascript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/assets/rainbow.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/assets/rainbow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/rating/rating.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/rating/rating.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/rating/test/rating.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/js/raw-files.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/accordion/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/alert/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/buttons/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/collapse/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/datepicker/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/dropdownToggle/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/modal/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/pagination/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/popover/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/progressbar/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/rating/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/tabs/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/timepicker/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/tooltip/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/typeahead/docs/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/responsive-utilities.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/scaffolding.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/scrollspy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/scrollspy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/signin/signin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/carousel/slide.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/_includes/social-buttons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/modal/test/stackedMap.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/starter-template/starter-template.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/sticky-footer-navbar/sticky-footer-navbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/sticky-footer/sticky-footer.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/docs/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/tabs/tab.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/tab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/tables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/tabs/tabs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/tabs/test/tabs.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/tabs/tabset-titles.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/tabs/tabset.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/position/test/test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/examples/theme/theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/theme.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/thumbnails.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/timepicker/timepicker.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/timepicker/timepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/timepicker/test/timepicker.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/tooltip/tooltip-html-unsafe-popup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/tooltip/tooltip-popup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/tooltip/tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/tooltip.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/tooltip/test/tooltip.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/tooltip/test/tooltip2.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/transition/transition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/transition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/js/tests/unit/transition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/transition/test/transition.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/type.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/typeahead/test/typeahead-highlight.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/typeahead/typeahead-match.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/typeahead/test/typeahead-parser.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/typeahead/typeahead-popup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/typeahead/test/typeahead-popup.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/typeahead/typeahead.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/src/typeahead/test/typeahead.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/docs-assets/js/uglify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/utilities.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/validate-commit-msg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/bootstrap/less/wells.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/template/modal/window.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/bundle/bootstrap/css/bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/bundle/bootstrap/css/bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/bundle/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/bundle/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/bundle/bootstrap/css/darkstrap-v0.9.0.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/bundle/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/bundle/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular-ui/ui-bootstrap-tpls-0.6.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular-ui/ui-bootstrap-tpls-0.6.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-animate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-animate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-animate.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-cookies.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-cookies.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-loader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-loader.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-loader.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-mocks.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-route.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-route.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-sanitize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-sanitize.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-sanitize.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-scenario.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-touch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-touch.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/appcache-offline.manifest" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/appcache.manifest" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/angular-bootstrap-prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/angular-bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/bootstrap/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/bootstrap/css/bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/bootstrap/css/bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/bootstrap/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/bootstrap/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/font-awesome/css/font-awesome-ie7.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/font-awesome/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/font-awesome/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/font-awesome/font/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/font-awesome/font/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/font-awesome/font/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/font-awesome/font/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/font-awesome/font/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/google-code-prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/lunr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/lunr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/components/marked.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/css/animations.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/css/doc_widgets.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/css/docs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/css/prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/docs-data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/docs-scenario.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/docs-scenario.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/AngularJS-small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/One_Way_Data_Binding.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/Two_Way_Data_Binding.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/angular_parts.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/angularjs-for-header-only.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/bullet.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/form_data_flow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/concepts-databinding1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/concepts-databinding2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/concepts-directive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/concepts-module-injector.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/concepts-module-service.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/concepts-runtime.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/concepts-scope.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/concepts-startup.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/concepts-view.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/di_sequence_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/dom_scope_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/hashbang_vs_regular_url.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/scenario_runner.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/guide/simple_scope_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/helloworld.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/helloworld_2way.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/tutorial/catalog_screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/tutorial/tutorial_00.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/tutorial/tutorial_00_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/tutorial/tutorial_02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/tutorial/tutorial_03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/tutorial/tutorial_04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/tutorial/tutorial_07_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/tutorial/tutorial_08-09_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/tutorial/tutorial_10-11_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/img/tutorial/xhr_service_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/index-debug.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/index-jq-debug.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/index-jq-nocache.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/index-jq.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/index-nocache.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/js/docs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/notes/empty.tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/offline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/AUTO.$injector.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/AUTO.$provide.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/AUTO.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.IModule.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.bind.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.bootstrap.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.copy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.element.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.equals.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.extend.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.forEach.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.fromJson.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.identity.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.injector.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.isArray.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.isDate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.isDefined.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.isElement.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.isFunction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.isNumber.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.isObject.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.isString.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.isUndefined.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.lowercase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.mock.TzDate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.mock.dump.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.mock.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.mock.inject.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.mock.module.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.module.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.noop.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.toJson.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.uppercase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/angular.version.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$anchorScroll.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$animate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$animateProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$cacheFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$compile.directive.Attributes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$compile.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$compileProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$controller.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$controllerProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$document.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$exceptionHandler.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$filter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$filterProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$http.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$httpBackend.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$interpolate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$interpolateProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$interval.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$locale.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$location.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$locationProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$log.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$logProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$parse.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$parseProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$q.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$rootElement.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$rootScope.Scope.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$rootScope.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$rootScopeProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$sce.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$sceDelegate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$sceDelegateProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$sceProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$templateCache.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$timeout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.$window.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_a.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_form.FormController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_input.checkbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_input.email.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_input.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_input.number.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_input.radio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_input.text.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_input.url.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngApp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngBind.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngBindHtml.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngBindTemplate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngBlur.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngChange.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngChecked.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngClass.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngClassEven.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngClassOdd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngClick.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngCloak.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngCopy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngCsp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngCut.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngDblclick.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngDisabled.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngFocus.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngHide.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngHref.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngIf.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngInclude.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngInit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngKeydown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngKeypress.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngKeyup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngList.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngModel.NgModelController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngMousedown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngMouseenter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngMouseleave.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngMousemove.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngMouseover.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngMouseup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngNonBindable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngOpen.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngPaste.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngPluralize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngReadonly.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngRepeat.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngSelected.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngShow.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngSrc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngSrcset.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngStyle.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngSubmit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngSwitch.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngTransclude.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_ngValue.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_script.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_select.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.directive_textarea.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.filter_currency.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.filter_date.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.filter_filter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.filter_json.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.filter_limitTo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.filter_lowercase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.filter_number.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.filter_orderBy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.filter_uppercase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ng.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngAnimate.$animate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngAnimate.$animateProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngAnimate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngCookies.$cookieStore.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngCookies.$cookies.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngCookies.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngMock.$exceptionHandler.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngMock.$exceptionHandlerProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngMock.$httpBackend.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngMock.$interval.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngMock.$log.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngMock.$timeout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngMock.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngMockE2E.$httpBackend.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngMockE2E.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngResource.$resource.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngResource.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngRoute.$route.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngRoute.$routeParams.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngRoute.$routeProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngRoute.directive_ngView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngRoute.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngSanitize.$sanitize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngSanitize.filter_linky.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngSanitize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngTouch.$swipe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngTouch.directive_ngClick.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngTouch.directive_ngSwipeLeft.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngTouch.directive_ngSwipeRight.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/api/ngTouch.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/cookbook/advancedform.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/cookbook/buzz.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/cookbook/deeplinking.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/cookbook/form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/cookbook/helloworld.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/cookbook/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/cookbook/mvc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$animate_notcsel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$cacheFactory_iid.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$compile_ctreq.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$compile_iscp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$compile_multidir.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$compile_nodomevents.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$compile_nonassign.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$compile_selmulti.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$compile_tpload.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$compile_tplrt.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$compile_uterdir.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$controller_noscp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$httpBackend_noxhr.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$injector_cdep.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$injector_itkn.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$injector_modulerr.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$injector_nomod.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$injector_pget.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$injector_unpr.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$interpolate_interr.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$interpolate_noconcat.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$location_ihshprfx.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$location_ipthprfx.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$location_isrcharg.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$parse_isecdom.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$parse_isecfld.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$parse_isecfn.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$parse_isecwindow.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$parse_lexerr.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$parse_syntax.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$parse_ueoe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$resource_badargs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$resource_badcfg.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$resource_badmember.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$resource_badname.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$rootScope_infdig.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$rootScope_inprog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$sanitize_badparse.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$sce_icontext.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$sce_iequirks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$sce_imatcher.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$sce_insecurl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$sce_itype.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$sce_iwcard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/$sce_unsafe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/jqLite_nosel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/jqLite_offargs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/jqLite_onargs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ngModel_nonassign.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ngOptions_iexp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ngPattern_noregexp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ngRepeat_dupes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ngRepeat_iexp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ngRepeat_iidexp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ngTransclude_orphan.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ng_areq.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ng_badname.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ng_btstrpd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ng_cpi.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/error/ng_cpws.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/animations.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/bootstrap.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/compiler.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/concepts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/controller.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/databinding.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/dev_guide.e2e-testing.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/dev_guide.services.$location.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/dev_guide.services.creating_services.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/dev_guide.services.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/dev_guide.services.injecting_controllers.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/dev_guide.services.managing_dependencies.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/dev_guide.services.testing_services.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/dev_guide.services.understanding_services.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/dev_guide.templates.css-styling.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/dev_guide.unit-testing.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/di.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/directive.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/expression.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/filter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/forms.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/i18n.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/ie.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/introduction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/migration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/module.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/providers.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/scope.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/guide/templates.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/misc/contribute.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/misc/downloading.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/misc/faq.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/misc/started.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_00.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_01.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_02.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_03.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_04.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_05.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_06.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_07.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_08.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_09.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_10.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_11.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/step_12.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/partials/tutorial/the_end.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/docs/sitemap.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/errors.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_af-na.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_af-za.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_am-et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_am.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-001.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-ae.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-bh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-dz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-eg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-iq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-jo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-kw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-lb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-ly.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-ma.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-om.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-qa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-sa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-sd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-sy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-tn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar-ye.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_bg-bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_bn-bd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_bn-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_bn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ca-ad.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ca-es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_cs-cz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_da-dk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_de-at.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_de-be.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_de-de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_de-li.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_de-lu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_el-cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_el-gr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-as.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-au.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-bb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-be.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-bm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-bw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-bz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-dsrt-us.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-dsrt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-fm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-gu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-gy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-hk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-ie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-iso.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-jm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-mh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-mp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-mt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-mu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-na.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-nz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-ph.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-pk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-pr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-pw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-sg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-tc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-tt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-um.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-us.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-vg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-za.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en-zw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-419.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-bo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-cl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-co.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-cr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-do.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-ea.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-ec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-gq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-gt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-hn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-ic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-mx.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-ni.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-pa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-pe.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-pr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-py.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-us.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-uy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es-ve.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_et-ee.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_eu-es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_eu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fa-af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fa-ir.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fi-fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fil-ph.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fil.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-be.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-bf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-bi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-bj.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-bl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-cd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-cf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-cg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-ci.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-cm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-dj.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-ga.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-gf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-gn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-gp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-gq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-lu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-mc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-mf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-mg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-ml.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-mq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-ne.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-re.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr-yt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_gl-es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_gsw-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_gsw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_gu-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_gu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_he-il.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_hi-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_hi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_hr-hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_hu-hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_id-id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_is-is.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_is.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_it-it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_it-sm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_iw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ja-jp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_kn-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_kn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ko-kr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ln-cd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ln.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_lt-lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_lv-lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ml-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ml.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_mr-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_mr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ms-my.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_mt-mt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_mt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_nl-cw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_nl-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_nl-sx.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_or-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_or.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_pl-pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_pt-pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ro-ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ru-ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sk-sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sl-si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sq-al.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sr-cyrl-rs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sr-latn-rs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sv-se.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sw-tz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_sw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ta-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ta.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_te-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_te.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_th-th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_tl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_tr-tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_uk-ua.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ur-pk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_ur.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_vi-vn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_zh-hans-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_zh-hk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_zh-tw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_zu-za.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/i18n/angular-locale_zu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/version.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/angular/version.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/common/lib/jquery/jquery.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/common/bundle/bootstrap/img/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/assets/img/glyphicons-halflings-white.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/common/bundle/bootstrap/img/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/misc/demo/assets/img/glyphicons-halflings.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-cookies.min.js.map" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-cookies/angular-cookies.min.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-csp.css" afterPath="$PROJECT_DIR$/app/common/bower_components/angular/angular-csp.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-resource.min.js.map" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-resource/angular-resource.min.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-route.min.js.map" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-route/angular-route.min.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/common/lib/angular/angular-touch.min.js.map" afterPath="$PROJECT_DIR$/app/common/bower_components/angular-touch/angular-touch.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/widgets/accounts/Accounts.js" afterPath="$PROJECT_DIR$/app/widgets/accounts/Accounts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/widgets/contacts/Contacts.js" afterPath="$PROJECT_DIR$/app/widgets/contacts/Contacts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/widgets/customer/Customer.js" afterPath="$PROJECT_DIR$/app/widgets/customer/Customer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/widgets/transactions/Transactions.js" afterPath="$PROJECT_DIR$/app/widgets/transactions/Transactions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="BPL.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/webResources.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +1082,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="contacts.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/widgets/contacts/contacts.html">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="6" selection-start="630" selection-end="630" vertical-scroll-proportion="0.34363854" vertical-offset="0" max-vertical-offset="841">
+            <state line="54" column="57" selection-start="2926" selection-end="2926" vertical-scroll-proportion="-14.481482" vertical-offset="581" max-vertical-offset="1278">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transactions.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/widgets/transactions/Transactions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="54" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/widgets/customer/Customer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="432">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/widgets/customer/Customer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="40" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Accounts.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/widgets/accounts/Accounts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="27" selection-start="70" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contacts.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/widgets/contacts/Contacts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="39" selection-start="786" selection-end="786" vertical-scroll-proportion="0.9840547" vertical-offset="0" max-vertical-offset="1926">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="0" selection-start="4223" selection-end="4223" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="3078">
               <folding />
             </state>
           </provider>
@@ -39,13 +1152,22 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/resources/CustomersBasicResource.js" />
-        <option value="$PROJECT_DIR$/app/common/js/services/BasicResource.js" />
-        <option value="$PROJECT_DIR$/app/common/js/services/CurrUser.js" />
-        <option value="$PROJECT_DIR$/app/common/js/services/HttpInterceptor.js" />
         <option value="$PROJECT_DIR$/app/common/js/services/Log.js" />
         <option value="$PROJECT_DIR$/app/common/js/services/PubSubService.js" />
         <option value="$PROJECT_DIR$/app/common/js/services/ServerValidationService.js" />
@@ -56,8 +1178,12 @@
         <option value="$PROJECT_DIR$/app/common/js/app.js" />
         <option value="$PROJECT_DIR$/app/widgets/contacts/contactsI18N.js" />
         <option value="$PROJECT_DIR$/app/widgets/accounts/accounts.html" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/widgets/contacts/contacts.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/widgets/transactions/Transactions.js" />
+        <option value="$PROJECT_DIR$/app/widgets/customer/Customer.js" />
+        <option value="$PROJECT_DIR$/app/widgets/accounts/Accounts.js" />
+        <option value="$PROJECT_DIR$/app/widgets/contacts/Contacts.js" />
       </list>
     </option>
   </component>
@@ -66,10 +1192,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1288" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1040" />
+    <option name="x" value="-1" />
+    <option name="width" value="1442" />
+    <option name="height" value="901" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -87,7 +1212,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -113,7 +1238,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -128,7 +1252,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BPL" />
+              <option name="myItemId" value="bpl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -138,7 +1262,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="bpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="BPL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BPL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BPL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bpl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -152,7 +1318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BPL" />
+              <option name="myItemId" value="bpl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -163,6 +1329,10 @@
               <option name="myItemId" value="widgets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="transactions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -170,7 +1340,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="bpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="widgets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="customer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="BPL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bpl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -192,7 +1384,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BPL" />
+              <option name="myItemId" value="bpl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -210,17 +1402,53 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="61" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="173" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="settings" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="61" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/plugins/lessc-plugin/lib/lessc-plugin.jar" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="74" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="674" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="776" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="74" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="71" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PublishConfig">
+    <servers>
+      <server id="04e268d7-50d1-43df-800d-f7eef646ab99">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="2a7640ad-7c1e-49f3-b951-5727f0ff7c58">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -297,24 +1525,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="-8" width="1296" height="1040" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="0" width="1442" height="901" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32597622" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32934928" sideWeight="0.7352941" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32536522" sideWeight="0.7352941" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32560706" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2609375" sideWeight="0.67439294" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2647059" sideWeight="0.67439294" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.63465786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.7352941" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32560706" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -322,23 +1550,23 @@
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.7352941" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32597622" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262295" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32536522" sideWeight="0.7352941" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32560706" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.7352941" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32617188" sideWeight="0.6737705" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2647059" sideWeight="0.67439294" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6354344" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.63465786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -354,114 +1582,147 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/common/js/services/HttpInterceptor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="4" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/js/services/Log.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="29" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/js/services/PubSubService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="3" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/common/js/services/ServerValidationService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="33" selection-start="171" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/i18n/en.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="27" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/contacts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="27" selection-start="1555" selection-end="1555" vertical-scroll-proportion="0.39716312" vertical-offset="429" max-vertical-offset="1819">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/js/filters/filters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="18" selection-start="1031" selection-end="1040" vertical-scroll-proportion="0.7147727" vertical-offset="0" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/i18n.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="4" selection-start="221" selection-end="221" vertical-scroll-proportion="0.15454546" vertical-offset="0" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/accounts/accounts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="59" selection-end="59" vertical-scroll-proportion="0.07962529" vertical-offset="0" max-vertical-offset="854">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/common/js/services/Translate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="779" selection-end="785" vertical-scroll-proportion="0.425" vertical-offset="0" max-vertical-offset="880">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/i18n/ru.js">
+    <entry file="file://$PROJECT_DIR$/app/common/js/services/DataCacheFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.019318182" vertical-offset="0" max-vertical-offset="880">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/i18n/he.js">
+    <entry file="file://$PROJECT_DIR$/app/common/bower_components/angular-mocks/README.md">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.07727273" vertical-offset="0" max-vertical-offset="880">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.72321427" vertical-offset="324" max-vertical-offset="864">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/js/app.js">
+    <entry file="file://$PROJECT_DIR$/app/common/bower_components/bootstrap/dist/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="37" selection-start="596" selection-end="596" vertical-scroll-proportion="0.3137255" vertical-offset="0" max-vertical-offset="867">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="463">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/popup.html">
+    <entry file="file://$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="726" selection-end="730" vertical-scroll-proportion="0.35831383" vertical-offset="0" max-vertical-offset="854">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.519362" vertical-offset="2862" max-vertical-offset="45126">
+          <folding>
+            <marker date="1385667206327" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1385667206327" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/dist/assets/rainbow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.556962" vertical-offset="3240" max-vertical-offset="14022">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/dist/assets/rainbow-html.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2127072" vertical-offset="878" max-vertical-offset="1602">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/dist/assets/rainbow-generic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/bower_components/angular-ui-bootstrap/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="0" selection-start="4223" selection-end="4223" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="3078">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="26" selection-start="919" selection-end="919" vertical-scroll-proportion="0.47775176" vertical-offset="51" max-vertical-offset="1598">
+        <state line="54" column="57" selection-start="2926" selection-end="2926" vertical-scroll-proportion="-14.481482" vertical-offset="581" max-vertical-offset="1278">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/contacts.html">
+    <entry file="file://$PROJECT_DIR$/app/widgets/transactions/Transactions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="6" selection-start="630" selection-end="630" vertical-scroll-proportion="0.34363854" vertical-offset="0" max-vertical-offset="841">
+        <state line="8" column="54" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/widgets/customer/Customer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="724">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/widgets/customer/Customer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="40" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/widgets/accounts/Accounts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="27" selection-start="70" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/widgets/contacts/Contacts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="39" selection-start="786" selection-end="786" vertical-scroll-proportion="0.9840547" vertical-offset="0" max-vertical-offset="1926">
           <folding />
         </state>
       </provider>
