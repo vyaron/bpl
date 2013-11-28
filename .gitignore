@@ -1,4 +1,6 @@
 logs/*
 .settings/*
+.project
+.buildpath
 .idea/*
 !.gitkeep
