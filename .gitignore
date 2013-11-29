@@ -4,3 +4,4 @@ logs/*
 .buildpath
 .idea/*
 !.gitkeep
+.DS_Store
