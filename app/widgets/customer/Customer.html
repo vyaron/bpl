@@ -1,18 +1,12 @@
-<div class='row-fluid'>
-	<div class='span2'>
-		<img ng-src='{{customer.getImgUrl()}}' />
-		
-	</div>	
-	<div class='offset2'>
-		<h1>{{customer.name}}</h1>
-		<div class='clearfix'>
-			<div accounts display-type="sideBySide"></div>
-		</div>
+<div class='row'>
+    <div class='col-xs-2 col-sm-3 thumbnail maxWidth300'>
+        <img ng-src='{{customer.getImgUrl()}}'/>
+    </div>
+    <div class='col-xs-10 col-sm-9'>
+        <h1>{{customer.name}}</h1>
+        <div accounts display-type="sideBySide"></div>
+        <hr/>
+        <div ng-if="prefs.showAccountSelection" accounts display-type="dropdown"></div>
+    </div>
 
-		<hr/>
-		<div ng-if="prefs.showAccountSelection">
-			<div accounts display-type="dropdown"></div>
-		</div>		
-	</div>	
-	
 </div>

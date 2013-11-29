@@ -1,24 +1,50 @@
 /* app css stylesheet */
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-    display: none !important;
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
 }
-
-.green{color: #BBE9AC}
-.red{color: #DD1144}
-.bplRed{color: #E60000}
-
-
-.modal {
-  background-color: #212121;
+.error {
+  font-size: 10px;
+  color: darkred;
+  margin-bottom: 10px;
+  background-color: #d3d3d3;
+  padding: 1px 6px;
+  border-radius: 3px;
 }
-
-.modal-footer {
-	background-color: #212121;	
+.green {
+  color: #bbe9ac;
 }
-
-.day {color: #333}
-
-
-
-.error{font-size: 10px; color: darkred; margin-bottom: 10px; background-color: #d3d3d3; padding: 1px 6px; border-radius: 3px;}
-
+.red {
+  color: #dd1144;
+}
+.bplRed {
+  color: #e60000;
+}
+.day {
+  color: #333333;
+}
+.inline {
+  display: inline;
+}
+.minWidth100 {
+  min-width: 100px;
+}
+.maxWidth100 {
+  max-width: 100px;
+}
+.minWidth200 {
+  min-width: 200px;
+}
+.maxWidth200 {
+  max-width: 200px;
+}
+.minWidth300 {
+  min-width: 300px;
+}
+.maxWidth300 {
+  max-width: 300px;
+}

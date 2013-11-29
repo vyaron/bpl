@@ -1,68 +1,68 @@
 <!doctype html>
 <html lang="en" ng-app="bplApp">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Le Bank</title>
-  <link rel="stylesheet" href="common/bundle/bootstrap/css/bootstrap.css" media="screen" />
-  <link rel="stylesheet" href="common/bundle/bootstrap/css/bootstrap-responsive.css" media="screen"/>
-
-  <link rel="stylesheet" href="common/bundle/bootstrap/css/darkstrap-v0.9.0.css" media="screen"/>
-
-  <link rel="stylesheet" href="common/css/app.css"/>
-
-  <link rel="shortcut icon" href="common/img/favicon.png">
-
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Le Bank</title>
+    <!--bootstrap 3 default  files-->
+    <!--<link rel="stylesheet" href="common/bower_components/bootstrap/dist/css/bootstrap.min.css"/>-->
+    <!--<link rel="stylesheet" href="common/bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>-->
+    <!--custom theme from bootswatch contains boostrap-->
+    <link rel="stylesheet" href="common/bower_components/bootswatch/cyborg/bootstrap.css"/>
+    <!--font awesome for bootswatch extention of icons-->
+    <link rel="stylesheet" href="common/bower_components/font-awesome/css/font-awesome.min.css"/>
+    <!--application css files-->
+    <link rel="stylesheet" href="common/css/app.css"/>
+    <link rel="shortcut icon" href="common/img/favicon.png">
+    <!--widget css files (should actually be loaded dynamically)-->
     <link rel="stylesheet" href="widgets/contacts/contacts.css"/>
 </head>
 <body class="container ng-cloak">
-
-	<!--<div customer show-account-selection="true"></div>-->
-    <!--<div accounts></div>-->
-
-    <div contacts max="2"></div>
-	<div transactions></div>
-
-    {{"hello world" | translate:'he'}}
-
-    <div>
-    <!-- 3rd party  -->
-    <script src="common/lib/jquery/jquery.js"></script>
-    <script src="common/lib/angular/angular.js"></script>
-    <script src="common/lib/angular/i18n/angular-locale_he.js"></script>
-    <script src="common/lib/angular/angular-route.js"></script>
-    <script src="common/lib/angular/angular-resource.js"></script>
-    <script src="common/lib/angular/angular-cookies.js"></script>
-
-    <!--<script src="common/bundle/bootstrap/js/bootstrap.js"></script>-->
-    <script src="common/lib/angular-ui/ui-bootstrap-tpls-0.6.0.min.js" type="text/javascript"></script>
+{{"hello world" | translate:'he'}}
+<div class="row">
+    <div customer show-account-selection="true"></div>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <div accounts></div>
+    </div>
+    <div class="col-xs-6">
+        <div contacts max="2"></div>
+    </div>
+</div>
+<div class="row">
+    <div transactions></div>
+</div>
 
 
+<footer>
+    <!-- External Javascript   -->
+    <script type="text/javascript" src="common/bower_components/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="common/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="common/bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="common/bower_components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="common/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript" src="common/bower_components/angular-i18n/angular-locale_he.js"></script>
+    <script type="text/javascript"
+            src="common/bower_components/angular-ui-bootstrap/dist/ui-bootstrap-tpls-0.7.0.js"></script>
     <!-- bpl common  -->
     <script src="common/js/app.js"></script>
     <script src="common/js/filters/filters.js"></script>
     <script src="common/js/directives/directives.js"></script>
-
+    <!--services-->
     <script src="common/js/services/PubSubService.js"></script>
     <script src="common/js/services/CurrUser.js"></script>
     <script src="common/js/services/DataCacheFactory.js"></script>
     <script src="common/js/services/HttpInterceptor.js"></script>
     <script src="common/js/services/Log.js"></script>
     <script src="common/js/services/ServerValidationService.js"></script>
+    <!--Translation files-->
     <script src="common/js/services/Translate.js"></script>
-
-
     <script src="common/i18n/en.js"></script>
     <script src="common/i18n/he.js"></script>
     <script src="common/i18n/ru.js"></script>
-
-
-
-
     <!-- Resources (Data Services)  -->
     <script src="common/js/services/BasicResource.js"></script>
     <script src="resources/CustomersBasicResource.js"></script>
@@ -70,19 +70,12 @@
     <script src="resources/ContactsResource.js"></script>
     <script src="resources/AccountsResource.js"></script>
     <script src="resources/TransactionsResource.js"></script>
-
-
-
-
-
-    <script src="widgets/customer/customer.js"></script>
-
-    <!-- Other components -->
-    <script src="widgets/transactions/transactions.js"></script>
-    <script src="widgets/accounts/accounts.js"></script>
-
-    <script src="widgets/contacts/contacts.js"></script>
+    <!--widgets (should be loaded dynamically-->
+    <script src="widgets/customer/Customer.js"></script>
+    <script src="widgets/transactions/Transactions.js"></script>
+    <script src="widgets/accounts/Accounts.js"></script>
+    <script src="widgets/contacts/Contacts.js"></script>
     <script src="widgets/contacts/i18n.js"></script>
-    </div>
+</footer>
 </body>
 </html>

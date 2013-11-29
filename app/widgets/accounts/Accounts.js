@@ -8,7 +8,7 @@ angular.module('bplApp.widgets')
 
 .directive('accounts', function() {
 	return {
-	    	templateUrl: 'widgets/accounts/accounts.html',
+	    	templateUrl: 'widgets/accounts/Accounts.html',
 	    	replace: true,
 	    	controller: 'accounts',
 	    	scope: {

@@ -6,7 +6,7 @@ angular.module('bplApp.widgets')
 // params: none
     .directive('transactions', function() {
         return {
-            templateUrl: 'widgets/transactions/transactions.html',
+            templateUrl: 'widgets/transactions/Transactions.html',
             replace: true,
             controller: 'transactions'
         };
