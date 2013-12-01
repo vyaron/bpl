@@ -1,46 +1,92 @@
 'use strict';
-/**
- * Created by Yaron on 27/11/13.
- */
 
-// TODO: make it none-anuglar
+var Log = (function(){
+    var _debug = true, _url = "", _self = this;
+    var _noop = function(){};
 
-angular.module('bplApp.services')
+    var setDebug = function(flag){
+        _debug = flag ? true : false;
+    };
 
-    .provider('Log', ['$logProvider', function($logProvider) {
-        var url, debug = true;
+    var setUrl = function(url){
+        _url = url ? url : '';
+    };
 
-        this.debugEnabled = function(flag) {
-            debug = flag ? true : false;
-        };
+    var _formatError = function(arg) {
+        if (arg instanceof Error) {
+            if (arg.stack) {
+                arg = (arg.message && arg.stack.indexOf(arg.message) === -1)
+                    ? 'Error: ' + arg.message + '\n' + arg.stack
+                    : arg.stack;
+            } else if (arg.sourceURL) {
+                arg = arg.message + '\n' + arg.sourceURL + ':' + arg.line;
+            }
+        }
+        return arg;
+    };
 
-        this.debugUrl = function(newUrl) {
-            url = newUrl;
-        };
+    var _serverLog = function(){
+        if (_url){
+            var req = new XMLHttpRequest();
+            req.open('POST', _url, false);
+            //req.overrideMimeType('application/json');
+            var data = (JSON && JSON.stringify) ? JSON.stringify(arguments) : '';
+            req.send(data);
+        }
+    };
 
-        this.$get = ['$log', '$http', function($log, $http){
-            var sendLogToServer = function(data){
-                if (url) $http.post(url, data);
+    var _consoleLog = function(type) {
+        var console = window.console || {},
+            logFn = console[type] || console.log || _noop;
+
+        if (logFn.apply) {
+            return function() {
+                var args = [];
+                for (var i= 0; i<arguments.length; i++){
+                    args.push(_formatError(arguments[i]));
+                }
+
+                if (!_debug) {
+                    if (type == 'error') logFn = _serverLog;
+                    else logFn = _noop;
+                }
+
+                return logFn.apply(console, args);
             };
+        }
 
-            return {
-                isDebugEnabled : function(){return debug;},
+        // we are IE which either doesn't have window.console => this is noop and we do nothing,
+        // or we are IE where console.log doesn't have apply so we log at least first 2 args
+        return function(arg1, arg2) {
+            arg2 = arg2 || '';
 
-                log: debug ? $log.log : sendLogToServer,
-                info: debug ? $log.info : sendLogToServer,
-                warn: debug ? $log.warn : sendLogToServer,
-                error: debug ? $log.error : sendLogToServer,
-                debug: debug ? $log.debug : sendLogToServer
+            if (!_debug) {
+                if (type == 'error') logFn = _serverLog;
+                else logFn = _noop;
+            }
+
+            logFn(arg1, arg2);
+        };
+    };
+
+    return {
+        setDebug : setDebug,
+        setUrl : setUrl,
+
+        log: _consoleLog('log'),
+        info: _consoleLog('info'),
+        warn: _consoleLog('warn'),
+        error: _consoleLog('error'),
+        debug: (function () {
+            var fn = _consoleLog('debug');
+
+            return function() {
+                if (_debug) {
+                    fn.apply(_self, arguments);
+                }
             };
-        }];
-    }])
-//    .factory('$exceptionHandler', function () {
-//        return function (exception, cause) {
-//            exception.message += ' (caused by "' + cause + '")';
-//            throw exception;
-//        };
-//    })
+        }())
+    };
+})();
 
-
-
-
+var cl = Log.log;
