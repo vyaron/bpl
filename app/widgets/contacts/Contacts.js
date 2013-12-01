@@ -3,7 +3,7 @@
 angular.module('bplApp.widgets')
 .directive('contacts', function() {
     return {
-        templateUrl: 'widgets/contacts/Contacts.html',
+        templateUrl: 'widgets/contacts/contacts.html',
         replace: true,
         controller: 'contacts',
         scope: {
@@ -12,9 +12,11 @@ angular.module('bplApp.widgets')
     };
 })
 
-.controller('contacts', ['$scope', '$modal', 'ContactsResource', function($scope, $modal, ContactsResource) {
-    var contactIns;
+.controller('contacts', ['$scope', '$modal', '$window', 'ContactsResource', function($scope, $modal, $window, ContactsResource) {
+    $scope.contactIns = null;
     $scope.contacts = [];
+
+    $scope.max = $scope.max ? $scope.max : 2;
 
     //TODO: create paginationService.setPage($scope, max, resource) / headerParser.getRange() ?
     $scope.setPage = function(page){
@@ -39,13 +41,13 @@ angular.module('bplApp.widgets')
     };
     $scope.setPage();
 
-       var showPopup = function(){
+       $scope.showPopup = function(){
             var modalInstance = $modal.open({
                 templateUrl: 'widgets/contacts/popup.html',
                 controller: 'contactsPopup',
                 resolve : {
                     contact : function(){
-                        return contactIns;
+                        return $scope.contactIns;
                     }
                 }
             });
@@ -58,19 +60,22 @@ angular.module('bplApp.widgets')
         };
 
         $scope.add = function(){
-            contactIns = new ContactsResource({name : '', image_url : 'img/customer/102.jpg'});
-            showPopup();
+            $scope.contactIns = new ContactsResource({name : '', image_url : 'img/customer/102.jpg'});
+            $scope.showPopup();
         };
 
         $scope.edit = function(contact){
-            contactIns = angular.copy(contact);
-            showPopup();
+            $scope.contactIns = angular.copy(contact);
+            $scope.showPopup();
         };
 
         $scope.delete = function(contact){
-            if (window.confirm('Are you shore?')) contact.$delete(function(){
-                $scope.setPage();
-            });
+            if ($window.confirm('Are you shore?')) {
+
+                contact.$delete(function(){
+                    $scope.setPage();
+                });
+            }
         };
 }])
 .controller('contactsPopup', ['$scope', '$modalInstance', 'ServerValidationService', 'translateFilter', 'contact', function($scope, $modalInstance, ServerValidationService,translateFilter, contact) {
@@ -86,7 +91,7 @@ angular.module('bplApp.widgets')
             });
         }
         else {
-            $scope.contact.$save({'forceError' : false}, function(){
+            $scope.contact.$save(function(){
                 $modalInstance.close();
             }, function(res){
                 ServerValidationService.handleRes(form, res);

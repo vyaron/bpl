@@ -5,7 +5,7 @@ describe('Resources', function() {
         var $httpBackend, CustomersResource;
         var dummyCustomer = {'first_name' : 'Ronen', 'last_name' : 'Cohen'};
 
-        beforeEach(module('bplApp.services', 'ngResource'));
+        beforeEach(module('bplApp.resources'));
 
         beforeEach(inject(function($injector){
             $httpBackend = $injector.get('$httpBackend');

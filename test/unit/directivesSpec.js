@@ -4,8 +4,8 @@
 
 describe('directives', function() {
     var $compile, $rootScope, template;
-
     beforeEach(module('bplApp.directives', 'common/templates/hello.html'));
+
 
     beforeEach(inject(function(_$compile_, _$rootScope_){
         // The injector unwraps the underscores (_) from around the parameter names when matching

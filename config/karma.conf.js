@@ -14,22 +14,30 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'common/lib/angular/angular.js',
-        'common/lib/angular/angular-*.min.js',
-        'common/lib/angular/angular-mocks.js',
+        'common/bower_components/angular/angular.js',
+        'common/bower_components/angular-*/*.min.js',
+        'common/bower_components/angular-mocks/angular-mocks.js',
+
+        'common/bower_components/angular-ui-bootstrap/dist/ui-bootstrap-tpls-0.7.0.js',
+
         'common/js/app.js',
-        'common/js/controllers/controllers.js',
-        'common/js/directives/directives.js',
-        'common/js/filters/filters.js',
-        'common/js/services/services.js',
+        //'common/js/controllers/controllers.js',
+        //'common/js/directives/directives.js',
+        //'common/js/filters/filters.js',
+        //'common/js/services/services.js',
 
         'common/js/services/**/*.js',
+        'resources/*.js',
+
+        'widgets/**/*.js',
+        'widgets/**/*.html'
+
 
         //'test/unit/**/*.js',
-        '../test/unit/directivesSpec.js',
-        '../test/unit/Resources/*Spec.js',
+        //'../test/unit/directivesSpec.js',
+        //'../test/unit/Resources/*Spec.js',
 
-        'common/templates/**/*.html'
+        //'common/templates/**/*.html'
     ],
 
 
@@ -38,7 +46,7 @@ module.exports = function(config) {
     ],
 
       preprocessors: {
-          'common/templates/**/*.html': 'ng-html2js'
+          'widgets/**/*.html': 'ng-html2js'
       },
 
     // test results reporter to use
