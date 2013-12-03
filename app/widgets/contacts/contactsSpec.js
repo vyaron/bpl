@@ -33,6 +33,11 @@ describe('widgets', function() {
             it('Replaces the element with the appropriate content', function(){
                 expect(element.find('button').text()).toEqual('Add');
             });
+
+            it('Should create 2 contacts in list', function(){
+                $httpBackend.flush();
+                expect(element.find('li').length).toBe(2);
+            });
         });
         describe('contacts controller', function() {
             var $modal, $window, contactsCtrl;
