@@ -10,6 +10,7 @@ var allowCrossDomain = function(req, res, next) {
     var oneof = false;
     if(req.headers.origin) {
         res.header('Access-Control-Allow-Origin', req.headers.origin);
+        res.header('Access-Control-Expose-Headers', 'Content-Range');
         oneof = true;
     }
     if(req.headers['access-control-request-method']) {
