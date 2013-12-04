@@ -13,8 +13,8 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.s
 })
 
 .config(['$httpProvider', 'TranslationsProvider', function($httpProvider, TranslationsProvider) {
-    Log.setDebug(true);
-    Log.setUrl("/LogErrors");
+   // Log.setDebug(true);
+    //Log.setUrl("/LogErrors");
 
     TranslationsProvider.lang = 'en';
 
@@ -36,7 +36,7 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.s
 
 	$http.defaults.cache = DataCacheFactory;
 	// Set the loggein user
-    cl("bplApp is Loaded");
+    D("bplApp is Loaded");
 }]);
 
 angular.module('bplApp.filters', []);

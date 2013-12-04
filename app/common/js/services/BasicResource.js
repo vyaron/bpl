@@ -39,6 +39,7 @@
  </example>
  */
 angular.module('bplApp.services').
+    //TODO: change to provider - support absolute url
     factory('BasicResource', ['$resource', function($resource){
         /**
          * @ngdoc method

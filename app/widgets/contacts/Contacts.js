@@ -7,7 +7,7 @@ angular.module('bplApp.widgets')
         replace: true,
         controller: 'contacts',
         scope: {
-            max: '@'
+            max: '=?'
         }
     };
 })
