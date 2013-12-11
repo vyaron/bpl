@@ -1,10 +1,31 @@
 'use strict';
-/**
- * Created by Yaron on 27/11/13.
- */
 
+/**
+ * @ngdoc function
+ * @name bplApp.services:DataCache
+ * @requires $cacheFactory
+ *
+ * @description
+ * Handle client side caching in memory.
+ *
+ * # General usage
+ * This is a wrapper around angular's $cacheFactory
+ *
+ * # Usage
+ * None, this happen behind the scene by angular when data is requested via $http.
+ *
+ * # Processing
+ * A wrapper and a hook point so we can extend caching behavior in the future,
+ * and be able to do things like: {angular-cache : http://jmdobry.github.io/angular-cache/}
+ *
+ * <pre>
+ *  var bplData = DataCache('BplData', {capacity: 100});
+ *  bplData.put("key", "value");
+ *  bplData.get("key"); // return "value"
+ * </pre>
+ */
 angular.module('bplApp.services')
-    .factory('DataCacheFactory', ['$cacheFactory', function($cacheFactory){
+    .factory('DataCache', ['$cacheFactory', function($cacheFactory){
         var _cacheFactory = $cacheFactory('Data');
 
         var infoFn = function(){return _cacheFactory.info();};

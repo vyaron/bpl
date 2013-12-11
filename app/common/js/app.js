@@ -29,12 +29,12 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.s
 	//$httpProvider.defaults.cache = true;
 	//$httpProvider.defaults.cache = $cacheFactory('myNewDefaultCache', { capacity: 100 });
 }])
-.run(['$http', '$cookies', 'DataCacheFactory', function ($http, $cookies, DataCacheFactory) {
+.run(['$http', '$cookies', 'DataCache', function ($http, $cookies, DataCache) {
     //cl($cookies);
 
     $cookies.bpl = "bpl-session-dummy-hash";
 
-	$http.defaults.cache = DataCacheFactory;
+	$http.defaults.cache = DataCache;
 	// Set the loggein user
     D("bplApp is Loaded");
 }]);
