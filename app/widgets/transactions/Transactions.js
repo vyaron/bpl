@@ -13,7 +13,7 @@ angular.module('bplApp.widgets')
     }
 
 )
-.controller('transactions', ['$scope', 'PubSubService', 'TransactionsResource', function($scope, PubSubService, TransactionsResource) {
+.controller('transactions', ['$scope', 'PubSub', 'TransactionsResource', function($scope, PubSubService, TransactionsResource) {
 
 	// Subscribe to chanel
 	PubSubService.subscribe($scope, PubSubService.CHANEL_ACCOUNT_SELECTED, function(event, args) {

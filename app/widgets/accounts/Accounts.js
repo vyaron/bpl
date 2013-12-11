@@ -18,7 +18,7 @@ angular.module('bplApp.widgets')
 	} 
 )
 
-.controller('accounts', ['$scope', 'PubSubService', 'AccountsResource', function($scope, PubSubService, AccountsResource) {
+.controller('accounts', ['$scope', 'PubSub', 'AccountsResource', function($scope, PubSubService, AccountsResource) {
     // Set the prefs including a default display type
     $scope.prefs = {displayType : $scope.displayType?  $scope.displayType : "sideBySide"};
     // Get the data

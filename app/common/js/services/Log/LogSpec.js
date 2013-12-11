@@ -1,9 +1,10 @@
 'use strict';
 
 describe('Log', function(){
-    //var console;
+    var originalConsole;
 
     beforeEach(function() {
+        originalConsole = window.console;
         var noop = function(){};
         window.console = {error : noop, info : noop, warn : noop, debug : noop};
         spyOn(window.console, 'debug');
@@ -13,6 +14,10 @@ describe('Log', function(){
 
         spyOn(XMLHttpRequest.prototype, 'open').andCallThrough();
         spyOn(XMLHttpRequest.prototype, 'send').andCallThrough();
+    });
+
+    afterEach(function(){
+        window.console = originalConsole;
     });
 
     it('should create global object Log', function(){

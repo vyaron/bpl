@@ -26,11 +26,12 @@ module.exports = function(config) {
         //'common/js/filters/filters.js',
         //'common/js/services/services.js',
 
-        'common/js/services/**/*.js',
-        'resources/*.js',
 
-        'widgets/**/*.js',
-        'widgets/**/*.html'
+        'common/js/services/**/*.js'//,
+        //'resources/*.js',
+
+        //'widgets/**/*.js',
+        //'widgets/**/*.html'
 
 
         //'test/unit/**/*.js',
