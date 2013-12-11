@@ -44,7 +44,7 @@ describe('Resources', function() {
 
         it ('should call GET "data/customers"', function(){
             $httpBackend.expectGET('data/customers').respond([]);
-            BasicResource.get({resourceName : 'customers'}).list();
+            BasicResource.get({resourceName : 'customers'}).query();
             $httpBackend.flush();
         });
 

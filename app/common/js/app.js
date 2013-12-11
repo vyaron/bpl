@@ -42,6 +42,6 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.s
 angular.module('bplApp.filters', []);
 angular.module('bplApp.controllers', []);
 angular.module('bplApp.directives', []);
-angular.module('bplApp.services', []);
+angular.module('bplApp.services', ['ngResource']);
 angular.module('bplApp.resources', ['ngResource', 'bplApp.services']);
 angular.module('bplApp.widgets', ['bplApp.resources', 'ui.bootstrap']);

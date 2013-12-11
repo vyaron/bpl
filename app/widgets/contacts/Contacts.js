@@ -23,7 +23,7 @@ angular.module('bplApp.widgets')
          var page = page ? (--page) : 0;
          var offset = Math.max(0, page) * $scope.max;
 
-         ContactsResource.list({offset:offset, limit:$scope.max}, function(contacts, headers){
+         ContactsResource.query({offset:offset, limit:$scope.max}, function(contacts, headers){
             $scope.contacts = contacts;
 
              //TODO: create paginationService

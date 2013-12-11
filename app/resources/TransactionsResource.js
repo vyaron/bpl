@@ -5,7 +5,7 @@ angular.module('bplApp.resources').
         return {
             get: function(opts) {
                 angular.extend(opts, params);
-                return BasicResource.get(angular.extend(opts));
+                return BasicResource(angular.extend(opts));
             }
         };
     }]);

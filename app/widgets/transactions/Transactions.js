@@ -13,12 +13,12 @@ angular.module('bplApp.widgets')
     }
 
 )
-.controller('transactions', ['$scope', 'PubSub', 'TransactionsResource', function($scope, PubSubService, TransactionsResource) {
+.controller('transactions', ['$scope', 'PubSub', 'TransactionsResource', function($scope, PubSub, TransactionsResource) {
 
 	// Subscribe to chanel
-	PubSubService.subscribe($scope, PubSubService.CHANEL_ACCOUNT_SELECTED, function(event, args) {
+    PubSub.subscribe(PubSub.CHANEL_ACCOUNT_SELECTED, $scope, function(event, args) {
 		$scope.accountId = args;
-		$scope.transactions = TransactionsResource.get({id:$scope.accountId}).list();
+		$scope.transactions = TransactionsResource.get({id:$scope.accountId}).query();
 	});
 	
 	// Handle Transaction popup

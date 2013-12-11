@@ -16,7 +16,7 @@
  * var CustomersResource = CustomersResource.get({id : 101});
  *
  * // GET customers list
- * var customers = CustomersResource.list();
+ * var customers = CustomersResource.query();
  *
  * // GET customer object and do update()
  * var customer = CustomersResource.get({id : 101}, function(customer){
@@ -45,7 +45,7 @@ angular.module('bplApp.resources').
     factory('CustomersResource', ['BasicResource', 'CurrUser', function(BasicResource, CurrUser){
         var params = {resourceName : 'customers', id: CurrUser.getId()};
 
-        var CustomersResource = BasicResource.get(angular.extend(params));
+        var CustomersResource = BasicResource(angular.extend(params));
 
         /**
          * @ngdoc method

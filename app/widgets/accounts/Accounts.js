@@ -22,7 +22,7 @@ angular.module('bplApp.widgets')
     // Set the prefs including a default display type
     $scope.prefs = {displayType : $scope.displayType?  $scope.displayType : "sideBySide"};
     // Get the data
-    AccountsResource.list(function(accounts) {
+    AccountsResource.query(function(accounts) {
         $scope.accounts = accounts;
         $scope.accountSelected = function() {
             PubSubService.publish(PubSubService.CHANEL_ACCOUNT_SELECTED, this.selectedAccount);

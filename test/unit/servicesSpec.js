@@ -68,7 +68,7 @@ describe('DataService Services', function(){
             var monsterService = DataService.get(DataService.MONSTER);
 
             $httpBackend.expectGET('data/monster/list').respond([]);
-            monsterService.list();
+            monsterService.query();
 
             $httpBackend.flush();
         });
