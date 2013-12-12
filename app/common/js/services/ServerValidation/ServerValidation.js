@@ -32,7 +32,7 @@
 angular.module('bplApp.services')
 .factory('ServerValidation', function () {
     var handleRes = function(form, res){
-        if (res && res.data && res.data.errors){
+        if (form && res && res.data && res.data.errors){
             for (name in res.data.errors){
                 if (name in form) {
                     form[name].$setValidity(res.data.errors[name], false);

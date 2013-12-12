@@ -94,7 +94,7 @@ angular.module('bplApp.widgets')
             });
         }
         else {
-            $scope.contact.$save({forceError : false}, function(){
+            $scope.contact.$save(function(){
                 $modalInstance.close();
             }, function(res){
                 ServerValidation(form, res);

@@ -159,11 +159,10 @@ describe('widgets', function() {
                     close : function(){}
                 };
 
-                ServerValidation = {handleRes : function(){}};
+                ServerValidation = jasmine.createSpy('ServerValidation');
 
                 spyOn($modalInstance, 'dismiss');
                 spyOn($modalInstance, 'close');
-                spyOn(ServerValidation, 'handleRes');
                 spyOn(contact, '$update');
 
                 var contactsPopupCtrl = $controller('contactsPopup', {
@@ -219,7 +218,7 @@ describe('widgets', function() {
 
                 $httpBackend.flush();
 
-                expect(ServerValidation.handleRes.mostRecentCall.args[1].data).toEqual({errors : errors});
+                expect(ServerValidation.mostRecentCall.args[1].data).toEqual({errors : errors});
             });
 
             it('should contain cancel function', function(){
@@ -232,36 +231,4 @@ describe('widgets', function() {
             });
         });
     });
-//    var $compile, scope, $httpBackend, element;
-//    beforeEach(module('bplApp.resources', 'bplApp.widgets', 'ui.bootstrap', 'widgets/contacts/contacts.html', 'widgets/contacts/popup.html'));
-//
-//
-//    beforeEach(inject(function($injector, _$compile_, _$rootScope_){
-//        // The injector unwraps the underscores (_) from around the parameter names when matching
-//        $compile = _$compile_;
-//        scope = _$rootScope_.$new();
-//        $httpBackend = $injector.get('$httpBackend');
-//
-//        $httpBackend.whenGET('data/contacts?limit=2&offset=0').respond(
-//            [{id : 1, name : 'Ronen Cohen'}, {id : 2, name : 'Miri Kaplan'}],
-//            {'content-range' : '0-2/3'}
-//        );
-//
-//        element = angular.element('<div contacts></div>');
-//        var compiled = $compile(element);
-//        compiled(scope);
-//        scope.$digest();
-//    }));
-//
-//    describe('contacts', function(){
-//        it('Should contain contacts list with 2 items', function(){
-////            cl(element.html());
-////            $httpBackend.flush();
-////            expect(element.find('.contacts li').length).toBe(2);
-//        });
-//
-//        it('Should contain add button', function(){
-//            expect(element.find('button').text()).toEqual('Add');
-//        });
-//    });
 });
