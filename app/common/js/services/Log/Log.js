@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @ngdoc function
+ * @ngdoc object
  * @name Log
  *
  * @description
@@ -40,7 +40,7 @@ var Log = (function(){
      * @description
      * Method to set debug mode.
      *
-     * @param {Boolean} flag
+     * @param {Boolean} flag show debug in console
      */
     var setDebug = function(flag){
         _debug = flag ? true : false;
@@ -121,7 +121,7 @@ var Log = (function(){
          * Method try to logs a value – level debug.
          * Those messages will only be outputted when in debug mode.
          *
-         * @prams {Mix} arguments
+         * @prams {...*} arguments -
          */
         debug : _console('debug'),
 
@@ -134,7 +134,7 @@ var Log = (function(){
          * Method try to logs a value – level info.
          * Those messages will only be outputted when in debug mode.
          *
-         * @prams {Mix} arguments
+         * @prams {...*} arguments -
          */
         info : _console('info'),
 
@@ -147,7 +147,7 @@ var Log = (function(){
          * Method try to logs a value – level warn.
          * Those messages will only be outputted when in debug mode.
          *
-         * @prams {Mix} arguments
+         * @prams {...*} arguments -
          */
         warn :  _console('warn'),
 
@@ -161,7 +161,7 @@ var Log = (function(){
          * Those messages will only be outputted when in debug mode
          * or send to server if url is defined.
          *
-         * @prams {Mix} arguments
+         * @prams {...*} arguments -
          */
         error : _console('error')
     };
@@ -175,6 +175,6 @@ var Log = (function(){
  * @description
  * Alias for Log.debug
  *
- * @prams {Mix} arguments
+ * @prams {Mix} arguments -
  */
 var D = Log.debug;

@@ -78,7 +78,7 @@ angular.module('bplApp.widgets')
             }
         };
 }])
-.controller('contactsPopup', ['$scope', '$modalInstance', 'ServerValidationService', 'translateFilter', 'contact', function($scope, $modalInstance, ServerValidationService,translateFilter, contact) {
+.controller('contactsPopup', ['$scope', '$modalInstance', 'ServerValidation', 'translateFilter', 'contact', function($scope, $modalInstance, ServerValidation,translateFilter, contact) {
     $scope.contact = contact;
 
     $scope.save = function () {
@@ -94,7 +94,7 @@ angular.module('bplApp.widgets')
             $scope.contact.$save(function(){
                 $modalInstance.close();
             }, function(res){
-                ServerValidationService.handleRes(form, res);
+                ServerValidation.handleRes(form, res);
             });
         }
     };

@@ -149,7 +149,7 @@ describe('widgets', function() {
         });
 
         describe('contactsPopup controller', function() {
-            var $modalInstance, ServerValidationService, contact;
+            var $modalInstance, ServerValidation, contact;
 
             beforeEach(function(){
                 contact = new ContactsResource({id : 1, name : 'Ronen Cohen'});
@@ -159,17 +159,17 @@ describe('widgets', function() {
                     close : function(){}
                 };
 
-                ServerValidationService = {handleRes : function(){}};
+                ServerValidation = {handleRes : function(){}};
 
                 spyOn($modalInstance, 'dismiss');
                 spyOn($modalInstance, 'close');
-                spyOn(ServerValidationService, 'handleRes');
+                spyOn(ServerValidation, 'handleRes');
                 spyOn(contact, '$update');
 
                 var contactsPopupCtrl = $controller('contactsPopup', {
                     '$scope' : $scope,
                     '$modalInstance' : $modalInstance,
-                    'ServerValidationService' : ServerValidationService,
+                    'ServerValidation' : ServerValidation,
                     'translateFilter' : {},
                     'contact' : contact
                 });
@@ -209,7 +209,7 @@ describe('widgets', function() {
                 expect($modalInstance.close).toHaveBeenCalled();
             });
 
-            it("tracks that the ServerValidationService.handleRes was called", function(){
+            it("tracks that the ServerValidation.handleRes was called", function(){
                 delete contact.id;
 
                 var errors = {name : 'required'};
@@ -219,7 +219,7 @@ describe('widgets', function() {
 
                 $httpBackend.flush();
 
-                expect(ServerValidationService.handleRes.mostRecentCall.args[1].data).toEqual({errors : errors});
+                expect(ServerValidation.handleRes.mostRecentCall.args[1].data).toEqual({errors : errors});
             });
 
             it('should contain cancel function', function(){

@@ -1,7 +1,7 @@
 'use strict';
 /**
  * @ngdoc function
- * @name bplApp.services:BasicResource
+ * @name bplApp.BasicResource
  * @requires $resource
  *
  * @description
@@ -14,6 +14,15 @@
  * # General usage
  * Define the general structure of the $resource
  *
+ <pre>
+    var CustomersResource = BasicResource({resourceName : 'customers'});
+    var customers = CustomersResource.query();
+    var customer = CustomersResource.get({id : 101}, function(customer){
+        customer.first_name = 'Ronen';
+        customer.$update();
+     });
+ </pre>
+ *
  * @param {Object} config configuration object must include 'resourceName' property.
  * @returns {Object} A resource "class" object with methods for the default set of resource actions
  * optionally extended with custom `actions`. The default set contains these actions:
@@ -24,37 +33,11 @@
  * 'query': {method:'GET', isArray:true},
  * 'remove': {method:'DELETE'}};
  *
- * Calling these methods invoke an {@link ng.$http} with the specified http method,
+ * Calling these methods invoke an {@link http://docs.angularjs.org/api/ng.$http ng.$http} with the specified http method,
  * destination and parameters. When the data is returned from the server then the object is an
  * instance of the resource class. The actions `save`, `remove` and `delete` are available on it
  * as methods with the `$` prefix. This allows you to easily perform CRUD operations (create,
  * read, update, delete) on server-side data like this:
- * <pre>
-     var CustomersResource = BasicResource({resourceName : 'customers'});
-     var customers = CustomersResource.query();
-     var customer = CustomersResource.get({id : 101}, function(customer){
-        customer.first_name = 'Ronen';
-        customer.$update();
-     });
-   </pre>
-
- * @example
- <example>
-     <file name="index.html">
-        <div ng-controller="FetchCtrl" id="customer">{{customer.first_name}}</div>
-     </file>
-     <file name="script.js">
-        function FetchCtrl($scope, BasicResource){
-            var CustomersResource = BasicResource({resourceName : 'customers'});
-            $scope.customer = CustomersResource.get({id : 101});
-        }
-     </file>
-     <file name="scenario.js">
-         it('should get Ronen', function() {
-            expect(element('#customer')).toBe('Ronen');
-        });
-     </file>
- </example>
  */
 angular.module('bplApp.services').
     provider('BasicResource', [function(){
@@ -74,8 +57,8 @@ angular.module('bplApp.services').
 
                 /**
                  * @ngdoc function
-                 * @name bplApp.services:BasicResource#getConfig
-                 * @methodOf bplApp.services:BasicResource
+                 * @name bplApp.BasicResource#getConfig
+                 * @methodOf bplApp.BasicResource
                  *
                  * @description
                  * Method to get resource config object.

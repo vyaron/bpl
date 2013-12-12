@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc object
- * @name bplApp.services:PubSub
+ * @name bplApp.PubSub
  * @requires $broadcast
  * @requires $on
  *
@@ -39,8 +39,8 @@ angular.module('bplApp.services')
 
         /**
          * @ngdoc method
-         * @name bplApp.services:PubSub#publish
-         * @methodOf bplApp.services:PubSub
+         * @name bplApp.PubSub#publish
+         * @methodOf bplApp.PubSub
          *
          * @description
          * Publishes the message (with args) to all subscribers of this channel.
@@ -60,8 +60,8 @@ angular.module('bplApp.services')
 
         /**
          * @ngdoc method
-         * @name bplApp.services:PubSub#subscribe
-         * @methodOf bplApp.services:PubSub
+         * @name bplApp.PubSub#subscribe
+         * @methodOf bplApp.PubSub
          *
          * @description
          * Subscribes the given $scope to a channel, the given callback will be called with the args received in publish.
@@ -79,8 +79,8 @@ angular.module('bplApp.services')
 
         /**
          * @ngdoc method
-         * @name bplApp.services:PubSub#unsubscribe
-         * @methodOf bplApp.services:PubSub
+         * @name bplApp.PubSub#unsubscribe
+         * @methodOf bplApp.PubSub
          *
          * @description
          * Unsubscribe the given $scope from a channel

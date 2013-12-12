@@ -1,7 +1,7 @@
 'use strict';
 /**
  * @ngdoc object
- * @name bplApp.services:HttpInterceptor
+ * @name bplApp.HttpInterceptor
  * @requires $q
  * @requires $window
  * @requires DataCache
@@ -20,15 +20,15 @@ angular.module('bplApp.services')
 
         /**
          * @ngdoc method
-         * @name bplApp.services:HttpInterceptor#request
-         * @methodOf bplApp.services:HttpInterceptor
+         * @name bplApp.HttpInterceptor#request
+         * @methodOf bplApp.HttpInterceptor
          *
          * @description
          * make sure remove caching case none-GET requests
          * function return the config directly or as a promise.
          *
-         * @param config
-         * @returns {Object|Promise}
+         * @param {*} config -
+         * @returns {Object | Promise} -
          */
         'request': function(config) {
             //D('Requesting: ' + config.url + '(' + config.method + ')');
@@ -39,14 +39,14 @@ angular.module('bplApp.services')
 
         /**
          * @ngdoc method
-         * @name bplApp.services:HttpInterceptor#request
-         * @methodOf bplApp.services:requestError
+         * @name bplApp.HttpInterceptor#request
+         * @methodOf bplApp.HttpInterceptor
          *
          * @description
          * interceptor gets called when a previous interceptor threw an error or resolved with a rejection.
          *
-         * @param rejection
-         * @returns {Promise}
+         * @param {*} rejection -
+         * @returns {Promise} -
          */
         'requestError': function(rejection) {
             //D("Intercepted - Request Error");
@@ -55,15 +55,15 @@ angular.module('bplApp.services')
 
         /**
          * @ngdoc method
-         * @name bplApp.services:HttpInterceptor#response
-         * @methodOf bplApp.services:HttpInterceptor
+         * @name bplApp.HttpInterceptor#response
+         * @methodOf bplApp.HttpInterceptor
          *
          * @description
          * interceptors get called with http response object.
          * The function return the response directly or as a promise.
          *
-         * @param response
-         * @returns {Object|Promise}
+         * @param {*} response -
+         * @returns {Object | Promise} -
          */
         'response': function(response) {
             //D(response);
@@ -72,15 +72,15 @@ angular.module('bplApp.services')
 
         /**
          * @ngdoc method
-         * @name bplApp.services:HttpInterceptor#responseError
-         * @methodOf bplApp.services:HttpInterceptor
+         * @name bplApp.HttpInterceptor#responseError
+         * @methodOf bplApp.HttpInterceptor
          *
          * @description
          * Case status = 403 redirect to https://login.bankhapoalim.co.il
          * interceptor gets called when a previous interceptor threw an error or resolved with a rejection.
          *
-         * @param rejection
-         * @returns {Promise}
+         * @param {*} rejection -
+         * @returns {Promise} -
          */
         'responseError': function(rejection) {
             if (rejection.status == 403) $window.location.href = 'https://login.bankhapoalim.co.il';
