@@ -1,5 +1,6 @@
 'use strict';
 
+
 angular.module('bplApp.widgets')
 .directive('contacts', function() {
     return {
@@ -84,6 +85,8 @@ angular.module('bplApp.widgets')
     $scope.save = function () {
         var form = this.form;
 
+        if (form) form.$setPristine(true);
+
         if ($scope.contact.id) {
             $scope.contact.$update(function(){
                 $modalInstance.close();
@@ -91,10 +94,10 @@ angular.module('bplApp.widgets')
             });
         }
         else {
-            $scope.contact.$save(function(){
+            $scope.contact.$save({forceError : false}, function(){
                 $modalInstance.close();
             }, function(res){
-                ServerValidation.handleRes(form, res);
+                ServerValidation(form, res);
             });
         }
     };

@@ -36,6 +36,26 @@
     <div transactions></div>
 </div>
 
+<!--<div ng-controller="TestCtrl">-->
+    <!--<form name="form" ng-submit="submit()" novalidate>-->
+        <!--<label>Name:-->
+            <!--<input ng-model="contact.name" type="text" name="name" required/>-->
+        <!--</label>-->
+
+        <!--<div ng-show="form.name.$dirty && form.name.$invalid" class="error">-->
+            <!--<span ng-show="form.name.$error.required">Enter contact full name.</span>-->
+        <!--</div>-->
+
+        <!--<label>Email:-->
+            <!--<input ng-model="contact.email" type="email" name="email" required/>-->
+        <!--</label>-->
+        <!--<div ng-show="form.email.$dirty && form.email.$invalid" class="error">-->
+            <!--<span ng-show="form.email.$error.email">Wrong email pattern</span>-->
+        <!--</div>-->
+
+        <!--<button type="submit">Clear</button>-->
+    <!--</form>-->
+<!--</div>-->
 
 <footer>
     <script src="common/js/services/Log/Log.js"></script>
@@ -77,6 +97,19 @@
     <script src="widgets/accounts/Accounts.js"></script>
     <script src="widgets/contacts/Contacts.js"></script>
     <script src="widgets/contacts/i18n.js"></script>
+
+    <script>
+        var TestCtrl = function($scope, $timeout){
+            $scope.submit = function(){
+                var form = this.form;
+                $timeout(function(){
+                    D(form);
+                    //form.$setDirty(true);
+                    form.$setPristine(true)
+                }, 2000);
+            };
+        };
+    </script>
 </footer>
 </body>
 </html>
