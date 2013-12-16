@@ -17,6 +17,9 @@ angular.module('bplApp.widgets')
     $scope.contactIns = null;
     $scope.contacts = [];
 
+
+    //dd("aha");
+
     $scope.max = $scope.max ? $scope.max : 2;
 
     //TODO: create paginationService.setPage($scope, max, resource) / headerParser.getRange() ?

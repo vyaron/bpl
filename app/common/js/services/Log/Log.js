@@ -177,4 +177,16 @@ var Log = (function(){
  *
  * @prams {Mix} arguments -
  */
-var D = Log.debug;
+var d = Log.debug;
+
+var dd = function() {
+    //console.log((new Error).stack);
+
+    var trace = printStackTrace();
+    var callerLine = trace[4];
+    //console.log(callerLine);
+//    var index = caller_line.indexOf("at ");
+//    var clean = caller_line.slice(index+2, caller_line.length);
+//
+//    console.log("clean: " , clean);
+}

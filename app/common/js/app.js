@@ -36,7 +36,7 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.s
 
 	$http.defaults.cache = DataCache;
 	// Set the loggein user
-    D("bplApp is Loaded");
+    //d("bplApp is Loaded");
 }]);
 
 angular.module('bplApp.filters', []);
