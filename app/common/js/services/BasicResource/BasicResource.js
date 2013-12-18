@@ -42,18 +42,129 @@
 angular.module('bplApp.services').
     provider('BasicResource', [function(){
         var URL = 'data';
-        var BasicResource = {};
-        BasicResource.setUrl = function(url){
+        var BasicResourceProvider = {};
+        BasicResourceProvider.setUrl = function(url){
             if (url) URL = url;
         };
 
-        BasicResource.$get = ['$resource', function($resource){
+        BasicResourceProvider.$get = ['$resource', 'PubSub', 'DataCache', 'Range', function($resource, PubSub, DataCache, Range){
             return function(config){
                 var resourceConfig = angular.extend({resourceName : null, id : '@id', subResourceName : '@subResourceName', subId : '@subId'}, config);
+
+                var sortedKeys = function(obj) {
+                    var keys = [];
+                    for (var key in obj) {
+                        if (obj.hasOwnProperty(key)) {
+                            keys.push(key);
+                        }
+                    }
+                    return keys.sort();
+                };
+
+                var getCacheKey = function(params){
+                    var keys = sortedKeys(params);
+
+                    var cacheKey = URL;
+
+                    cacheKey += '/' + resourceConfig.resourceName;
+
+                    if ('id' in params) {
+                        cacheKey += '/' + params.id;
+                        delete params.id;
+                    }
+                    if ('subResourceName' in resourceConfig && (resourceConfig.subResourceName[0] != '@')) cacheKey += '/' + resourceConfig.subResourceName;
+                    if ('subId' in params) {
+                        cacheKey += '/' + params.subId;
+                        delete  params.subId;
+                    }
+
+                    var uri = '';
+                    for (var i=0; i < keys.length; i++){
+                        var key = keys[i];
+
+                        if (key == 'id' || key == 'subId') continue;
+
+                        uri += '&' + key +'='+ params[key];
+                    }
+
+                    if (uri) cacheKey += '?' + uri.substr(1);
+
+                    return cacheKey;
+                };
+
+                var clearCache = function(){
+                    var args = arguments;
+
+                    var isDeleteCache = (arguments[0] === true) ? true : false;
+                    if (isDeleteCache){
+                        args = [];
+                        if (arguments[1]) args.push(arguments[1]);
+                        if (arguments[2]) args.push(arguments[2]);
+                        if (arguments[3]) args.push(arguments[3]);
+                        if (arguments[4]) args.push(arguments[4]);
+
+                        var params = angular.isObject(arguments[1]) ? angular.copy(arguments[1]) : {};
+                        var cacheKey = getCacheKey(params);
+
+
+                        DataCache.remove(cacheKey);
+
+                        return args;
+                    }
+
+                    return args;
+                };
+
+                var publishResourceChanged = function(res){
+                    res.$promise.then(function(data){
+                        var channel = resourceConfig.resourceName;
+                        if ('subResourceName' in resourceConfig && (resourceConfig.subResourceName[0] != '@')) channel += '_' + resourceConfig.subResourceName;
+
+                        channel = channel.toUpperCase();
+                        if (channel in PubSub) {
+                            PubSub.publish(PubSub[channel], data);
+                        }
+
+                    });
+                };
 
                 var resource = $resource(URL + '/:resourceName/:id/:subResourceName/:subId', resourceConfig, {
                     update : {method: 'PUT'}
                 });
+
+                var BasicResource = {};
+
+                BasicResource.get = function(){
+                    var args = clearCache.apply(null, arguments);
+                    var res = resource.get.apply(null, args);
+
+                    return res;
+                };
+
+                BasicResource.query = function(){
+                    var args = clearCache.apply(null, arguments);
+                   return  resource.query.apply(null, args);
+                };
+
+                BasicResource.save = function(){
+                    var res = resource.save.apply(null, arguments);
+                    publishResourceChanged(res);
+                    return res;
+                };
+
+                BasicResource.update = function(){
+                    var res = resource.update.apply(null, arguments);
+                    publishResourceChanged(res);
+                    return res;
+                };
+
+                BasicResource.remove = function(){
+                    var res = resource.remove.apply(null, arguments);
+                    publishResourceChanged(res);
+                    return res;
+                };
+
+                BasicResource.getRange = Range;
 
                 /**
                  * @ngdoc function
@@ -65,13 +176,13 @@ angular.module('bplApp.services').
                  *
                  * @returns {Object} resource config
                  */
-                resource.getConfig = function(){
+                BasicResource.getConfig = function(){
                     return resourceConfig;
                 };
 
-                return resource;
+                return BasicResource;
             };
         }];
 
-        return BasicResource;
+        return BasicResourceProvider;
     }]);

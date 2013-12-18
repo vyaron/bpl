@@ -32,7 +32,7 @@ angular.module('bplApp.services')
          */
         'request': function(config) {
             //D('Requesting: ' + config.url + '(' + config.method + ')');
-            if (config.method != 'GET') DataCache.removeAll();
+            //if (config.method != 'GET') DataCache.removeAll();
 
             return config || $q.when(config);
         },

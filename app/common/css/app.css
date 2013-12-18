@@ -48,3 +48,10 @@
 .maxWidth300 {
   max-width: 300px;
 }
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+.rtl th {
+  text-align: right;
+}

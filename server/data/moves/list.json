@@ -1,0 +1,122 @@
+[
+    {
+        "id" : 1,
+        "created_at" : "1387095240000",
+        "category_id" : 1,
+        "description" : "ריבית הלוואה",
+        "right" : null,
+        "duty" : -848,
+        "balance" : -9069,
+        "is_conditional" : true,
+        "adviser" : null
+    },
+    {
+        "id" : 2,
+        "created_at" : "1387065240000",
+        "category_id" : 3,
+        "description" : "חיוב לכרטיס מאסטרקארד",
+        "right" : null,
+        "duty" : -340,
+        "balance" : -8235,
+        "is_conditional" : true,
+        "adviser" : null
+    },
+    {
+        "id" : 3,
+        "created_at" : "1387064240000",
+        "category_id" : 2,
+        "description" : "משיכת מזומנית",
+        "right" : null,
+        "duty" : -445,
+        "balance" : -7895,
+        "is_conditional" : true,
+        "adviser" : null
+    },
+    {
+        "id" : 4,
+        "created_at" : "1387064240000",
+        "category_id" : 4,
+        "description" : "הפקדת שיק",
+        "right" : 834,
+        "duty" : null,
+        "balance" : -7450,
+        "is_conditional" : false,
+        "adviser" : null
+    },
+    {
+        "id" : 5,
+        "created_at" : "1387055240000",
+        "category_id" : 2,
+        "description" : "הערת כסף",
+        "right" : 1045,
+        "duty" : null,
+        "balance" : 144234,
+        "is_conditional" : false,
+        "adviser" : {
+            "title" : "יותר משתלם להעביר כספים באינטרנט",
+            "description" : "מעבירים כספים בקלות באינטרנט ונהנים משירות פשוט ומעלמות נמוכות",
+            "url" : "/plan/1",
+            "url_label" : "בחר תוכנית"
+        }
+    },
+    {
+        "id" : 6,
+        "created_at" : "1387095240000",
+        "category_id" : 1,
+        "description" : "ריבית הלוואה",
+        "right" : null,
+        "duty" : -848,
+        "balance" : -9069,
+        "is_conditional" : false,
+        "adviser" : null
+    },
+    {
+        "id" : 7,
+        "created_at" : "1387065240000",
+        "category_id" : 3,
+        "description" : "חיוב לכרטיס מאסטרקארד",
+        "right" : null,
+        "duty" : -340,
+        "balance" : -8235,
+        "is_conditional" : false,
+        "adviser" : null
+    },
+    {
+        "id" : 8,
+        "created_at" : "1387064240000",
+        "category_id" : 2,
+        "description" : "משיכת מזומנית",
+        "right" : null,
+        "duty" : -445,
+        "balance" : -7895,
+        "is_conditional" : false,
+        "adviser" : null
+    },
+    {
+        "id" : 9,
+        "created_at" : "1387064240000",
+        "category_id" : 4,
+        "description" : "הפקדת שיק",
+        "right" : 834,
+        "duty" : null,
+        "balance" : -7450,
+        "is_conditional" : false,
+        "adviser" : null
+    },
+    {
+        "id" : 10,
+        "created_at" : "1387055240000",
+        "category_id" : 2,
+        "description" : "הערת כסף",
+        "right" : 1045,
+        "duty" : null,
+        "balance" : 144234,
+        "is_conditional" : false,
+        "adviser" : {
+            "title" : "יותר משתלם להעביר כספים באינטרנט",
+            "description" : "מעבירים כספים בקלות באינטרנט ונהנים משירות פשוט ומעלמות נמוכות",
+            "url" : "/plan/1",
+            "url_label" : "בחר תוכנית"
+        }
+    }
+]

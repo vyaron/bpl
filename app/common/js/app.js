@@ -1,7 +1,7 @@
 'use strict';
 
 // This is our main module
-angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.services', 'bplApp.resources', 'bplApp.directives', 'bplApp.widgets', 'ui.bootstrap'])
+angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.services', 'bplApp.resources', 'bplApp.directives', 'bplApp.widgets', 'ui.bootstrap', 'ngTable'])
 
 .constant('ENTITIES', {MONSTER : 'monster', CUSTOMER : 'customer', CONTACT: 'contact', ACCOUNT : 'account', TRANSACTION : 'transaction'})
 

@@ -1,0 +1,34 @@
+<div class="moves">
+    <table ng-table="tableParams" class="table">
+        <thead>
+        <tr>
+            <th ng-if="isGrouped">&nbsp;</th>
+            <th moves-sort="created_at">תאריך</th>
+            <th moves-sort="category_id">תיאור פעולה</th>
+            <th moves-sort="right">זכות</th>
+            <th moves-sort="duty">חובה</th>
+            <th>יתרה בש"ח</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="group in $groups">
+            <tr ng-repeat-start="(i, move) in group.data" ng-click="showDetails(move)">
+                <td ng-if="isGrouped">{{ i == 0 ? group.value : ''}}</td>
+                <td>{{ move.created_at | date:'EEE dd.MM'}}</td>
+                <td><i ng-class="getCtgClass(move)">&nbsp;</i> {{ move.description }}</td>
+                <td class="right">{{ move.right | number:2}}</td>
+                <td class="duty">{{ move.duty | number:2}}</td>
+                <td>
+                    <div class="balance">
+                        {{ move.balance | number:2}}
+                        <button ng-if="move.adviser" class="adviser" popover-title="{{ move.adviser.title }}" popover="{{ move.adviser.description }}" popover-placement="left">&nbsp;</button>
+                    </div>
+                </td>
+            </tr>
+            <tr ng-repeat-end ng-show="move.$isOpen">
+                <td colspan="6">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus blanditiis debitis deserunt et eveniet, fugiat illo natus necessitatibus placeat possimus qui quibusdam quidem quod reprehenderit sed temporibus vero voluptas?
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -34,6 +34,7 @@ angular.module('bplApp.services')
     var chanel2scopes = {};
 
 	return {
+        CONTACTS : 'onContactsChanged',
 		CHANEL_ACCOUNT_SELECTED     : 'cnlAccountSelected',
         CHANEL_SEVERE_ERROR         : 'cnlSevereError',
 
