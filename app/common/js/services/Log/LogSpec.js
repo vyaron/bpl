@@ -29,7 +29,7 @@ describe('Log', function(){
     });
 
     it('should create D global alias to Log.debug', function(){
-        expect(D).toEqual(Log.debug);
+        expect(d).toEqual(Log.debug);
     });
 
     it('should contain Log object with function info', function(){

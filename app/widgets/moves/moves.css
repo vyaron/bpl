@@ -30,12 +30,46 @@
   border: none;
   background-color: #add8e6;
 }
+.filters > li {
+  display: block;
+  float: left;
+  width: 33%;
+}
+.filters ul {
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+  background-color: #181818;
+  border: 1px solid darkgray;
+  border-top: none;
+}
+.filters ul li {
+  padding: 5px 10px;
+}
+ul.filters,
+.filters ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.filters {
+  width: 100%;
+}
+/*RTL*/
 .rtl .moves .ctg {
   margin-right: 0;
   margin-left: 5px;
 }
-.rtl .right,
-.rtl .duty,
-.rtl .balance {
+.rtl .moves .income,
+.rtl .moves .expense,
+.rtl .moves .balance {
   direction: ltr;
+}
+.rtl .moves .filters > li {
+  float: right;
+}
+.rtl .moves .balance .adviser {
+  left: -12px;
+  right: auto;
 }

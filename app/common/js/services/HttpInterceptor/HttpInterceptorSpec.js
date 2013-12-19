@@ -40,11 +40,11 @@ describe('bplApp.services', function (){
             expect(HttpInterceptor.request(config)).toBe(config);
         });
 
-        it ('should call DataCache.removeAll', function(){
-            var config = {method : 'DELETE'};
-            HttpInterceptor.request(config);
-            expect(DataCache.removeAll).toHaveBeenCalled();
-        });
+//        it ('should call DataCache.removeAll', function(){
+//            var config = {method : 'DELETE'};
+//            HttpInterceptor.request(config);
+//            expect(DataCache.removeAll).toHaveBeenCalled();
+//        });
 
         it ('track request call $q.when with false', function(){
             HttpInterceptor.request(false);

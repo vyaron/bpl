@@ -35,7 +35,7 @@ angular.module('bplApp.filters')
 // <div>{{'hello world'| translate:'ru'}}</div>
 // <div>{{'hello world'| translate:'he'}}</div>
 
-.filter('translate', ['Translations', function(Translations){
+.filter('trans', ['Translations', function(Translations){
     return function(input, lang){
         return Translations.get(lang, input);
     };

@@ -1,22 +1,67 @@
 <div class="moves">
     <table ng-table="tableParams" class="table">
         <thead>
-        <tr>
-            <th ng-if="isGrouped">&nbsp;</th>
-            <th moves-sort="created_at">תאריך</th>
-            <th moves-sort="category_id">תיאור פעולה</th>
-            <th moves-sort="right">זכות</th>
-            <th moves-sort="duty">חובה</th>
-            <th>יתרה בש"ח</th>
-        </tr>
+            <tr>
+                <th ng-if="isGrouped">&nbsp;</th>
+                <th colspan="5">
+                    <ul class="filters" moves-filter-dropdown>
+                        <li>
+                            <div>
+                                <h3>{{ 'Date' | trans }}</h3>
+                                <p>{{ filterDateTitle }}</p>
+                            </div>
+
+                            <ul>
+                                <li ng-click="filterByDate('30_DAYS')">{{ '30 Days' | trans }}</li>
+                                <li ng-click="filterByDate('3_MONTH')">{{ 'Three Months' | trans }}</li>
+                                <li ng-click="filterByDate('6_MONTH')">{{ 'Half Last Year' | trans }}</li>
+                                <li ng-click="filterByDate('CUSTOM')">
+                                    {{ 'Exact Date' | trans}}
+                                    <form name="filterByDatesForm" ng-submit="submitFilterByDate()" ng-show="showFilterByDatesForm">
+                                        <input type="text" ng-model="filter.starts_at"/><br/>
+                                        <input type="text" ng-model="filter.ends_at"/><br/>
+                                        <button class="btn" type="submit">הצג</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>{{ 'Type of action' | trans}}</h3>
+                                <p>{{ filterCtgsTitle }}</p>
+                            </div>
+                            <ul>
+                                <li>aaa</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>{{ 'Sum' | trans}}</h3>
+                                <p>{{ filterSumTitle }}</p>
+                            </div>
+                            <ul>
+                                <li>aaa</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </th>
+            </tr>
+            <tr>
+                <th ng-if="isGrouped">&nbsp;</th>
+                <th moves-sort="created_at">{{ 'Date' | trans }}</th>
+                <th moves-sort="category_id">{{ 'Description of action' | trans }}</th>
+                <th moves-sort="income">{{ 'Income' | trans }}</th>
+                <th moves-sort="expense">{{ 'Expense' | trans}}</th>
+                <th>{{ 'Balance in NIS' | trans}}</th>
+            </tr>
         </thead>
         <tbody ng-repeat="group in $groups">
             <tr ng-repeat-start="(i, move) in group.data" ng-click="showDetails(move)">
                 <td ng-if="isGrouped">{{ i == 0 ? group.value : ''}}</td>
                 <td>{{ move.created_at | date:'EEE dd.MM'}}</td>
                 <td><i ng-class="getCtgClass(move)">&nbsp;</i> {{ move.description }}</td>
-                <td class="right">{{ move.right | number:2}}</td>
-                <td class="duty">{{ move.duty | number:2}}</td>
+                <td class="income">{{ move.income | number:2}}</td>
+                <td class="expense">{{ move.expense | number:2}}</td>
                 <td>
                     <div class="balance">
                         {{ move.balance | number:2}}

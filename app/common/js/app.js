@@ -16,7 +16,7 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.s
    // Log.setDebug(true);
     //Log.setUrl("/LogErrors");
 
-    TranslationsProvider.lang = 'en';
+    TranslationsProvider.lang = 'he';
 
 	// register our interceptor service
 	$httpProvider.interceptors.push('HttpInterceptor');
@@ -44,4 +44,4 @@ angular.module('bplApp.controllers', []);
 angular.module('bplApp.directives', []);
 angular.module('bplApp.services', ['ngResource']);
 angular.module('bplApp.resources', ['ngResource', 'bplApp.services']);
-angular.module('bplApp.widgets', ['bplApp.resources', 'ui.bootstrap']);
+angular.module('bplApp.widgets', ['bplApp.resources', 'ui.bootstrap', 'ngTable', 'bplApp.filters']);

@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path, that will be used to resolve files and exclude
-    basePath: '../app',
+    basePath: '../',
 
 
     // frameworks to use
@@ -14,24 +14,29 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'common/bower_components/angular/angular.js',
-        'common/bower_components/angular-*/*.min.js',
-        'common/bower_components/angular-mocks/angular-mocks.js',
+        'app/common/lib/strtotime/strtotime.js',
+        'app/common/bower_components/jquery/jquery.min.js',
+        'test/lib/jasmine-jquery.js',
 
-        'common/bower_components/angular-ui-bootstrap/dist/ui-bootstrap-tpls-0.7.0.js',
+        'app/common/bower_components/angular/angular.js',
+        'app/common/bower_components/angular-*/*.min.js',
+        'app/common/bower_components/angular-mocks/angular-mocks.js',
 
-        'common/js/app.js',
+        'app/common/bower_components/angular-ui-bootstrap/dist/ui-bootstrap-tpls-0.7.0.js',
+        'app/common/bower_components/ng-table/ng-table.js',
+
+        'app/common/js/app.js',
         //'common/js/controllers/controllers.js',
         //'common/js/directives/directives.js',
-        //'common/js/filters/filters.js',
+        'app/common/js/filters/filters.js',
         //'common/js/services/services.js',
 
 
-        'common/js/services/**/*.js',
-        'resources/*.js',
+        'app/common/js/services/**/*.js',
+        'app/resources/*.js',
 
-        'widgets/**/*.js',
-        'widgets/**/*.html'
+        'app/widgets/**/*.js',
+        'app/widgets/**/*.html',
 
 
         //'test/unit/**/*.js',
@@ -39,6 +44,8 @@ module.exports = function(config) {
         //'../test/unit/Resources/*Spec.js',
 
         //'common/templates/**/*.html'
+
+        {pattern: 'server/data/**/*.json', watched: true, served: true, included: false}
     ],
 
 
@@ -47,7 +54,12 @@ module.exports = function(config) {
     ],
 
       preprocessors: {
-          'widgets/**/*.html': 'ng-html2js'
+          'app/widgets/**/*.html': 'ng-html2js'
+      },
+
+      ngHtml2JsPreprocessor: {
+          // strip this from the file path
+          stripPrefix: 'app/'
       },
 
     // test results reporter to use

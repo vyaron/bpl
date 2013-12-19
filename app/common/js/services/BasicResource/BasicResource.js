@@ -132,39 +132,42 @@ angular.module('bplApp.services').
                     update : {method: 'PUT'}
                 });
 
-                var BasicResource = {};
-
-                BasicResource.get = function(){
+                var resourceGet = resource.get;
+                resource.get = function(){
                     var args = clearCache.apply(null, arguments);
-                    var res = resource.get.apply(null, args);
+                    var res = resourceGet.apply(null, args);
 
                     return res;
                 };
 
-                BasicResource.query = function(){
+                var resourceQuery = resource.query;
+                resource.query = function(){
                     var args = clearCache.apply(null, arguments);
-                   return  resource.query.apply(null, args);
+                   return  resourceQuery.apply(null, args);
                 };
 
-                BasicResource.save = function(){
-                    var res = resource.save.apply(null, arguments);
+                var resourceSave = resource.save;
+                resource.save = function(){
+                    var res = resourceSave.apply(null, arguments);
                     publishResourceChanged(res);
                     return res;
                 };
 
-                BasicResource.update = function(){
-                    var res = resource.update.apply(null, arguments);
+                var resourceUpdate = resource.update;
+                resource.update = function(){
+                    var res = resourceUpdate.apply(null, arguments);
                     publishResourceChanged(res);
                     return res;
                 };
 
-                BasicResource.remove = function(){
-                    var res = resource.remove.apply(null, arguments);
+                var resourceRemove = resource.remove;
+                resource.remove = function(){
+                    var res = resourceRemove.apply(null, arguments);
                     publishResourceChanged(res);
                     return res;
                 };
 
-                BasicResource.getRange = Range;
+                resource.getRange = Range;
 
                 /**
                  * @ngdoc function
@@ -176,13 +179,13 @@ angular.module('bplApp.services').
                  *
                  * @returns {Object} resource config
                  */
-                BasicResource.getConfig = function(){
+                resource.getConfig = function(){
                     return resourceConfig;
                 };
 
-                BasicResource.prototype = resource.prototype;
+                //BasicResource.prototype = resource.prototype;
 
-                return BasicResource;
+                return resource;
             };
         }];
 
