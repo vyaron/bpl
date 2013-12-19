@@ -19,6 +19,43 @@ describe('widgets', function() {
         );
     }));
 
+    describe('movesFilterDropdown directive', function(){
+        var $compile, element;
+
+        beforeEach(inject(function(_$compile_){
+            $compile = _$compile_;
+
+            element = $compile('<ul moves-filter-dropdown><li><div></div><ul></ul></li><li><div></div><ul></ul></li></ul>')($scope);
+            $scope.$digest();
+        }));
+
+        it('Replaces the element with the appropriate content', function(){
+            var firstEl = element.find('> li:first');
+            var lastEl = element.find('> li:last');
+            expect(firstEl.find('div:first').attr('ng-click')).toEqual("openDropDown(0)");
+            expect(firstEl.find('ul:first').attr('ng-show')).toEqual("isDropDownOpen(0)");
+
+            expect(lastEl.find('div:first').attr('ng-click')).toEqual("openDropDown(1)");
+            expect(lastEl.find('ul:first').attr('ng-show')).toEqual("isDropDownOpen(1)");
+        });
+    });
+
+    describe('movesSort directive', function(){
+        var $compile, element;
+
+        beforeEach(inject(function(_$compile_){
+            $compile = _$compile_;
+
+            element = $compile('<div moves-sort="created_at"></div>')($scope);
+            $scope.$digest();
+        }));
+
+        it('Replaces the element with the appropriate content', function(){
+            expect(element.attr('ng-click')).toEqual("sorting('created_at')");
+            expect(element.attr('ng-class')).toEqual("getSortableClass('created_at')");
+        });
+    });
+
     describe('moves directive', function(){
         var $compile, element;
 
@@ -47,17 +84,12 @@ describe('widgets', function() {
             MovesResource = $injector.get('MovesResource');
             $controller = $injector.get('$controller');
 
-            movesCtrl = $controller('contacts', {
+            movesCtrl = $controller('moves', {
                 $scope : $scope,
                 $filter : $filter,
                 ngTableParams : ngTableParams,
                 MovesResource : MovesResource
             });
-
-//            spyOn($scope, 'showPopup');
-//            spyOn($window, 'confirm').andReturn(true);
-//
-//            $httpBackend.whenDELETE('data/contacts/1').respond(null);
         }));
 
         it('should define empty contacts array', function(){
@@ -65,6 +97,35 @@ describe('widgets', function() {
                 moves.slice(0,7),
                 {'content-range' : '0-7/10'}
             );
+        });
+
+        it('should contain object with 2 properties ends_at, starts_at', function(){
+            expect($scope.filter).toEqual(jasmine.any(Object));
+            expect($scope.filter.starts_at).toEqual(jasmine.any(Number));
+            expect($scope.filter.ends_at).toEqual(jasmine.any(Number));
+        });
+
+        it('should contain ngTableParams object', function(){
+            expect($scope.tableParams).toEqual(jasmine.any(ngTableParams));
+        });
+
+        it ('should set the right sort param', function(){
+            $scope.sorting('created_at');
+            expect($scope.isGrouped).toBeTruthy();
+
+            //spyOn($scope.tableParams, 'sorting');
+            //expect($scope.tableParams.sorting).toHaveBeenCalledWith({created_at : 'asc'});
+
+            $scope.sorting('income');
+            expect($scope.isGrouped).not.toBeTruthy();
+        });
+
+        it ('should return the right sort class', function(){
+            expect($scope.getSortableClass('income')).toBe('sortable');
+
+            $scope.sorting('income');
+
+            expect($scope.getSortableClass('income')).toBe('sortable sort-asc');
         });
     });
 });

@@ -52,27 +52,29 @@ angular.module('bplApp.widgets')
             return dateFilter;
         };
 
+        var getData = function($defer, params) {
+            var offset = (params.page() - 1) * params.count();
+            var limit = params.page() * params.count();
+
+            var queryParams = angular.extend({offset : offset, limit : limit}, params.filter());
+
+            MovesResource.query(queryParams, function(moves, headers){
+                var data = params.sorting() ? $filter('orderBy')(moves, params.orderBy()) : moves;
+
+                var range = MovesResource.getRange(headers);
+                if (range.total) params.total(range.total);
+
+                $defer.resolve(data);
+            });
+        };
+
         var tableParams = new ngTableParams({
             page: 1,
             count: 7,
             filter : getDateFilter('30_DAYS')
         }, {
             groupBy: groupBy,
-            getData: function($defer, params) {
-                var offset = (params.page() - 1) * params.count();
-                var limit = params.page() * params.count();
-
-                var queryParams = angular.extend({offset : offset, limit : limit}, params.filter());
-
-                MovesResource.query(queryParams, function(moves, headers){
-                    var data = params.sorting() ? $filter('orderBy')(moves, params.orderBy()) : moves;
-
-                    var range = MovesResource.getRange(headers);
-                    if (range.total) params.total(range.total);
-
-                    $defer.resolve(data);
-                });
-            }
+            getData: getData
         });
 
         //d(tableParams.filter()['name']);
@@ -103,6 +105,7 @@ angular.module('bplApp.widgets')
 
             var sortParams = {};
             sortParams[name] = tableParams.isSortBy(name, 'asc') ? 'desc' : 'asc';
+
             tableParams.sorting(sortParams);
         };
 
