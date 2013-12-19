@@ -180,6 +180,8 @@ angular.module('bplApp.services').
                     return resourceConfig;
                 };
 
+                BasicResource.prototype = resource.prototype;
+
                 return BasicResource;
             };
         }];
