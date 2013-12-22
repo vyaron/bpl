@@ -29,6 +29,9 @@ angular.module('bplApp').run(['Translations', function(Translations){
         'Ordering checkbooks' : 'הזמן פנקסי שייקים',
         
         'Choose plan' : 'בחר תוכנית',
-        'Not interested' : 'אינני מעוניין'        
+        'Not interested' : 'אינני מעוניין',
+        
+        'Previous' : 'הקודם',
+        'Next' : 'הבא'        
     });
 }]);
