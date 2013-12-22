@@ -10,11 +10,13 @@ angular.module('bplApp.widgets')
             templateUrl: 'widgets/moves/adviser.html',
             link: function (scope, element, attrs) {
                 scope.cancel = function () {
+                    // TODO: onClose();
                     scope.$parent.tt_isOpen = false;
                 };
             }
         };
     })
+    // TODO: remove dependenceis?
     .directive( 'adviser', [ '$compile', '$timeout', '$parse', '$window', '$tooltip', function ( $compile, $timeout, $parse, $window, $tooltip ) {
         var tooltip = $tooltip( 'adviser', 'adviser', 'click' );
         return tooltip;
@@ -60,21 +62,23 @@ angular.module('bplApp.widgets')
         };
 
         var getDateFilter = function(key){
+            // TODO: make this code general
             var now = new Date();
             now = new Date(now.getFullYear(), now.getMonth(), now.getDate());
             now = Math.floor(now.getTime() / 1000);
 
             var dateFilter = { ends_at : now * 1000};
 
-            if (key == '30_DAYS')  dateFilter['starts_at'] = strtotime('-30 days', now) * 1000;
-            else if (key == '3_MONTH') dateFilter['starts_at'] = strtotime('-3 month', now) * 1000;
-            else if (key == '6_MONTH') dateFilter['starts_at'] = strtotime('-6 month', now) * 1000;
+            if (key == '30_DAYS')       dateFilter['starts_at'] = strtotime('-30 days', now) * 1000;
+            else if (key == '3_MONTH')  dateFilter['starts_at'] = strtotime('-3 month', now) * 1000;
+            else if (key == '6_MONTH')  dateFilter['starts_at'] = strtotime('-6 month', now) * 1000;
 
             return dateFilter;
         };
 
         var getData = function($defer, params) {
             if ($scope.accountId){
+                // TODO: extend params so we have: params.offset() and params.limit()
                 var offset = (params.page() - 1) * params.count();
                 var limit = params.page() * params.count();
 
@@ -154,6 +158,7 @@ angular.module('bplApp.widgets')
             }
         };
 
+        // TODO: document what is it for
         var openDropDownType = null;
         var isDropDownOpen = function(type){
             return openDropDownType == type;
