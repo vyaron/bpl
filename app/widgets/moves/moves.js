@@ -52,10 +52,8 @@ angular.module('bplApp.widgets')
             }
         };
     })
-    .controller('moves', ['$scope', '$filter', 'ngTableParams', 'MovesResource', 'MovesCategoriesResource', function($scope, $filter, ngTableParams, MovesResource, MovesCategoriesResource){
-        var movesCategories = MovesCategoriesResource.query(function(ctgs){
-            //d(ctgs);
-        });
+    .controller('moves', ['$scope', '$filter', 'ngTableParams', 'PubSub', 'MovesResource', 'MovesCategoriesResource', function($scope, $filter, ngTableParams, PubSub, MovesResource, MovesCategoriesResource){
+        var movesCategories = MovesCategoriesResource.query();
 
         var groupBy = function(item) {
             return item.is_conditional ? $filter('trans')('Conditional') : $filter('date')(item.created_at, 'MMMM yyyy');
@@ -76,19 +74,21 @@ angular.module('bplApp.widgets')
         };
 
         var getData = function($defer, params) {
-            var offset = (params.page() - 1) * params.count();
-            var limit = params.page() * params.count();
+            if ($scope.accountId){
+                var offset = (params.page() - 1) * params.count();
+                var limit = params.page() * params.count();
 
-            var queryParams = angular.extend({offset : offset, limit : limit}, params.filter());
+                var queryParams = angular.extend({accountId : $scope.accountId, offset : offset, limit : limit}, params.filter());
 
-            MovesResource.query(queryParams, function(moves, headers){
-                var data = params.sorting() ? $filter('orderBy')(moves, params.orderBy()) : moves;
+                MovesResource.query(queryParams, function(moves, headers){
+                    var data = params.sorting() ? $filter('orderBy')(moves, params.orderBy()) : moves;
 
-                var range = MovesResource.getRange(headers);
-                if (range.total) params.total(range.total);
+                    var range = MovesResource.getRange(headers);
+                    if (range.total) params.total(range.total);
 
-                $defer.resolve(data);
-            });
+                    $defer.resolve(data);
+                });
+            }
         };
 
         var tableParams = new ngTableParams({
@@ -221,6 +221,13 @@ angular.module('bplApp.widgets')
 //        var getCheckbookStyle = function(move){
 //            return 'background-image: url("' + move.getCheckbookImageUrl() + '")';
 //        };
+
+        $scope.accountId;
+
+        PubSub.subscribe(PubSub.CHANEL_ACCOUNT_SELECTED, $scope, function(e, accountId){
+            $scope.accountId = accountId;
+            tableParams.reload();
+        });
 
         $scope.filter = getDateFilter('30_DAYS');
         $scope.tableParams = tableParams;

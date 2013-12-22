@@ -65,23 +65,24 @@ app.get(/^\/data\/(\w+)(\/)?(\d+)?(\/)?(\w+)?(\/)?(\d+)?(\/)?$/, function(req, r
             var offset = req.query.offset || 0;
             var limit = req.query.limit || MAX_ITEMS_LIMIT;
 
-            //starts_at, ends_at
-            var startsAt = req.query.starts_at;
-            var endsAt = req.query.ends_at;
-
             offset = parseInt(offset);
             limit = parseInt(limit);
 
-            if (startsAt && endsAt){
-                startsAt = parseInt(startsAt);
-                endsAt = parseInt(endsAt);
+            var accountId = req.query.accountId;
+            var startsAt = req.query.starts_at;
+            var endsAt = req.query.ends_at;
 
-                //console.log(startsAt, endsAt);
+            if (accountId) accountId = parseInt(accountId);
+            if (startsAt) startsAt = parseInt(startsAt);
+            if (endsAt) endsAt = parseInt(endsAt);
 
+
+            if (startsAt || endsAt || accountId){
                 var filteredData = [];
                 for (var i=0; i < data.length; i++){
-                    //console.log(data[i].created_at);
-                    if (data[i].created_at >= startsAt && data[i].created_at <= endsAt) filteredData.push(data[i]);
+                    if ((!startsAt || startsAt && data[i].created_at >= startsAt)
+                        && (!endsAt || endsAt && data[i].created_at <= endsAt)
+                        && (!accountId || accountId && data[i].account_id == accountId)) filteredData.push(data[i]);
                 }
                 data = filteredData;
             }
