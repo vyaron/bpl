@@ -2,6 +2,25 @@
 
 
 angular.module('bplApp.widgets')
+    .directive( 'adviserPopup', function () {
+        return {
+            restrict: 'EA',
+            replace: true,
+            scope: { title: '@', content: '@', placement: '@', animation: '&', isOpen: '&' },
+            templateUrl: 'widgets/moves/adviser.html',
+            link: function (scope, element, attrs) {
+                scope.cancel = function () {
+                    scope.$parent.tt_isOpen = false;
+                };
+            }
+        };
+    })
+    .directive( 'adviser', [ '$compile', '$timeout', '$parse', '$window', '$tooltip', function ( $compile, $timeout, $parse, $window, $tooltip ) {
+        var tooltip = $tooltip( 'adviser', 'adviser', 'click' );
+        return tooltip;
+    }])
+
+
     .directive('moves', function() {
         return {
             restrict : 'A',
@@ -33,7 +52,11 @@ angular.module('bplApp.widgets')
             }
         };
     })
-    .controller('moves', ['$scope', '$filter', 'ngTableParams', 'MovesResource', function($scope, $filter, ngTableParams, MovesResource){
+    .controller('moves', ['$scope', '$filter', 'ngTableParams', 'MovesResource', 'MovesCategoriesResource', function($scope, $filter, ngTableParams, MovesResource, MovesCategoriesResource){
+        var movesCategories = MovesCategoriesResource.query(function(ctgs){
+            //d(ctgs);
+        });
+
         var groupBy = function(item) {
             return item.is_conditional ? $filter('trans')('Conditional') : $filter('date')(item.created_at, 'MMMM yyyy');
         };
@@ -77,11 +100,11 @@ angular.module('bplApp.widgets')
             getData: getData
         });
 
-        //d(tableParams.filter()['name']);
+        //d(tableParams);
 
 
 
-        var toggleGorup = function(name){
+        var toggleGroup = function(name){
             if (name == 'created_at') {
                 tableParams.settings().groupBy = groupBy;
                 $scope.isGrouped = true;
@@ -101,7 +124,7 @@ angular.module('bplApp.widgets')
         };
 
         var sorting = function(name){
-            toggleGorup(name);
+            toggleGroup(name);
 
             var sortParams = {};
             sortParams[name] = tableParams.isSortBy(name, 'asc') ? 'desc' : 'asc';
@@ -113,22 +136,36 @@ angular.module('bplApp.widgets')
             return 'ctg ctg-' + move.category_id;
         };
 
-        var showDetails = function(move){
-            //d(move);
-            move.$isOpen = !move.$isOpen;
+        var getCtgName = function(move){
+            for (var i=0; i < movesCategories.length; i++){
+                if (movesCategories[i].id == move.category_id) return movesCategories[i].name;
+            }
         };
 
-        var openDropDwonType = null;
+        var showDetails = function(move){
+            move.$_isOpen = !move.$_isOpen;
+
+            if (move.$_isOpen){
+                move.$_isLoading = true;
+                move.$get(function(moveDetails){
+                    move.$_isLoading = false;
+                    angular.extend(move, moveDetails);
+                });
+            }
+        };
+
+        var openDropDownType = null;
         var isDropDownOpen = function(type){
-            return openDropDwonType == type;
+            return openDropDownType == type;
         };
 
         var openDropDown = function(type){
-            openDropDwonType = type;
+            openDropDownType = type;
         };
 
-        var filterBy = function(){
-            angular.extend(tableParams.filter(), arguments[0]);
+        var filterBy = function(dateFilter){
+            angular.extend(tableParams.filter(), dateFilter);
+            tableParams.page(1);
         };
 
         var getDateFilterTitle = function(key){
@@ -143,8 +180,6 @@ angular.module('bplApp.widgets')
         };
 
         var filterByDate = function(){
-            var now = strtotime('now') * 1000;
-
             if (arguments.length == 1){
                 var key = arguments[0];
                 var dateFilter = getDateFilter(key);
@@ -175,12 +210,25 @@ angular.module('bplApp.widgets')
             openDropDown();
         };
 
+        var getLoadingClass = function(move){
+            return move.$_isLoading ? 'loading' : null;
+        };
+
+        var update = function(move){
+            move.$update();
+        };
+
+//        var getCheckbookStyle = function(move){
+//            return 'background-image: url("' + move.getCheckbookImageUrl() + '")';
+//        };
+
         $scope.filter = getDateFilter('30_DAYS');
         $scope.tableParams = tableParams;
         $scope.getSortableClass = getSortableClass;
         $scope.sorting = sorting;
         $scope.filterBy = filterBy;
         $scope.getCtgClass = getCtgClass;
+        $scope.getCtgName = getCtgName;
         $scope.isGrouped = true;
         $scope.showDetails = showDetails;
 
@@ -196,4 +244,8 @@ angular.module('bplApp.widgets')
 
         $scope.openDropDown = openDropDown;
         $scope.isDropDownOpen = isDropDownOpen;
+
+        $scope.getLoadingClass = getLoadingClass;
+        $scope.update = update;
+        //$scope.getCheckbookStyle = getCheckbookStyle;
     }]);

@@ -5,5 +5,12 @@ angular.module('bplApp.resources').
 
         var MovesResource = BasicResource(angular.extend(params));
 
+
+        MovesResource.prototype.getCheckbookImageUrl = function(){
+            //return (this.id) ? 'img/checkbook/' + this.id + '.jpg' : '';
+            return (this.id) ? 'img/checkbook/' + 7474876486 + '.jpg' : '';
+        };
+
+
         return MovesResource;
     }]);

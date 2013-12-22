@@ -65,8 +65,26 @@ app.get(/^\/data\/(\w+)(\/)?(\d+)?(\/)?(\w+)?(\/)?(\d+)?(\/)?$/, function(req, r
             var offset = req.query.offset || 0;
             var limit = req.query.limit || MAX_ITEMS_LIMIT;
 
+            //starts_at, ends_at
+            var startsAt = req.query.starts_at;
+            var endsAt = req.query.ends_at;
+
             offset = parseInt(offset);
             limit = parseInt(limit);
+
+            if (startsAt && endsAt){
+                startsAt = parseInt(startsAt);
+                endsAt = parseInt(endsAt);
+
+                //console.log(startsAt, endsAt);
+
+                var filteredData = [];
+                for (var i=0; i < data.length; i++){
+                    //console.log(data[i].created_at);
+                    if (data[i].created_at >= startsAt && data[i].created_at <= endsAt) filteredData.push(data[i]);
+                }
+                data = filteredData;
+            }
 
             res.setHeader('Content-Range', offset + '-' + (offset+limit) + '/' + data.length);
             data = data.slice(offset, offset + limit)

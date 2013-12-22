@@ -59,19 +59,77 @@
             <tr ng-repeat-start="(i, move) in group.data" ng-click="showDetails(move)">
                 <td ng-if="isGrouped">{{ i == 0 ? group.value : ''}}</td>
                 <td>{{ move.created_at | date:'EEE dd.MM'}}</td>
-                <td><i ng-class="getCtgClass(move)">&nbsp;</i> {{ move.description }}</td>
+                <td><i ng-class="getCtgClass(move)" tooltip="{{ getCtgName(move) }}">&nbsp;</i> {{ move.description }}</td>
                 <td class="income">{{ move.income | number:2}}</td>
                 <td class="expense">{{ move.expense | number:2}}</td>
                 <td>
                     <div class="balance">
                         {{ move.balance | number:2}}
-                        <button ng-if="move.adviser" class="adviser" popover-title="{{ move.adviser.title }}" popover="{{ move.adviser.description }}" popover-placement="left">&nbsp;</button>
+                        <button ng-if="move.adviser" class="adviser" adviser-title="{{move.adviser.title}}" adviser="{{move.adviser.description}}" adviser-placement="right">&nbsp;</button>
+                        <!--<button ng-if="move.adviser" class="adviser" adviser-title="{{ move.adviser.title }}" adviser="{{move.adviser.description}}" adviser-placement="right">&nbsp;</button>-->
                     </div>
                 </td>
             </tr>
-            <tr ng-repeat-end ng-show="move.$isOpen">
-                <td colspan="6">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus blanditiis debitis deserunt et eveniet, fugiat illo natus necessitatibus placeat possimus qui quibusdam quidem quod reprehenderit sed temporibus vero voluptas?
+            <tr ng-repeat-end ng-if="move.$_isOpen">
+                <td>&nbsp;</td>
+                <td colspan="5" ng-class="getLoadingClass(move)">
+                    <div class="move-details-wrapper">
+                        <div class="move-details clearfix">
+                            <div class="move-details-a">
+                                <h4>{{ 'Reference' | trans}}</h4>
+                                <div class="value">{{ move.id }}</div>
+
+                                <ul class="clearfix">
+                                    <li>
+                                        <h4>{{ 'Beneficiary name' | trans}}</h4>
+                                        <div class="value">{{ move.beneficiary }}</div>
+                                    </li>
+                                    <li>
+                                        <h4>{{ 'Bank' | trans}}</h4>
+                                        <div class="value">{{ move.bank }}</div>
+                                    </li>
+                                    <li>
+                                        <h4>{{ 'Branch name' | trans}}</h4>
+                                        <div class="value">{{ move.branch }}</div>
+                                    </li>
+                                    <li>
+                                        <h4>{{ 'Account number' | trans}}</h4>
+                                        <div class="value">{{ move.account_id }}</div>
+                                    </li>
+                                </ul>
+
+                                <select ng-model="move.subject_id" ng-change="update(move)">
+                                    <option value="1">{{ 'Apartment' | trans }}</option>
+                                    <option value="2">{{ 'Work' | trans }}</option>
+                                    <option value="3">{{ 'Contribution' | trans }}</option>
+                                </select>
+                            </div>
+                            <div class="move-details-b">
+                                <h4>{{ 'Comment' | trans }}</h4>
+                                <textarea ng-model="move.comment" ng-blur="update(move)"></textarea>
+                            </div>
+                        </div>
+
+                        <hr/>
+
+                        <div ng-if="move.category_id == 2" class="move-actions">
+                            <button class="btn" ng-click="transferReturn(move)">{{ 'Initiate a transfer return' | trans }}</button>
+                            <button class="btn" ng-click="transferSmallExpenses(move)">{{ 'Initiate a transfer small expenses' | trans }}</button>
+                            <button class="btn" ng-click="managementBeneficiariesTransfers(move)">{{ 'Management beneficiaries transfers' | trans }}</button>
+                        </div>
+
+                        <div ng-if="move.category_id == 4">
+
+                            <img class="checkbook" ng-src="{{move.getCheckbookImageUrl()}}" />
+
+                            <hr/>
+
+                            <div class="move-actions">
+                                <button class="btn" ng-click="orderingCheckbooks(move)">{{ 'Ordering checkbooks' | trans }}</button>
+                            </div>
+                        </div>
+
+                    </div>
                 </td>
             </tr>
         </tbody>

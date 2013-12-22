@@ -1,3 +1,6 @@
+.moves {
+  /* move details */
+}
 .moves .ctg {
   display: inline-block;
   width: 16px;
@@ -30,12 +33,12 @@
   border: none;
   background-color: #add8e6;
 }
-.filters > li {
+.moves .filters > li {
   display: block;
   float: left;
   width: 33%;
 }
-.filters ul {
+.moves .filters ul {
   width: 300px;
   position: absolute;
   z-index: 1;
@@ -43,17 +46,50 @@
   border: 1px solid darkgray;
   border-top: none;
 }
-.filters ul li {
+.moves .filters ul li {
   padding: 5px 10px;
 }
-ul.filters,
-.filters ul {
+.moves ul.filters,
+.moves .filters ul {
   display: block;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-ul.filters {
+.moves ul.filters {
+  width: 100%;
+}
+.moves .move-details ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.moves .move-details ul li {
+  float: left;
+  margin-left: 15px;
+}
+.moves .move-details ul li:first-child {
+  margin-left: 0;
+}
+.moves .move-details h4 {
+  font-size: 1em;
+  font-weight: normal;
+  color: #888;
+}
+.moves .move-details .value {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+}
+.moves .move-details-a {
+  float: left;
+}
+.moves .move-details-b {
+  float: right;
+  width: 300px;
+}
+.moves .move-details-b textarea {
   width: 100%;
 }
 /*RTL*/
@@ -72,4 +108,18 @@ ul.filters {
 .rtl .moves .balance .adviser {
   left: -12px;
   right: auto;
+}
+.rtl .moves .move-details-a {
+  float: right;
+}
+.rtl .moves .move-details-b {
+  float: left;
+}
+.rtl .moves .move-details ul li {
+  float: right;
+  margin-right: 15px;
+  margin-left: 0;
+}
+.rtl .moves .move-details ul li:first-child {
+  margin-right: 0;
 }

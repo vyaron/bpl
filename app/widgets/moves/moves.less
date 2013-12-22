@@ -13,20 +13,37 @@
     position: relative;
     .adviser{position: absolute; right: -12px; top: -8px; width: 30px; height: 20px; display: block; border: none; background-color: #add8e6;}
   }
-}
 
-.filters{
-  > li{display: block; float: left; width: 33%;}
+  .filters{
+    > li{display: block; float: left; width: 33%;}
 
-  ul {
-    width: 300px; position: absolute; z-index: 1; background-color: #181818; border: 1px solid darkgray; border-top: none;
-    li {padding: 5px 10px;}
+    ul {
+      width: 300px; position: absolute; z-index: 1; background-color: #181818; border: 1px solid darkgray; border-top: none;
+      li {padding: 5px 10px;}
+    }
   }
 
-}
-ul.filters, .filters ul{display: block; margin: 0; padding: 0; list-style: none;}
-ul.filters{width: 100%;}
+  ul.filters, .filters ul{display: block; margin: 0; padding: 0; list-style: none;}
+  ul.filters{width: 100%;}
 
+  /* move details */
+  .move-details{
+    ul{display: block; margin: 0; padding: 0; list-style: none;}
+    ul li{float: left; margin-left: 15px;}
+    ul li:first-child{margin-left: 0;}
+
+
+    h4{font-size:1em; font-weight: normal; color: #888;}
+    .value{font-size: 1.1em; font-weight: bold; color: #fff;}
+  }
+
+  .move-details-a{float: left;}
+  .move-details-b{
+    float: right;
+    width: 300px;
+    textarea{width: 100%;}
+  }
+}
 
 
 /*RTL*/
@@ -38,6 +55,14 @@ ul.filters{width: 100%;}
     .balance .adviser{
       left : -12px;
       right:auto;
+    }
+
+    .move-details-a{float: right;}
+    .move-details-b{float: left;}
+
+    .move-details{
+      ul li{float: right; margin-right: 15px; margin-left: 0;}
+      ul li:first-child{margin-right: 0;}
     }
   }
 

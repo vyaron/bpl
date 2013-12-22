@@ -151,10 +151,19 @@
   }
 }
 
+.loading{background: center center no-repeat data-uri("../../img/layout/loading.gif");}
+.loading > div{visibility: hidden;}
+
+.popover{width: 300px; top: -10px !important;}
+.popover.right .arrow{margin-top: 0; top:0;}
+
+
 /*RTL*/
 .rtl{
   direction: rtl; text-align: right;
   .ng-table th.sortable div{padding-right: 0; padding-left: 18px;}
   .ng-table th.sortable div:after, .ng-table th.sortable div:before{right: auto; left: 8px;}
   th{text-align: right;}
+
+  .popover{direction: rtl; text-align: right;}
 }
