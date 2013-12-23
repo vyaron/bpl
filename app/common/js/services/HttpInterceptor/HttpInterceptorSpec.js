@@ -9,17 +9,17 @@ describe('bplApp.services', function (){
 
         beforeEach(function(){
             $q = {when : function(){}, reject : function(){}};
-            DataCache = {removeAll : function(){}};
+            //DataCache = {removeAll : function(){}};
             $window = {location : {href : ''}};
 
             spyOn($q, 'when');
             spyOn($q, 'reject');
-            spyOn(DataCache, 'removeAll');
+            //spyOn(DataCache, 'removeAll');
 
             module(function($provide) {
                 $provide.value('$q', $q);
                 $provide.value('$window', $window);
-                $provide.value('DataCache', DataCache);
+                //$provide.value('DataCache', DataCache);
             });
 
             inject(function($injector){

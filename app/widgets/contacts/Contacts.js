@@ -4,7 +4,7 @@
 angular.module('bplApp.widgets')
 .directive('contacts', function() {
     return {
-        templateUrl: 'widgets/contacts/contacts.html',
+        templateUrl: 'widgets/contacts/Contacts.html',
         replace: true,
         controller: 'contacts',
         scope: {

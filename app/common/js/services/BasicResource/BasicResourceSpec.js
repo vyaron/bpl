@@ -2,7 +2,7 @@
 
 describe('bplApp.services', function (){
     describe('BasicResource', function (){
-        var $httpBackend, BasicResource;
+        var $httpBackend, DataCache, PubSub, Range, BasicResource;
 
         beforeEach(module('bplApp.services'));
 
@@ -11,10 +11,31 @@ describe('bplApp.services', function (){
             BasicResourceProvider.setUrl('http://bpl.local/data')
         }));
 
-        beforeEach(inject(function($injector) {
-            $httpBackend = $injector.get('$httpBackend');
-            BasicResource = $injector.get('BasicResource');
-        }));
+
+        beforeEach(function(){
+            DataCache = jasmine.createSpyObj('DataCache', ['remove']);
+
+            PubSub = jasmine.createSpyObj('PubSub', ['publish']);
+            PubSub.CONTACTS = 'onContactsChange';
+
+            Range = jasmine.createSpy('Range');
+
+            module(function($provide) {
+                $provide.value('DataCache', DataCache);
+                $provide.value('PubSub', PubSub);
+                $provide.value('Range', Range);
+            });
+
+            inject(function($injector){
+                $httpBackend = $injector.get('$httpBackend');
+                BasicResource = $injector.get('BasicResource');
+            });
+        });
+
+        afterEach(function() {
+            $httpBackend.verifyNoOutstandingExpectation();
+            $httpBackend.verifyNoOutstandingRequest();
+        });
 
         it ('should return $resource with right actions', function(){
             var CustomersResource = BasicResource({resourceName : 'customers'});
@@ -25,6 +46,9 @@ describe('bplApp.services', function (){
             expect(CustomersResource.update).toEqual(jasmine.any(Function));
             expect(CustomersResource.remove).toEqual(jasmine.any(Function));
             expect(CustomersResource.query).toEqual(jasmine.any(Function));
+
+            expect(CustomersResource.getRange).toEqual(jasmine.any(Function));
+            expect(CustomersResource.getConfig).toEqual(jasmine.any(Function));
 
             expect(CustomersResource.prototype.$update).toEqual(jasmine.any(Function));
             expect(CustomersResource.prototype.$delete).toEqual(jasmine.any(Function));
@@ -64,6 +88,38 @@ describe('bplApp.services', function (){
             $httpBackend.expectGET('http://bpl.local/data/customers/1').respond({});
             BasicResource({resourceName : 'customers'}).get({id : 1});
             $httpBackend.flush();
+        });
+
+        it ('should clear cache', function(){
+            $httpBackend.whenGET('http://bpl.local/data/customers/1').respond({});
+
+            BasicResource({resourceName : 'customers'}).get({id : 1});
+            expect(DataCache.remove).not.toHaveBeenCalledWith('http://bpl.local/data/customers/1');
+
+            BasicResource({resourceName : 'customers'}).get(true, {id : 1});
+            expect(DataCache.remove).toHaveBeenCalledWith('http://bpl.local/data/customers/1');
+
+            $httpBackend.flush();
+        });
+
+        it ('should publish on channel CONTACTS', function(){
+            $httpBackend.whenPOST('http://bpl.local/data/contacts').respond({});
+            $httpBackend.whenPUT('http://bpl.local/data/contacts/1').respond({});
+            $httpBackend.whenDELETE('http://bpl.local/data/contacts/1').respond(null);
+
+            BasicResource({resourceName : 'contacts'}).save({name : 'Ronen Cohen'});
+            BasicResource({resourceName : 'contacts'}).update({id : 1, name : 'Ronen Cohen'});
+            BasicResource({resourceName : 'contacts'}).remove({id : 1});
+
+            $httpBackend.flush();
+            expect(PubSub.publish.mostRecentCall.args[0]).toEqual(PubSub.CONTACTS);
+            expect(PubSub.publish.calls.length).toBe(3);
+        });
+
+        it ('should call Range factory', function(){
+            var CustomersResource = BasicResource({resourceName : 'customers'});
+            CustomersResource.getRange(angular.noop);
+            expect(Range).toHaveBeenCalled();
         });
     });
 });

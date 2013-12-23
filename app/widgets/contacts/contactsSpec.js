@@ -2,7 +2,7 @@
 
 describe('widgets', function() {
     var $scope, $httpBackend, $controller, ContactsResource, contact;
-    beforeEach(module('bplApp.widgets', 'widgets/contacts/contacts.html', 'widgets/contacts/popup.html'));
+    beforeEach(module('bplApp.widgets', 'widgets/contacts/Contacts.html', 'widgets/contacts/popup.html'));
 
     beforeEach(inject(function($injector, _$rootScope_){
         $scope = _$rootScope_.$new();

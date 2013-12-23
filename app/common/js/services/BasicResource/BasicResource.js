@@ -142,7 +142,7 @@ angular.module('bplApp.services').
 
                 var resourceQuery = resource.query;
                 resource.query = function(){
-                    var args = clearCache.apply(null, arguments);
+                   var args = clearCache.apply(null, arguments);
                    return  resourceQuery.apply(null, args);
                 };
 
