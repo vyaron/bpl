@@ -260,6 +260,7 @@ angular.module('bplApp.widgets')
         //$scope.getLoadingClass = getLoadingClass;
         $scope.update = update;
 
+        $scope.movesCategories = movesCategories;
 
         PubSub.subscribe(PubSub.CHANEL_ACCOUNT_SELECTED, $scope, function(e, time, accountId){
             $scope.accountId = accountId;
