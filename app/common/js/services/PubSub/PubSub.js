@@ -54,7 +54,16 @@ angular.module('bplApp.services')
             var channel = arguments[0];
             if ( channel in chanel2scopes) {
                 for (var i=0; i< chanel2scopes[channel].length; i++){
-                    chanel2scopes[channel][i].$broadcast.apply(chanel2scopes[channel][i], arguments);
+                    //arguments[arguments.length] = Date.now();
+
+                    var args = [];
+                    for (var j in arguments){
+                        args[j] = arguments[j];
+                    }
+
+                    args.splice(1, 0, Date.now());
+
+                    chanel2scopes[channel][i].$broadcast.apply(chanel2scopes[channel][i], args);
                 }
             }
 		},

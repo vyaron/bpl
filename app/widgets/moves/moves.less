@@ -1,4 +1,8 @@
 .moves{
+  table tr {
+    th:first-child, td:first-child{width: 15%}
+  }
+
   .ctg{
     display: inline-block;
     width: 16px; height: 16px; background-color: #add8e6; margin-right: 5px;
@@ -35,13 +39,8 @@
 
     h4{font-size:1em; font-weight: normal; color: #888;}
     .value{font-size: 1.1em; font-weight: bold; color: #fff;}
-  }
 
-  .move-details-a{float: left;}
-  .move-details-b{
-    float: right;
-    width: 300px;
-    textarea{width: 100%;}
+    textarea{width: 300px;}
   }
 }
 
@@ -56,9 +55,6 @@
       left : -12px;
       right:auto;
     }
-
-    .move-details-a{float: right;}
-    .move-details-b{float: left;}
 
     .move-details{
       ul li{float: right; margin-right: 15px; margin-left: 0;}

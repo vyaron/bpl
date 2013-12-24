@@ -51,51 +51,13 @@ angular.module('bplApp.services').
             return function(config){
                 var resourceConfig = angular.extend({resourceName : null, id : '@id', subResourceName : '@subResourceName', subId : '@subId'}, config);
 
-                var sortedKeys = function(obj) {
-                    var keys = [];
-                    for (var key in obj) {
-                        if (obj.hasOwnProperty(key)) {
-                            keys.push(key);
-                        }
-                    }
-                    return keys.sort();
-                };
-
-                var getCacheKey = function(params){
-                    var keys = sortedKeys(params);
-
-                    var cacheKey = URL;
-
-                    cacheKey += '/' + resourceConfig.resourceName;
-
-                    if ('id' in params) {
-                        cacheKey += '/' + params.id;
-                        delete params.id;
-                    }
-                    if ('subResourceName' in resourceConfig && (resourceConfig.subResourceName[0] != '@')) cacheKey += '/' + resourceConfig.subResourceName;
-                    if ('subId' in params) {
-                        cacheKey += '/' + params.subId;
-                        delete  params.subId;
-                    }
-
-                    var uri = '';
-                    for (var i=0; i < keys.length; i++){
-                        var key = keys[i];
-
-                        if (key == 'id' || key == 'subId') continue;
-
-                        uri += '&' + key +'='+ params[key];
-                    }
-
-                    if (uri) cacheKey += '?' + uri.substr(1);
-
-                    return cacheKey;
-                };
-
+                var clearedCache = {};
                 var clearCache = function(){
                     var args = arguments;
 
-                    var isDeleteCache = (arguments[0] === true) ? true : false;
+                    var publishTime = parseInt(arguments[0]);
+
+                    var isDeleteCache = (!isNaN(publishTime)) ? true : false;
                     if (isDeleteCache){
                         args = [];
                         if (arguments[1]) args.push(arguments[1]);
@@ -103,11 +65,13 @@ angular.module('bplApp.services').
                         if (arguments[3]) args.push(arguments[3]);
                         if (arguments[4]) args.push(arguments[4]);
 
-                        var params = angular.isObject(arguments[1]) ? angular.copy(arguments[1]) : {};
-                        var cacheKey = getCacheKey(params);
+                        if (!(publishTime in clearedCache)) {
+                            var params = angular.isObject(arguments[1]) ? angular.copy(arguments[1]) : {};
+                            var cacheKey = DataCache.getCacheKey(resourceConfig, params);
 
-
-                        DataCache.remove(cacheKey);
+                            DataCache.remove(cacheKey);
+                            clearedCache[publishTime] = true;
+                        }
 
                         return args;
                     }

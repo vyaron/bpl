@@ -1,6 +1,10 @@
 .moves {
   /* move details */
 }
+.moves table tr th:first-child,
+.moves table tr td:first-child {
+  width: 15%;
+}
 .moves .ctg {
   display: inline-block;
   width: 16px;
@@ -82,15 +86,8 @@
   font-weight: bold;
   color: #fff;
 }
-.moves .move-details-a {
-  float: left;
-}
-.moves .move-details-b {
-  float: right;
+.moves .move-details textarea {
   width: 300px;
-}
-.moves .move-details-b textarea {
-  width: 100%;
 }
 /*RTL*/
 .rtl .moves .ctg {
@@ -108,12 +105,6 @@
 .rtl .moves .balance .adviser {
   left: -12px;
   right: auto;
-}
-.rtl .moves .move-details-a {
-  float: right;
-}
-.rtl .moves .move-details-b {
-  float: left;
 }
 .rtl .moves .move-details ul li {
   float: right;

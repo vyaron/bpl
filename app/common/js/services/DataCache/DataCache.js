@@ -93,13 +93,56 @@ angular.module('bplApp.services')
          */
         var destroyFn = function(){return _cacheFactory.destroy();} ;
 
+        var sortedKeys = function(obj) {
+            var keys = [];
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    keys.push(key);
+                }
+            }
+            return keys.sort();
+        };
+
+        var getCacheKey = function(resourceConfig, params){
+            var keys = sortedKeys(params);
+
+            var cacheKey = URL;
+
+            cacheKey += '/' + resourceConfig.resourceName;
+
+            if ('id' in params) {
+                cacheKey += '/' + params.id;
+                delete params.id;
+            }
+            if ('subResourceName' in resourceConfig && (resourceConfig.subResourceName[0] != '@')) cacheKey += '/' + resourceConfig.subResourceName;
+            if ('subId' in params) {
+                cacheKey += '/' + params.subId;
+                delete  params.subId;
+            }
+
+            var uri = '';
+            for (var i=0; i < keys.length; i++){
+                var key = keys[i];
+
+                if (key == 'id' || key == 'subId') continue;
+
+                uri += '&' + key +'='+ params[key];
+            }
+
+            if (uri) cacheKey += '?' + uri.substr(1);
+
+            return cacheKey;
+        };
+
+
         return {
             info : infoFn,
             put : putFn,
             get : getFn,
             remove : removeFn,
             removeAll : removeAllFn,
-            destroy : destroyFn
+            destroy : destroyFn,
+            getCacheKey : getCacheKey
         };
     }]);
 

@@ -1,5 +1,5 @@
 <div class="moves" ng-show="accountId">
-    <table ng-table="tableParams" class="table" template-pagination="widgets/moves/pager.html">
+    <table ng-table="tableModel" class="table" template-pagination="widgets/moves/pager.html">
         <thead>
             <tr>
                 <th ng-if="isGrouped">&nbsp;</th>
@@ -47,7 +47,7 @@
                 </th>
             </tr>
             <tr>
-                <th ng-if="isGrouped">&nbsp;</th>
+                <th>&nbsp;</th>
                 <th moves-sort="created_at">{{ 'Date' | trans }}</th>
                 <th moves-sort="category_id">{{ 'Description of action' | trans }}</th>
                 <th moves-sort="income">{{ 'Income' | trans }}</th>
@@ -57,9 +57,9 @@
         </thead>
         <tbody ng-repeat="group in $groups">
             <tr ng-repeat-start="(i, move) in group.data" ng-click="showDetails(move)">
-                <td ng-if="isGrouped">{{ i == 0 ? group.value : ''}}</td>
-                <td>{{ move.created_at | date:'EEE dd.MM'}}</td>
-                <td><i ng-class="getCtgClass(move)" tooltip="{{ getCtgName(move) }}">&nbsp;</i> {{ move.description }}</td>
+                <td>{{ (isGrouped && i == 0) ? group.value : ''}}</td>
+                <td>{{ move.created_at | date:(isGrouped ? 'EEE dd.MM' : 'dd.MM.yyyy')}}</td>
+                <td><i ng-class="move.getCtgClass()" tooltip="{{ getCtgName(move) }}">&nbsp;</i> {{ move.description }}</td>
                 <td class="income">{{ move.income | number:2}}</td>
                 <td class="expense">{{ move.expense | number:2}}</td>
                 <td>
@@ -72,10 +72,10 @@
             </tr>
             <tr ng-repeat-end ng-if="move.$_isOpen">
                 <td>&nbsp;</td>
-                <td colspan="5" ng-class="getLoadingClass(move)">
+                <td colspan="5" ng-class="{loading : move.$_isLoading}">
                     <div class="move-details-wrapper">
                         <div class="move-details clearfix">
-                            <div class="move-details-a">
+                            <div class="pull-left">
                                 <h4>{{ 'Reference' | trans}}</h4>
                                 <div class="value">{{ move.id }}</div>
 
@@ -104,7 +104,7 @@
                                     <option value="3">{{ 'Contribution' | trans }}</option>
                                 </select>
                             </div>
-                            <div class="move-details-b">
+                            <div class="pull-right">
                                 <h4>{{ 'Comment' | trans }}</h4>
                                 <textarea ng-model="move.comment" ng-blur="update(move)"></textarea>
                             </div>
@@ -120,12 +120,12 @@
 
                         <div ng-if="move.category_id == 4">
 
-                            <img class="checkbook" ng-src="{{move.getCheckbookImageUrl()}}" />
+                            <img ng-src="{{move.getChequeImageUrl()}}" />
 
                             <hr/>
 
                             <div class="move-actions">
-                                <button class="btn" ng-click="orderingCheckbooks(move)">{{ 'Ordering checkbooks' | trans }}</button>
+                                <button class="btn" ng-click="orderingCheques(move)">{{ 'Ordering cheques' | trans }}</button>
                             </div>
                         </div>
 

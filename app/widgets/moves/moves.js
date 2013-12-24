@@ -61,6 +61,7 @@ angular.module('bplApp.widgets')
             return item.is_conditional ? $filter('trans')('Conditional') : $filter('date')(item.created_at, 'MMMM yyyy');
         };
 
+        // getTimeByKey
         var getDateFilter = function(key){
             // TODO: make this code general
             var now = new Date();
@@ -95,7 +96,7 @@ angular.module('bplApp.widgets')
             }
         };
 
-        var tableParams = new ngTableParams({
+        var tableModel = new ngTableParams({
             page: 1,
             count: 7,
             filter : getDateFilter('30_DAYS')
@@ -104,16 +105,16 @@ angular.module('bplApp.widgets')
             getData: getData
         });
 
-        //d(tableParams);
+        //d(tableModel);
 
 
 
         var toggleGroup = function(name){
             if (name == 'created_at') {
-                tableParams.settings().groupBy = groupBy;
+                tableModel.settings().groupBy = groupBy;
                 $scope.isGrouped = true;
             } else {
-                tableParams.settings().groupBy = function(){return 0};
+                tableModel.settings().groupBy = angular.noop;
                 $scope.isGrouped = false;
             }
         };
@@ -121,8 +122,8 @@ angular.module('bplApp.widgets')
         var getSortableClass = function(name){
             var sortableClass = 'sortable';
 
-            if (tableParams.isSortBy(name, 'asc')) sortableClass += ' sort-asc';
-            else if (tableParams.isSortBy(name, 'desc')) sortableClass += ' sort-desc';
+            if (tableModel.isSortBy(name, 'asc')) sortableClass += ' sort-asc';
+            else if (tableModel.isSortBy(name, 'desc')) sortableClass += ' sort-desc';
 
             return sortableClass;
         };
@@ -131,15 +132,16 @@ angular.module('bplApp.widgets')
             toggleGroup(name);
 
             var sortParams = {};
-            sortParams[name] = tableParams.isSortBy(name, 'asc') ? 'desc' : 'asc';
+            sortParams[name] = tableModel.isSortBy(name, 'asc') ? 'desc' : 'asc';
 
-            tableParams.sorting(sortParams);
+            tableModel.sorting(sortParams);
         };
 
-        var getCtgClass = function(move){
-            return 'ctg ctg-' + move.category_id;
-        };
+//        var getCtgClass = function(move){
+//            return 'ctg ctg-' + move.category_id;
+//        };
 
+        // TODO: think if we can put on the model
         var getCtgName = function(move){
             for (var i=0; i < movesCategories.length; i++){
                 if (movesCategories[i].id == move.category_id) return movesCategories[i].name;
@@ -158,7 +160,7 @@ angular.module('bplApp.widgets')
             }
         };
 
-        // TODO: document what is it for
+
         var openDropDownType = null;
         var isDropDownOpen = function(type){
             return openDropDownType == type;
@@ -168,24 +170,26 @@ angular.module('bplApp.widgets')
             openDropDownType = type;
         };
 
-        var filterBy = function(dateFilter){
-            angular.extend(tableParams.filter(), dateFilter);
-            tableParams.page(1);
+        var filterBy = function(newFilters){
+            angular.extend(tableModel.filter(), newFilters);
+            tableModel.page(1);
         };
 
+        // TODO: document what is it for
         var getDateFilterTitle = function(key){
             var str;
 
             if (key == '30_DAYS')  str = $filter('trans')('30 Days');
             else if (key == '3_MONTH') str = $filter('trans')('Three Months');
             else if (key == '6_MONTH') str = $filter('trans')('Half Last Year');
-            else if (key == 'CUSTOM') str = $filter('date')(tableParams.filter()['starts_at'], 'dd.M.yy') + '-' + $filter('date')(tableParams.filter()['ends_at'], 'dd.M.yy');
+            else if (key == 'CUSTOM') str = $filter('date')(tableModel.filter()['starts_at'], 'dd.M.yy') + '-' + $filter('date')(tableModel.filter()['ends_at'], 'dd.M.yy');
 
             return str;
         };
 
+        // TODO: document what is it for
         var filterByDate = function(){
-            if (arguments.length == 1){
+            //if (arguments.length == 1){
                 var key = arguments[0];
                 var dateFilter = getDateFilter(key);
 
@@ -199,7 +203,7 @@ angular.module('bplApp.widgets')
                 else {
                     $scope.showFilterByDatesForm = true;
                 }
-            }
+            //}
         };
 
         var submitFilterByDate = function(){
@@ -215,9 +219,9 @@ angular.module('bplApp.widgets')
             openDropDown();
         };
 
-        var getLoadingClass = function(move){
-            return move.$_isLoading ? 'loading' : null;
-        };
+//        var getLoadingClass = function(move){
+//            return move.$_isLoading ? 'loading' : null;
+//        };
 
         var update = function(move){
             move.$update();
@@ -227,19 +231,15 @@ angular.module('bplApp.widgets')
 //            return 'background-image: url("' + move.getCheckbookImageUrl() + '")';
 //        };
 
-        $scope.accountId;
 
-        PubSub.subscribe(PubSub.CHANEL_ACCOUNT_SELECTED, $scope, function(e, accountId){
-            $scope.accountId = accountId;
-            tableParams.reload();
-        });
+        $scope.accountId = null;
 
         $scope.filter = getDateFilter('30_DAYS');
-        $scope.tableParams = tableParams;
+        $scope.tableModel = tableModel;
         $scope.getSortableClass = getSortableClass;
         $scope.sorting = sorting;
         $scope.filterBy = filterBy;
-        $scope.getCtgClass = getCtgClass;
+        //$scope.getCtgClass = getCtgClass;
         $scope.getCtgName = getCtgName;
         $scope.isGrouped = true;
         $scope.showDetails = showDetails;
@@ -257,7 +257,14 @@ angular.module('bplApp.widgets')
         $scope.openDropDown = openDropDown;
         $scope.isDropDownOpen = isDropDownOpen;
 
-        $scope.getLoadingClass = getLoadingClass;
+        //$scope.getLoadingClass = getLoadingClass;
         $scope.update = update;
-        //$scope.getCheckbookStyle = getCheckbookStyle;
+
+
+        PubSub.subscribe(PubSub.CHANEL_ACCOUNT_SELECTED, $scope, function(e, time, accountId){
+            $scope.accountId = accountId;
+            tableModel.reload();
+        });
+
+
     }]);
