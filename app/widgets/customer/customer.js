@@ -6,7 +6,7 @@ angular.module('bplApp.widgets')
 // params: showAccountSelection (boolean) - wether or not to show a dropdown for selecting current account
 .directive('customer', function() {
     return {
-        templateUrl: 'widgets/customer/Customer.html',
+        templateUrl: 'widgets/customer/customer.html',
         replace: true,
         controller: 'customer',
         scope: {

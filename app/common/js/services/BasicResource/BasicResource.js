@@ -67,7 +67,7 @@ angular.module('bplApp.services').
 
                         if (!(publishTime in clearedCache)) {
                             var params = angular.isObject(arguments[1]) ? angular.copy(arguments[1]) : {};
-                            var cacheKey = DataCache.getCacheKey(resourceConfig, params);
+                            var cacheKey = DataCache.getCacheKey(URL, resourceConfig, params);
 
                             DataCache.remove(cacheKey);
                             clearedCache[publishTime] = true;

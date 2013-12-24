@@ -103,7 +103,7 @@ angular.module('bplApp.services')
             return keys.sort();
         };
 
-        var getCacheKey = function(resourceConfig, params){
+        var getCacheKey = function(URL, resourceConfig, params){
             var keys = sortedKeys(params);
 
             var cacheKey = URL;
@@ -131,6 +131,7 @@ angular.module('bplApp.services')
 
             if (uri) cacheKey += '?' + uri.substr(1);
 
+            d(params);
             return cacheKey;
         };
 

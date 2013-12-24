@@ -13,7 +13,8 @@ describe('bplApp.services', function (){
 
 
         beforeEach(function(){
-            DataCache = jasmine.createSpyObj('DataCache', ['remove']);
+            //DataCache = jasmine.createSpyObj('DataCache', ['remove', 'getCacheKey']);
+
 
             PubSub = jasmine.createSpyObj('PubSub', ['publish']);
             PubSub.CONTACTS = 'onContactsChange';
@@ -21,14 +22,17 @@ describe('bplApp.services', function (){
             Range = jasmine.createSpy('Range');
 
             module(function($provide) {
-                $provide.value('DataCache', DataCache);
+                //$provide.value('DataCache', DataCache);
                 $provide.value('PubSub', PubSub);
                 $provide.value('Range', Range);
             });
 
             inject(function($injector){
+                DataCache = $injector.get('DataCache');
                 $httpBackend = $injector.get('$httpBackend');
                 BasicResource = $injector.get('BasicResource');
+
+                spyOn(DataCache, 'remove');
             });
         });
 
@@ -94,9 +98,9 @@ describe('bplApp.services', function (){
             $httpBackend.whenGET('http://bpl.local/data/customers/1').respond({});
 
             BasicResource({resourceName : 'customers'}).get({id : 1});
-            expect(DataCache.remove).not.toHaveBeenCalledWith('http://bpl.local/data/customers/1');
+            expect(DataCache.remove).not.toHaveBeenCalled();
 
-            BasicResource({resourceName : 'customers'}).get(true, {id : 1});
+            BasicResource({resourceName : 'customers'}).get(Date.now(), {id : 1});
             expect(DataCache.remove).toHaveBeenCalledWith('http://bpl.local/data/customers/1');
 
             $httpBackend.flush();

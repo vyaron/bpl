@@ -108,8 +108,8 @@ describe('widgets', function() {
             expect($scope.filter.ends_at).toEqual(jasmine.any(Number));
         });
 
-        it('should contain ngTableParams object', function(){
-            expect($scope.tableParams).toEqual(jasmine.any(ngTableParams));
+        it('should contain tableModel object', function(){
+            expect($scope.tableModel).toEqual(jasmine.any(Object));
         });
 
         it ('should set the right sort param', function(){
