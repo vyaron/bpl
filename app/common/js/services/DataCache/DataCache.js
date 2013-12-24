@@ -131,7 +131,6 @@ angular.module('bplApp.services')
 
             if (uri) cacheKey += '?' + uri.substr(1);
 
-            d(params);
             return cacheKey;
         };
 
