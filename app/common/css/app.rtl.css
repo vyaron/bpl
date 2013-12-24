@@ -159,3 +159,23 @@
   margin-top: 0;
   top: 0;
 }
+body {
+  direction: rtl;
+  text-align: right;
+}
+.ng-table th.sortable div {
+  padding-right: 0;
+  padding-left: 18px;
+}
+.ng-table th.sortable div:after,
+.ng-table th.sortable div:before {
+  right: auto;
+  left: 8px;
+}
+th {
+  text-align: right;
+}
+.popover {
+  direction: rtl;
+  text-align: right;
+}

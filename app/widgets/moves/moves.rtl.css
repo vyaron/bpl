@@ -89,3 +89,27 @@
 .moves .move-details textarea {
   width: 300px;
 }
+.moves .ctg {
+  margin-right: 0;
+  margin-left: 5px;
+}
+.moves .income,
+.moves .expense,
+.moves .balance {
+  direction: ltr;
+}
+.moves .filters > li {
+  float: right;
+}
+.moves .balance .adviser {
+  left: -12px;
+  right: auto;
+}
+.moves .move-details ul li {
+  float: right;
+  margin-right: 15px;
+  margin-left: 0;
+}
+.moves .move-details ul li:first-child {
+  margin-right: 0;
+}
