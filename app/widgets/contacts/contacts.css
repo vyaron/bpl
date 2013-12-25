@@ -1,4 +1,7 @@
 /*Contacts*/
+.contacts li {
+  margin: 10px;
+}
 .contacts li div.thumbnail {
   border: none;
   margin-bottom: 0;

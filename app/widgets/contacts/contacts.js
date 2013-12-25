@@ -82,7 +82,7 @@ angular.module('bplApp.widgets')
             }
         };
 }])
-.controller('contactsPopup', ['$scope', '$modalInstance', 'ServerValidation', 'translateFilter', 'contact', function($scope, $modalInstance, ServerValidation,translateFilter, contact) {
+.controller('contactsPopup', ['$scope', '$modalInstance', 'ServerValidation', 'transFilter', 'contact', function($scope, $modalInstance, ServerValidation,transFilter, contact) {
     $scope.contact = contact;
 
     $scope.save = function () {
