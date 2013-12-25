@@ -13,7 +13,7 @@ angular.module('bplApp.widgets')
     };
 })
 
-.controller('contacts', ['$scope', '$modal', '$window', 'ContactsResource', function($scope, $modal, $window, ContactsResource) {
+.controller('contacts', ['$scope', '$modal', '$window', 'ContactsResource', 'Range', function($scope, $modal, $window, ContactsResource, Range) {
     $scope.contactIns = null;
     $scope.contacts = [];
 
@@ -24,63 +24,57 @@ angular.module('bplApp.widgets')
 
     //TODO: create paginationService.setPage($scope, max, resource) / headerParser.getRange() ?
     $scope.setPage = function(page){
-         var page = page ? (--page) : 0;
-         var offset = Math.max(0, page) * $scope.max;
+        var page = page ? (--page) : 0;
+        var offset = Math.max(0, page) * $scope.max;
 
-         ContactsResource.query({offset:offset, limit:$scope.max}, function(contacts, headers){
+        ContactsResource.query({offset:offset, limit:$scope.max}, function(contacts, headers){
             $scope.contacts = contacts;
 
-             //TODO: create paginationService
-            var headers = headers();
-            var rangeParts = headers['content-range'].split('/');
-            $scope.total = parseInt(rangeParts[1]);
-
-            rangeParts = rangeParts[0].split('-');
-            var offset = parseInt(rangeParts[0]);
-            var limit = parseInt(rangeParts[1]);
+            var range = Range(headers);
+            var offset = range.offset;
 
             $scope.page = Math.round(offset/$scope.max) + 1;
-            //cl('page: ' + $scope.page + ' | max: ' + $scope.max + ' | total: ' + $scope.total);
+            $scope.total = range.total;
         });
     };
     $scope.setPage();
 
-       $scope.showPopup = function(){
-            var modalInstance = $modal.open({
-                templateUrl: 'widgets/contacts/popup.html',
-                controller: 'contactsPopup',
-                resolve : {
-                    contact : function(){
-                        return $scope.contactIns;
-                    }
+    $scope.showPopup = function(){
+        var modalInstance = $modal.open({
+            templateUrl: 'widgets/contacts/popup.html',
+            controller: 'contactsPopup',
+            resolve : {
+                contact : function(){
+                    return $scope.contactIns;
                 }
-            });
-
-            modalInstance.result.then(function () {
-                $scope.setPage($scope.page);
-            }, function () {
-                //cl('Modal dismissed at: ' + new Date());
-            });
-        };
-
-        $scope.add = function(){
-            $scope.contactIns = new ContactsResource({name : '', image_url : 'img/customer/102.jpg'});
-            $scope.showPopup();
-        };
-
-        $scope.edit = function(contact){
-            $scope.contactIns = angular.copy(contact);
-            $scope.showPopup();
-        };
-
-        $scope.delete = function(contact){
-            if ($window.confirm('Are you shore?')) {
-
-                contact.$delete(function(){
-                    $scope.setPage();
-                });
             }
-        };
+        });
+
+        modalInstance.result.then(function () {
+            $scope.setPage($scope.page);
+        }, function () {
+            //cl('Modal dismissed at: ' + new Date());
+        });
+    };
+
+    $scope.add = function(){
+        $scope.contactIns = new ContactsResource({name : '', image_url : 'img/customer/102.jpg'});
+        $scope.showPopup();
+    };
+
+    $scope.edit = function(contact){
+        $scope.contactIns = angular.copy(contact);
+        $scope.showPopup();
+    };
+
+    $scope.delete = function(contact){
+        if ($window.confirm('Are you sure?')) {
+
+            contact.$remove(function(){
+                $scope.setPage();
+            });
+        }
+    };
 }])
 .controller('contactsPopup', ['$scope', '$modalInstance', 'ServerValidation', 'transFilter', 'contact', function($scope, $modalInstance, ServerValidation,transFilter, contact) {
     $scope.contact = contact;

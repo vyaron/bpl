@@ -12,12 +12,7 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.s
     };
 })
 
-.config(['$httpProvider', 'TranslationsProvider', function($httpProvider, TranslationsProvider) {
-   // Log.setDebug(true);
-    //Log.setUrl("/LogErrors");
-
-    TranslationsProvider.lang = 'he';
-
+.config(['$httpProvider', function($httpProvider) {
 	// register our interceptor service
 	$httpProvider.interceptors.push('HttpInterceptor');
 
