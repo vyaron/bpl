@@ -13,16 +13,12 @@ angular.module('bplApp.widgets')
     };
 })
 
-.controller('contacts', ['$scope', '$modal', '$window', 'ContactsResource', 'Range', function($scope, $modal, $window, ContactsResource, Range) {
+.controller('contacts', ['$scope', '$modal', '$window', 'PubSub', 'ContactsResource', 'Range', function($scope, $modal, $window, PubSub, ContactsResource, Range) {
     $scope.contactIns = null;
     $scope.contacts = [];
 
-
-    //dd("aha");
-
     $scope.max = $scope.max ? $scope.max : 2;
 
-    //TODO: create paginationService.setPage($scope, max, resource) / headerParser.getRange() ?
     $scope.setPage = function(page){
         var page = page ? (--page) : 0;
         var offset = Math.max(0, page) * $scope.max;
@@ -71,10 +67,14 @@ angular.module('bplApp.widgets')
         if ($window.confirm('Are you sure?')) {
 
             contact.$remove(function(){
-                $scope.setPage();
+                $scope.setPage(1);
             });
         }
     };
+
+//    PubSub.subscribe(PubSub.CONTACTS, $scope, function(e, time, contactId){
+//        $scope.setPage(null, time);
+//    });
 }])
 .controller('contactsPopup', ['$scope', '$modalInstance', 'ServerValidation', 'transFilter', 'contact', function($scope, $modalInstance, ServerValidation,transFilter, contact) {
     $scope.contact = contact;
