@@ -169,7 +169,7 @@ var Log = (function(){
 
 /**
  * @ngdoc method
- * @name D
+ * @name d
  * @methodOf Log
  *
  * @description
