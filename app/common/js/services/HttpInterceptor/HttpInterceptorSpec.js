@@ -73,9 +73,9 @@ describe('bplApp.services', function (){
             expect($q.reject).toHaveBeenCalledWith(config);
         });
 
-        it ("should change $window.location.href to 'https://login.bankhapoalim.co.il' ", function(){
-            HttpInterceptor.responseError({status : 403});
-            expect($window.location.href).toEqual('https://login.bankhapoalim.co.il');
-        });
+//        it ("should change $window.location.href to 'https://login.bankhapoalim.co.il' ", function(){
+//            HttpInterceptor.responseError({status : 403});
+//            expect($window.location.href).toEqual('https://login.bankhapoalim.co.il');
+//        });
     });
 });

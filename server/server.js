@@ -43,6 +43,15 @@ var app = express()
 const DELAY = 0;
 //const DELAY = 5000;
 
+
+app.get('/403', function(req, res){
+    res.json(403, {msg: 'Forbidden'});
+});
+
+app.get('/500', function(req, res){
+    res.json(500, {msg: 'There is currently a temporary problem on the server.'});
+});
+
 var isForceErrors = function(req){
     return (String(req.query.forceError) == "true") ? true : false;
 };

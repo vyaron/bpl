@@ -15,7 +15,7 @@
  * <pre>$httpProvider.interceptors.push('HttpInterceptor');</pre>
  */
 angular.module('bplApp.services')
-.factory('HttpInterceptor', ['$q', '$window', 'DataCache', function($q, $window, DataCache) {
+.factory('HttpInterceptor', ['$q', '$window', 'DataCache', 'ErrorHandler', function($q, $window, DataCache, ErrorHandler) {
     return {
 
         /**
@@ -83,7 +83,8 @@ angular.module('bplApp.services')
          * @returns {Promise} -
          */
         'responseError': function(rejection) {
-            if (rejection.status == 403) $window.location.href = 'https://login.bankhapoalim.co.il';
+            //if (rejection.status == 403) $window.location.href = 'https://login.bankhapoalim.co.il';
+            ErrorHandler(rejection);
 
             //D('ERROR! (' + rejection.status + ')');
             return $q.reject(rejection);

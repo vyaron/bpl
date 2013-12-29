@@ -27,6 +27,8 @@
 </head>
 <body class="ng-cloak">
 
+<div error-handler-demo></div>
+
 <!--<div class="container">-->
     <!--<div customer show-account-selection="true"></div>-->
 <!--</div>-->
@@ -88,12 +90,13 @@
         <script src="common/js/filters/filters.js"></script>
         <script src="common/js/directives/directives.js"></script>
         <!--services-->
+        <script src="common/js/services/ErrorHandler/ErrorHandler.js"></script>
         <script src="common/js/services/PubSub/PubSub.js"></script>
         <script src="common/js/services/CurrUser.js"></script>
         <script src="common/js/services/DataCache/DataCache.js"></script>
         <script src="common/js/services/HttpInterceptor/HttpInterceptor.js"></script>
         <script src="common/js/services/ServerValidation/ServerValidation.js"></script>
-        <script src="common/js/services/range/range.js"></script>
+        <script src="common/js/services/Range/Range.js"></script>
         <!--Translation files-->
         <script src="common/js/services/Translate.js"></script>
         <!--<script src="common/i18n/en.js"></script>-->
@@ -121,6 +124,8 @@
         <script src="widgets/moves/moves.js"></script>
         <script src="widgets/moves/i18n.js"></script>
 
+
+        <script src="widgets/errorHandlerDemo/errorHandlerDemo.js"></script>
 
         <script>
             var TestCtrl = function($scope, ngTableParams){

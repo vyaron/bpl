@@ -14,13 +14,15 @@
  * HttpInterceptor
  */
 angular.module('bplApp.services')
-    .factory('ErrorHandler', ['$window', function($window){
-        var _status = {
-            403 : angular.noop
+    .factory('ErrorHandler', ['$window', 'PubSub', function($window, PubSub){
+
+        var redirectToLoginPage = function(rejection){
+            $window.location.href = "https://login.bankhapoalim.co.il";
         };
 
-        var redirectToLoginPage = function(){
-            $window.location.href = "http://google.com";
+        var publishByHttpStatus = function(rejection){
+            if (('STATUS_' + rejection.status) in PubSub) PubSub.publish(PubSub['STATUS_' + rejection.status], rejection);
+
         };
 
         var ErrorHandler = function(rejection){
@@ -34,6 +36,12 @@ angular.module('bplApp.services')
         };
 
         ErrorHandler.redirectToLoginPage = redirectToLoginPage;
+        ErrorHandler.publishByHttpStatus = publishByHttpStatus;
+
+        var _status = {
+            403 : ErrorHandler.redirectToLoginPage,
+            500 : [angular.noop, ErrorHandler.publishByHttpStatus]
+        };
 
         return ErrorHandler;
     }]);

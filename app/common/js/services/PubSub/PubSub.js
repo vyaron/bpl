@@ -38,6 +38,8 @@ angular.module('bplApp.services')
 		CHANEL_ACCOUNT_SELECTED     : 'cnlAccountSelected',
         CHANEL_SEVERE_ERROR         : 'cnlSevereError',
 
+        STATUS_500 : 'onStatus500',
+
         /**
          * @ngdoc method
          * @name bplApp.PubSub#publish
