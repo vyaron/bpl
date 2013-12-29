@@ -1,5 +1,14 @@
 'use strict';
-
+/**
+ * @ngdoc overview
+ * @name bplApp
+ *
+ * @description
+ *
+ * Main module
+ *
+ * <div doc-module-components="bplApp"></div>
+ */
 // This is our main module
 angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.services', 'bplApp.resources', 'bplApp.directives', 'bplApp.widgets', 'ui.bootstrap', 'ngTable'])
 
