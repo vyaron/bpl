@@ -7,9 +7,9 @@ describe('bplApp.services', function (){
         beforeEach(module('bplApp.services'));
 
 
-        beforeEach(module(function(BasicResourceProvider) {
-            BasicResourceProvider.setUrl('http://bpl.local/data')
-        }));
+//        beforeEach(module(function(BasicResourceProvider) {
+//            BasicResourceProvider.setUrl('http://bpl.local/data')
+//        }));
 
 
         beforeEach(function(){
@@ -25,6 +25,7 @@ describe('bplApp.services', function (){
                 //$provide.value('DataCache', DataCache);
                 $provide.value('PubSub', PubSub);
                 $provide.value('Range', Range);
+                $provide.value('REST_URL', 'http://bpl.local/data');
             });
 
             inject(function($injector){
@@ -32,7 +33,7 @@ describe('bplApp.services', function (){
                 $httpBackend = $injector.get('$httpBackend');
                 BasicResource = $injector.get('BasicResource');
 
-                spyOn(DataCache, 'remove');
+                spyOn(DataCache, 'removeAll');
             });
         });
 
@@ -98,10 +99,10 @@ describe('bplApp.services', function (){
             $httpBackend.whenGET('http://bpl.local/data/customers/1').respond({});
 
             BasicResource({resourceName : 'customers'}).get({id : 1});
-            expect(DataCache.remove).not.toHaveBeenCalled();
+            expect(DataCache.removeAll).not.toHaveBeenCalled();
 
             BasicResource({resourceName : 'customers'}).get(Date.now(), {id : 1});
-            expect(DataCache.remove).toHaveBeenCalledWith('http://bpl.local/data/customers/1');
+            expect(DataCache.removeAll).toHaveBeenCalledWith('customers');
 
             $httpBackend.flush();
         });

@@ -3,8 +3,6 @@
 // This is our main module
 angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.services', 'bplApp.resources', 'bplApp.directives', 'bplApp.widgets', 'ui.bootstrap', 'ngTable'])
 
-.constant('ENTITIES', {MONSTER : 'monster', CUSTOMER : 'customer', CONTACT: 'contact', ACCOUNT : 'account', TRANSACTION : 'transaction'})
-
 .factory('$exceptionHandler', function () {
     return function (exception, cause) {
         exception.message += ' (caused by "' + cause + '")';
@@ -37,6 +35,6 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.s
 angular.module('bplApp.filters', []);
 angular.module('bplApp.controllers', []);
 angular.module('bplApp.directives', []);
-angular.module('bplApp.services', ['ngResource']);
+angular.module('bplApp.services', ['ngResource']).value('REST_URL', 'data');
 angular.module('bplApp.resources', ['ngResource', 'bplApp.services']);
 angular.module('bplApp.widgets', ['bplApp.resources', 'ui.bootstrap', 'ngTable', 'bplApp.filters']);

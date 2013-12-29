@@ -18,8 +18,18 @@
  * A wrapper and a hook point so we can extend $cacheFactory return object behavior in the future
  */
 angular.module('bplApp.services')
-    .factory('DataCache', ['$cacheFactory', function($cacheFactory){
+    .factory('DataCache', ['$cacheFactory', 'REST_URL', function($cacheFactory, REST_URL){
         var _cacheFactory = $cacheFactory('Data');
+
+        var resourceToKeys = {};
+        var setKey = function(name, key){
+            if (!(name in resourceToKeys)) resourceToKeys[name] = [];
+            resourceToKeys[name].push(key);
+        };
+
+        var getKeys = function(name){
+            return (name in resourceToKeys) ? resourceToKeys[name] : [];
+        };
 
         /**
          * @ngdoc method
@@ -28,7 +38,7 @@ angular.module('bplApp.services')
          *
          * @returns {Object} Returns id, size, and options of cache.
          */
-        var infoFn = function(){return _cacheFactory.info();};
+        var info = function(){return _cacheFactory.info();};
 
         /**
          * @ngdoc method
@@ -41,7 +51,11 @@ angular.module('bplApp.services')
          * @param {String} key name
          * @param {*} value mix
          */
-        var putFn = function(key, value){
+        var put = function(key, value){
+            //save relation between resource name to cache key
+            var t = key.match(REST_URL + '/' + '([a-zA-Z]+)');
+            if (t && t.length > 1) setKey(t[1], key);
+
             return _cacheFactory.put(key, value);
         };
 
@@ -53,7 +67,7 @@ angular.module('bplApp.services')
          * @param {String} key name
          * @return {*} Returns cached value for key or undefined for cache miss.
          */
-        var getFn = function(key){
+        var get = function(key){
             //console.log('Get: ' + key);
             return _cacheFactory.get(key);
         };
@@ -68,7 +82,7 @@ angular.module('bplApp.services')
          *
          * @param {String} key name
          */
-        var removeFn = function(key){return _cacheFactory.remove(key);};
+        var remove = function(key){return _cacheFactory.remove(key);};
 
         /**
          * @ngdoc method
@@ -77,10 +91,17 @@ angular.module('bplApp.services')
          *
          * @description
          * Removes all cached values.
+         *
+         * @param {String} name optional resource name
          */
-        var removeAllFn = function(){
-            //console.log('Clear cache');
-            return _cacheFactory.removeAll();
+        var removeAll = function(name){
+            if (name){
+                var keys = getKeys(name);
+                for (var i=0; i < keys.length; i++){
+                    remove(keys[i]);
+                }
+                if (resourceToKeys[name]) delete resourceToKeys[name];
+            } else return _cacheFactory.removeAll();
         };
 
         /**
@@ -91,58 +112,15 @@ angular.module('bplApp.services')
          * @description
          * Removes references to this cache from $cacheFactory.
          */
-        var destroyFn = function(){return _cacheFactory.destroy();} ;
-
-        var sortedKeys = function(obj) {
-            var keys = [];
-            for (var key in obj) {
-                if (obj.hasOwnProperty(key)) {
-                    keys.push(key);
-                }
-            }
-            return keys.sort();
-        };
-
-        var getCacheKey = function(URL, resourceConfig, params){
-            var keys = sortedKeys(params);
-
-            var cacheKey = URL;
-
-            cacheKey += '/' + resourceConfig.resourceName;
-
-            if ('id' in params) {
-                cacheKey += '/' + params.id;
-                delete params.id;
-            }
-            if ('subResourceName' in resourceConfig && (resourceConfig.subResourceName[0] != '@')) cacheKey += '/' + resourceConfig.subResourceName;
-            if ('subId' in params) {
-                cacheKey += '/' + params.subId;
-                delete  params.subId;
-            }
-
-            var uri = '';
-            for (var i=0; i < keys.length; i++){
-                var key = keys[i];
-
-                if (key == 'id' || key == 'subId') continue;
-
-                uri += '&' + key +'='+ params[key];
-            }
-
-            if (uri) cacheKey += '?' + uri.substr(1);
-
-            return cacheKey;
-        };
-
+        var destroy = function(){return _cacheFactory.destroy();} ;
 
         return {
-            info : infoFn,
-            put : putFn,
-            get : getFn,
-            remove : removeFn,
-            removeAll : removeAllFn,
-            destroy : destroyFn,
-            getCacheKey : getCacheKey
+            info : info,
+            put : put,
+            get : get,
+            remove : remove,
+            removeAll : removeAll,
+            destroy : destroy
         };
     }]);
 

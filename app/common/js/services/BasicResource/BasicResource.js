@@ -41,17 +41,17 @@
  */
 angular.module('bplApp.services').
     provider('BasicResource', [function(){
-        var URL = 'data';
+//        var URL = 'data';
         var BasicResourceProvider = {};
-        BasicResourceProvider.setUrl = function(url){
-            if (url) URL = url;
-        };
+//        BasicResourceProvider.setUrl = function(url){
+//            if (url) URL = url;
+//        };
 
-        BasicResourceProvider.$get = ['$resource', 'PubSub', 'DataCache', 'Range', function($resource, PubSub, DataCache, Range){
+        BasicResourceProvider.$get = ['$resource', 'REST_URL', 'PubSub', 'DataCache', 'Range', function($resource, REST_URL, PubSub, DataCache, Range){
             return function(config){
                 var resourceConfig = angular.extend({resourceName : null, id : '@id', subResourceName : '@subResourceName', subId : '@subId'}, config);
 
-                var clearedCache = {};
+                var clearedResourceCache = {};
                 var clearCache = function(){
                     var args = arguments;
 
@@ -65,12 +65,13 @@ angular.module('bplApp.services').
                         if (arguments[3]) args.push(arguments[3]);
                         if (arguments[4]) args.push(arguments[4]);
 
-                        if (!(publishTime in clearedCache)) {
-                            var params = angular.isObject(arguments[1]) ? angular.copy(arguments[1]) : {};
-                            var cacheKey = DataCache.getCacheKey(URL, resourceConfig, params);
+                        var resourceName = resourceConfig.resourceName;
+                        var clearedResource = publishTime + '_' + resourceName;
 
-                            DataCache.remove(cacheKey);
-                            clearedCache[publishTime] = true;
+
+                        if (!( clearedResource in clearedResourceCache)) {
+                            DataCache.removeAll(resourceName);
+                            clearedResourceCache[clearedResource] = true;
                         }
 
                         return args;
@@ -92,7 +93,7 @@ angular.module('bplApp.services').
                     });
                 };
 
-                var resource = $resource(URL + '/:resourceName/:id/:subResourceName/:subId', resourceConfig, {
+                var resource = $resource(REST_URL + '/:resourceName/:id/:subResourceName/:subId', resourceConfig, {
                     update : {method: 'PUT'}
                 });
 

@@ -19,11 +19,13 @@ angular.module('bplApp.widgets')
 
     $scope.max = $scope.max ? $scope.max : 2;
 
-    $scope.setPage = function(page){
+    $scope.setPage = function(page, time){
+        time = time | 0;
+
         var page = page ? (--page) : 0;
         var offset = Math.max(0, page) * $scope.max;
 
-        ContactsResource.query({offset:offset, limit:$scope.max}, function(contacts, headers){
+        ContactsResource.query(time, {offset:offset, limit:$scope.max}, function(contacts, headers){
             $scope.contacts = contacts;
 
             var range = Range(headers);
@@ -47,7 +49,7 @@ angular.module('bplApp.widgets')
         });
 
         modalInstance.result.then(function () {
-            $scope.setPage($scope.page);
+            //$scope.setPage($scope.page);
         }, function () {
             //cl('Modal dismissed at: ' + new Date());
         });
@@ -67,14 +69,15 @@ angular.module('bplApp.widgets')
         if ($window.confirm('Are you sure?')) {
 
             contact.$remove(function(){
-                $scope.setPage(1);
+                $scope.page = 1;
+                //$scope.setPage(1);
             });
         }
     };
 
-//    PubSub.subscribe(PubSub.CONTACTS, $scope, function(e, time, contactId){
-//        $scope.setPage(null, time);
-//    });
+    PubSub.subscribe(PubSub.CONTACTS, $scope, function(e, time){
+        $scope.setPage($scope.page, time);
+    });
 }])
 .controller('contactsPopup', ['$scope', '$modalInstance', 'ServerValidation', 'transFilter', 'contact', function($scope, $modalInstance, ServerValidation,transFilter, contact) {
     $scope.contact = contact;
