@@ -19,13 +19,11 @@ angular.module('bplApp.widgets')
 
     $scope.max = $scope.max ? $scope.max : 2;
 
-    $scope.setPage = function(page, time){
-        time = time | 0;
-
+    $scope.setPage = function(page){
         var page = page ? (--page) : 0;
         var offset = Math.max(0, page) * $scope.max;
 
-        ContactsResource.query(time, {offset:offset, limit:$scope.max}, function(contacts, headers){
+        ContactsResource.query({offset:offset, limit:$scope.max}, function(contacts, headers){
             $scope.contacts = contacts;
 
             var range = Range(headers);
@@ -75,8 +73,8 @@ angular.module('bplApp.widgets')
         }
     };
 
-    PubSub.subscribe(PubSub.CONTACTS, $scope, function(e, time){
-        $scope.setPage($scope.page, time);
+    PubSub.subscribe(PubSub.CONTACTS, $scope, function(e){
+        $scope.setPage($scope.page);
     });
 }])
 .controller('contactsPopup', ['$scope', '$modalInstance', 'ServerValidation', 'transFilter', 'contact', function($scope, $modalInstance, ServerValidation,transFilter, contact) {

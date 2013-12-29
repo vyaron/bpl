@@ -41,44 +41,11 @@
  */
 angular.module('bplApp.services').
     provider('BasicResource', [function(){
-//        var URL = 'data';
         var BasicResourceProvider = {};
-//        BasicResourceProvider.setUrl = function(url){
-//            if (url) URL = url;
-//        };
 
         BasicResourceProvider.$get = ['$resource', 'REST_URL', 'PubSub', 'DataCache', 'Range', function($resource, REST_URL, PubSub, DataCache, Range){
             return function(config){
                 var resourceConfig = angular.extend({resourceName : null, id : '@id', subResourceName : '@subResourceName', subId : '@subId'}, config);
-
-                var clearedResourceCache = {};
-                var clearCache = function(){
-                    var args = arguments;
-
-                    var publishTime = parseInt(arguments[0]);
-
-                    var isDeleteCache = (!isNaN(publishTime)) ? true : false;
-                    if (isDeleteCache){
-                        args = [];
-                        if (arguments[1]) args.push(arguments[1]);
-                        if (arguments[2]) args.push(arguments[2]);
-                        if (arguments[3]) args.push(arguments[3]);
-                        if (arguments[4]) args.push(arguments[4]);
-
-                        var resourceName = resourceConfig.resourceName;
-                        var clearedResource = publishTime + '_' + resourceName;
-
-
-                        if (!( clearedResource in clearedResourceCache)) {
-                            DataCache.removeAll(resourceName);
-                            clearedResourceCache[clearedResource] = true;
-                        }
-
-                        return args;
-                    }
-
-                    return args;
-                };
 
                 var publishResourceChanged = function(res){
                     res.$promise.then(function(data){
@@ -99,21 +66,18 @@ angular.module('bplApp.services').
 
                 var resourceGet = resource.get;
                 resource.get = function(){
-                    var args = clearCache.apply(null, arguments);
-                    var res = resourceGet.apply(null, args);
-
-                    return res;
+                    return resourceGet.apply(null, arguments);
                 };
 
                 var resourceQuery = resource.query;
                 resource.query = function(){
-                   var args = clearCache.apply(null, arguments);
-                   return  resourceQuery.apply(null, args);
+                   return resourceQuery.apply(null, arguments);
                 };
 
                 var resourceSave = resource.save;
                 resource.save = function(){
                     var res = resourceSave.apply(null, arguments);
+                    DataCache.removeAll(resourceConfig.resourceName);
                     publishResourceChanged(res);
                     return res;
                 };
@@ -121,6 +85,7 @@ angular.module('bplApp.services').
                 var resourceUpdate = resource.update;
                 resource.update = function(){
                     var res = resourceUpdate.apply(null, arguments);
+                    DataCache.removeAll(resourceConfig.resourceName);
                     publishResourceChanged(res);
                     return res;
                 };
@@ -128,6 +93,7 @@ angular.module('bplApp.services').
                 var resourceRemove = resource.remove;
                 resource.remove = function(){
                     var res = resourceRemove.apply(null, arguments);
+                    DataCache.removeAll(resourceConfig.resourceName);
                     publishResourceChanged(res);
                     return res;
                 };
