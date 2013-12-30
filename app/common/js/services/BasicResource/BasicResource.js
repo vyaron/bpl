@@ -98,6 +98,17 @@ angular.module('bplApp.services').
                     return res;
                 };
 
+                /**
+                 * @ngdoc function
+                 * @name bplApp.BasicResource#getRange
+                 * @methodOf bplApp.BasicResource
+                 *
+                 * @description
+                 * Method to get range object from headers function.
+                 *
+                 * @param {Function} headers function from $http success call back function
+                 * @returns {Object} range - {offset : 0, limit : 2}
+                 */
                 resource.getRange = Range;
 
                 /**

@@ -21,7 +21,9 @@ angular.module('bplApp.services')
     .factory('DataCache', ['$cacheFactory', 'REST_URL', function($cacheFactory, REST_URL){
         var _cacheFactory = $cacheFactory('Data');
 
+        //Resource name to cached keys relation
         var resourceToKeys = {};
+
         var setKey = function(name, key){
             if (!(name in resourceToKeys)) resourceToKeys[name] = [];
             resourceToKeys[name].push(key);
@@ -30,6 +32,7 @@ angular.module('bplApp.services')
         var getKeys = function(name){
             return (name in resourceToKeys) ? resourceToKeys[name] : [];
         };
+
 
         /**
          * @ngdoc method
@@ -52,7 +55,7 @@ angular.module('bplApp.services')
          * @param {*} value mix
          */
         var put = function(key, value){
-            //save relation between resource name to cache key
+            //save relation between resource name to cached keys
             var t = key.match(REST_URL + '/' + '([a-zA-Z]+)');
             if (t && t.length > 1) setKey(t[1], key);
 
@@ -91,8 +94,9 @@ angular.module('bplApp.services')
          *
          * @description
          * Removes all cached values.
+         * Or specific resource cached values.
          *
-         * @param {String} name optional resource name
+         * @param {String} name Optional resource name
          */
         var removeAll = function(name){
             if (name){

@@ -1,17 +1,19 @@
 'use strict';
 
 /**
- * @ngdoc object
+ * @ngdoc function
  * @name bplApp.ErrorHandler
  *
  * @description
- * Handle error response by HTTP Status.
+ * Handles all server returns errors based on HTTP STATUS
  *
  * # General usage
- * Handle error response by HTTP Status.
+ * In $HttpInterceptor.responseError function.
  *
  * # Usage
- * HttpInterceptor
+ * None, this happen behind the scene by angular when data is requested via $http -> $HttpInterceptor.
+ *
+ * @param {object} rejection must contain status property - HTTP STATUS
  */
 angular.module('bplApp.services')
     .factory('ErrorHandler', ['$window', 'PubSub', function($window, PubSub){
