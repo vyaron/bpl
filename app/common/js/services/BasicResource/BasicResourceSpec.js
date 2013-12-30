@@ -97,12 +97,21 @@ describe('bplApp.services', function (){
 
         it ('should clear cache', function(){
             $httpBackend.whenGET('http://bpl.local/data/customers/1').respond({});
+            $httpBackend.whenGET('http://bpl.local/data/customers?limit=2&offset=0').respond([]);
+            $httpBackend.whenPOST('http://bpl.local/data/customers').respond({});
+            $httpBackend.whenPUT('http://bpl.local/data/customers/1').respond({});
+            $httpBackend.whenDELETE('http://bpl.local/data/customers/1').respond(null);
 
             BasicResource({resourceName : 'customers'}).get({id : 1});
+            BasicResource({resourceName : 'customers'}).query({offset : 0, limit : 2});
             expect(DataCache.removeAll).not.toHaveBeenCalled();
 
-            BasicResource({resourceName : 'customers'}).get(Date.now(), {id : 1});
+            BasicResource({resourceName : 'customers'}).save({name : 'ronen'});
+            BasicResource({resourceName : 'customers'}).update({id : 1, name : 'ronen'});
+            BasicResource({resourceName : 'customers'}).remove({id : 1});
+
             expect(DataCache.removeAll).toHaveBeenCalledWith('customers');
+            expect(DataCache.removeAll.calls.length).toEqual(3);
 
             $httpBackend.flush();
         });

@@ -31,7 +31,7 @@ describe('bplApp.services', function (){
             PubSub.subscribe('chanel1', $scope, function(){});
 
             PubSub.publish('chanel1', 101);
-            expect($scope.$broadcast).toHaveBeenCalledWith('chanel1', jasmine.any(Number),101);
+            expect($scope.$broadcast).toHaveBeenCalledWith('chanel1',101);
         });
 
         it ('should have unsubscribe function', function(){
