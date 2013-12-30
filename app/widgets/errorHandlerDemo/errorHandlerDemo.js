@@ -33,7 +33,7 @@ angular.module('bplApp.widgets')
         $scope.getStatus500 = getStatus500;
         $scope.getStatus403 = getStatus403;
 
-        PubSub.subscribe(PubSub.STATUS_500, $scope, function(e, time, rejection){
+        PubSub.subscribe(PubSub.STATUS_500, $scope, function(e, rejection){
             showPopup(rejection);
         });
     }])
