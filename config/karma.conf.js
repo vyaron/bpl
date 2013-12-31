@@ -27,7 +27,7 @@ module.exports = function(config) {
 
         'app/common/js/app.js',
         //'common/js/controllers/controllers.js',
-        //'common/js/directives/directives.js',
+        'app/common/js/directives/**/*.js',
         'app/common/js/filters/filters.js',
         //'common/js/services/services.js',
 
@@ -37,6 +37,8 @@ module.exports = function(config) {
 
         'app/widgets/**/*.js',
         'app/widgets/**/*.html',
+
+        'app/templates/*.html',
 
 
         //'test/unit/**/*.js',
@@ -54,7 +56,8 @@ module.exports = function(config) {
     ],
 
       preprocessors: {
-          'app/widgets/**/*.html': 'ng-html2js'
+          'app/widgets/**/*.html': 'ng-html2js',
+          'app/templates/**/*.html': 'ng-html2js'
       },
 
       ngHtml2JsPreprocessor: {

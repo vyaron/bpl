@@ -19,7 +19,9 @@ angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.s
     };
 })
 
-.config(['$httpProvider', function($httpProvider) {
+.config(['$httpProvider', '$compileProvider', function($httpProvider, $compileProvider) {
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|blob):/);
+
 	// register our interceptor service
 	$httpProvider.interceptors.push('HttpInterceptor');
 

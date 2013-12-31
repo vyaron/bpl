@@ -18,14 +18,36 @@
     <!--font awesome for bootswatch extention of icons-->
     <!--<link rel="stylesheet" href="common/bower_components/font-awesome/css/font-awesome.min.css"/>-->
     <!--application css files-->
-    <!--<link rel="stylesheet" href="common/css/app.css"/>-->
-    <link rel="stylesheet" href="common/css/app.rtl.css"/>
+    <link rel="stylesheet" href="common/css/app.css"/>
+    <!--<link rel="stylesheet" href="common/css/app.rtl.css"/>-->
     <link rel="shortcut icon" href="common/img/favicon.png">
     <!--widget css files (should actually be loaded dynamically)-->
     <link rel="stylesheet" href="widgets/contacts/contacts.css"/>
     <link rel="stylesheet" href="widgets/moves/moves.rtl.css"/>
 </head>
 <body class="ng-cloak">
+
+<div ng-controller="TestCtrl">
+    <ul>
+        <li class="dropdown">
+            <a class="dropdown-toggle">Export</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a file-export="contacts" file-export-type="csv">download CSV</a>
+                </li>
+                <li>
+                    <a file-export="contacts" file-export-type="html">download HTML</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr/>
+    <a class="btn btn-primary" file-export="contacts" file-export-type="csv">download CSV</a>
+    <a class="btn btn-primary" file-export="contacts" file-export-type="html">download HTML</a>
+
+    <hr/>
+</div>
 
 <div error-handler-demo></div>
 
@@ -47,9 +69,6 @@
 </div>
 
 <div class="container">
-
-
-
 
     <!--{{"hello world" | translate:'he'}}-->
     <!--<div class="row">-->
@@ -89,6 +108,7 @@
         <script src="common/js/app.js"></script>
         <script src="common/js/filters/filters.js"></script>
         <script src="common/js/directives/directives.js"></script>
+        <script src="common/js/directives/fileExport/fileExport.js"></script>
         <!--services-->
         <script src="common/js/services/ErrorHandler/ErrorHandler.js"></script>
         <script src="common/js/services/PubSub/PubSub.js"></script>
@@ -97,6 +117,7 @@
         <script src="common/js/services/HttpInterceptor/HttpInterceptor.js"></script>
         <script src="common/js/services/ServerValidation/ServerValidation.js"></script>
         <script src="common/js/services/Range/Range.js"></script>
+        <!--<script src="common/js/services/FileExport/FileExport.js"></script>-->
         <!--Translation files-->
         <script src="common/js/services/Translate.js"></script>
         <!--<script src="common/i18n/en.js"></script>-->
@@ -128,16 +149,16 @@
         <script src="widgets/errorHandlerDemo/errorHandlerDemo.js"></script>
 
         <script>
-            var TestCtrl = function($scope, ngTableParams){
+            var TestCtrl = function($scope, $timeout){
+                $scope.contacts = [{id : 1, name : 'Ronen Cohen'}];
 
-    //            ContactsResource.get({id : 1});
-    //
-    //            ContactsResource.save({name : 'lala'});
-    //
-    //            PubSub.subscribe(PubSub.CONTACTS, $scope, function(res){
-    //                ContactsResource.get(true, {id : 1});
-    //            });
+                var autoIncarament = function(){
 
+                    $scope.contacts.push({id : Math.floor(Math.random() * 1000), name : 'Auto'});
+
+                    $timeout(autoIncarament, 2000);
+                };
+                autoIncarament();
             };
         </script>
     </footer>

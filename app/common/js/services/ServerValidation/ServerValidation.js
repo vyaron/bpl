@@ -33,7 +33,7 @@ angular.module('bplApp.services')
 .factory('ServerValidation', function () {
     var handleRes = function(form, res){
         if (form && res && res.data && res.data.errors){
-            for (name in res.data.errors){
+            for (var name in res.data.errors){
                 if (name in form) {
                     form[name].$setValidity(res.data.errors[name], false);
                     form[name].$dirty = true;
