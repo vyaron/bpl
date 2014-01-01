@@ -5,6 +5,9 @@ angular.module('bplApp.directives')
         var DISABLED_CLASS = 'disabled';
         var DOWNLOAD_ATTR = 'download';
 
+        var CSV = 'csv';
+        var HTML = 'html';
+
         var CSV_SEP = ',';
         var NEW_LINE = "\n";
 
@@ -27,13 +30,36 @@ angular.module('bplApp.directives')
             return (isBrowserSupportMsSaveBlob() || (!isIE() && Blob && $window.URL.createObjectURL)) ? true : false;
         };
 
-        var getCsvLine = function(data){
+        var getOptions = function(scope){
+            var options;
+
+            if (Array.isArray(scope.options)) options = scope.options;
+            else {
+                var item = Array.isArray(scope.data) ? scope.data[0] : scope.data;
+                if (item){
+                    options = [];
+                    for (var name in item){
+                        //TODO: use $filter on label
+                        options.push({name : name, label : name.toUpperCase()});
+                    }
+                }
+            }
+
+            return options;
+        };
+
+        var getCsvLine = function(data, options){
             //clear data
             data = angular.fromJson(angular.toJson(data));
 
             var line = '';
-            for (var key in data){
-                line += CSV_SEP + ('' + data[key]).trim();
+
+            for (var i = 0; i < options.length; i++){
+                var val = data[options[i].name] ? data[options[i].name] : '';
+
+                if ('filter' in options[i]) val = options[i].filter(val);
+
+                line += CSV_SEP + ('' + val).trim();
             }
 
             line += NEW_LINE;
@@ -44,61 +70,89 @@ angular.module('bplApp.directives')
             return line;
         };
 
-        var getCsvLines = function(data){
+        var getCsvLines = function(scope, options){
             var lines='';
 
-            for (var i=0; i < data.length; i++){
-                lines += getCsvLine(data[i]);
+            for (var i=0; i < scope.data.length; i++){
+                lines += getCsvLine(scope.data[i], options);
             }
 
             return lines;
         };
 
-        var getHtmlContent = function(data){
-            //clear data
-            data = angular.fromJson(angular.toJson(data));
+        var getCsvContent = function(scope){
+            var options = getOptions(scope);
 
-
-
-//            var url = 'common/js/directives/fileExport/items.html';
-//            $http({method : 'GET', url : url, cache : true})
-//                .success(function(template){
-//                    var scope = $rootScope.$new();
-//
-//                    if (Array.isArray(data)) scope.items = data;
-//                    else scope.item = data;
-//
-//                    var element = $compile(template)(scope);
-//                    //scope.$digest();
-//
-//                    d(template[0]);
-//                });
-
-            var scope = $rootScope.$new();
-
-            if (Array.isArray(data)) scope.items = data;
-            else scope.item = data;
-
-            var template = scope.items ? '<pre>{{ items | json }}}</pre>' : '<pre>{{ item | json }}}</pre>';
-
-            var element = $compile(template)(scope);
-            scope.$digest();
-
-            return '<!DOCTYPE HTML><html><body>' + element[0].outerHTML + '</body></html>';
-        };
-
-        var getBlob = function(data, type){
-            var blobParts = [], blobOptions = {}, content;
-
-            if (type == 'csv')  {
-                content = Array.isArray(data) ? getCsvLines(data) : getCsvLine(data);
-                content = content.substr(0, content.length - NEW_LINE.length);
-            } else if (type == 'html'){
-                content = getHtmlContent(data);
+            var content = '';
+            for (var i=0; i<options.length; i++){
+                content += CSV_SEP + options[i].label;
             }
 
+            content += NEW_LINE;
+
+            //remove first comma
+            content = content.substr(1);
+
+            content += Array.isArray(scope.data) ? getCsvLines(scope, options) : getCsvLine(scope.data, options);
+
+            //remove last new line
+            content = content.substr(0, content.length - NEW_LINE.length);
+            return content;
+        };
+
+        var cssContent;
+        var getCssContent = function(){
+            if (!cssContent){
+                var xmlhttp = new XMLHttpRequest();
+
+                //Wrong URL in Karma
+                xmlhttp.open("GET","common/css/print.css",true);
+
+                xmlhttp.onreadystatechange = function(){
+                    if (this.readyState == 4 && this.status == 200) cssContent = this.responseText;
+                };
+
+                xmlhttp.send();
+            }
+
+            return cssContent;
+        };
+
+        var getHtmlContent = function(){
+            //clear data
+//            data = angular.fromJson(angular.toJson(data));
+//
+//            var scope = $rootScope.$new();
+//
+//            if (Array.isArray(data)) scope.items = data;
+//            else scope.item = data;
+//
+//            var template = scope.items ? '<pre>{{ items | json }}}</pre>' : '<pre>{{ item | json }}}</pre>';
+//
+//            var element = $compile(template)(scope);
+//            scope.$digest();
+            var pageEl = angular.element(document.body).clone();
+
+            //debugger;
+
+            //TODO: clean HTML comments
+            //Clean tags
+            pageEl.find('.hide-print, script').remove();
+
+            //TODO: convert href data to dataURI
+
+            return '<!DOCTYPE HTML><html><head><style type="text/css">' + getCssContent() + '</style></head><body>' + pageEl.html() + '</body></html>';
+        };
+
+        var getBlob = function(scope){
+            var blobParts = [], blobOptions = {}, content;
+
+            //get content
+            if (scope.type == CSV) content = getCsvContent(scope);
+            else if (scope.type == HTML) content = getHtmlContent();
+
             if (content) blobParts.push(content);
-            blobOptions = {type: 'text/' + type};
+            blobOptions = {type: 'text/' + scope.type};
 
             return (blobParts.length && blobOptions.type) ? new Blob(blobParts, blobOptions) : null;
         };
@@ -113,45 +167,54 @@ angular.module('bplApp.directives')
             if (href) $window.URL.revokeObjectURL(href);
         };
 
+        var setClickEvent = function(scope, element){
+            var fileNameWithExtension = fileName + '.' + scope.type;
+
+            element.removeClass(DISABLED_CLASS);
+
+            //TODO: check newVal vs oldVal
+            element.unbind('click');
+            if (isBrowserSupportMsSaveBlob()){
+                element.bind('click', function(){
+                    $window.navigator.msSaveBlob(getBlob(scope), fileNameWithExtension)
+                });
+            } else {
+                element.bind('click', function(){
+                    var url = getObjectURL(scope);
+                    if (url) {
+                        revokeObjectURL(element.attr('href'));
+                        element.attr('href', url);
+                    }
+
+                    element.attr(DOWNLOAD_ATTR, fileNameWithExtension);
+
+                    if (scope.type == CSV) element.unbind('click');
+                });
+            }
+        };
+
         return {
             scope : {
               data : '=fileExport',
+              options : '=fileExportOptions',
               type : '@fileExportType'
             },
             link : function(scope, element, attrs){
-                var fileNameWithExtension = fileName + '.' + scope.type;
-
                 if (isBrowserSupportFileExport()){
-                    scope.$watch('data', function(newVal, oldVal){
-                        if (isDataReady(newVal)) {
-                            element.removeClass(DISABLED_CLASS);
-
-                            //TODO: check newVal vs oldVal
-                            element.unbind('click');
-                            if (isBrowserSupportMsSaveBlob()){
-                                element.bind('click', function(){
-                                    $window.navigator.msSaveBlob(getBlob(newVal, scope.type), fileNameWithExtension)
-                                });
+                    if (scope.type == CSV){
+                        scope.$watch('data', function(newVal, oldVal){
+                            if (isDataReady(newVal)) {
+                                setClickEvent(scope, element);
                             } else {
-                                element.bind('click', function(){
-                                    var url = getObjectURL(scope.data, scope.type);
-                                    if (url) {
-                                        revokeObjectURL(element.attr('href'));
-                                        element.attr('href', url);
-                                    }
-
-                                    element.attr(DOWNLOAD_ATTR, fileNameWithExtension);
-
-                                    element.unbind('click');
-                                });
+                                element.addClass(DISABLED_CLASS);
+                                element.removeAttr(DOWNLOAD_ATTR);
+                                revokeObjectURL(element.attr('href'));
+                                element.removeAttr('href');
                             }
-                        } else {
-                            element.addClass(DISABLED_CLASS);
-                            element.removeAttr(DOWNLOAD_ATTR);
-                            revokeObjectURL(element.attr('href'));
-                            element.removeAttr('href');
-                        }
-                    }, true);
+                        }, true);
+                    } else if (scope.type == HTML){
+                        setClickEvent(scope, element);
+                    }
                 } else {
                     element.addClass(DISABLED_CLASS);
                 }

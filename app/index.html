@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Le Bank</title>
+    <link rel="shortcut icon" href="common/img/favicon.png"/>
     <!--bootstrap 3 default  files-->
     <!--<link rel="stylesheet" href="common/bower_components/bootstrap/dist/css/bootstrap.min.css"/>-->
     <!--<link rel="stylesheet" href="common/bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>-->
@@ -18,16 +19,18 @@
     <!--font awesome for bootswatch extention of icons-->
     <!--<link rel="stylesheet" href="common/bower_components/font-awesome/css/font-awesome.min.css"/>-->
     <!--application css files-->
-    <link rel="stylesheet" href="common/css/app.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="common/css/app.css"/>
     <!--<link rel="stylesheet" href="common/css/app.rtl.css"/>-->
-    <link rel="shortcut icon" href="common/img/favicon.png">
+
     <!--widget css files (should actually be loaded dynamically)-->
-    <link rel="stylesheet" href="widgets/contacts/contacts.css"/>
-    <link rel="stylesheet" href="widgets/moves/moves.rtl.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="widgets/contacts/contacts.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="widgets/moves/moves.rtl.css"/>
+    <link rel="stylesheet" type="text/css" media="print" href="common/css/print.css"/>
 </head>
 <body class="ng-cloak">
 
 <div ng-controller="TestCtrl">
+    <div class="hide-print">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cupiditate dolore dolores fugit nostrum rem similique! Aperiam consectetur consequuntur cupiditate id in magni nulla provident quasi saepe, sint? Labore, maxime?</div>
     <ul>
         <li class="dropdown">
             <a class="dropdown-toggle">Export</a>
@@ -36,14 +39,14 @@
                     <a file-export="contacts" file-export-type="csv">download CSV</a>
                 </li>
                 <li>
-                    <a file-export="contacts" file-export-type="html">download HTML</a>
+                    <a file-export file-export-type="html">download HTML</a>
                 </li>
             </ul>
         </li>
     </ul>
 
     <hr/>
-    <a class="btn btn-primary" file-export="contacts" file-export-type="csv">download CSV</a>
+    <a class="btn btn-primary" file-export="contacts" file-export-type="csv" file-export-options="options">download CSV</a>
     <a class="btn btn-primary" file-export="contacts" file-export-type="html">download HTML</a>
 
     <hr/>
@@ -149,16 +152,22 @@
         <script src="widgets/errorHandlerDemo/errorHandlerDemo.js"></script>
 
         <script>
-            var TestCtrl = function($scope, $timeout){
+            var TestCtrl = function($scope, $timeout, $filter){
                 $scope.contacts = [{id : 1, name : 'Ronen Cohen'}];
 
                 var autoIncarament = function(){
 
-                    $scope.contacts.push({id : Math.floor(Math.random() * 1000), name : 'Auto'});
+                    $scope.contacts.push({id : Math.floor(Math.random() * 1000), name : 'Auto', created_at : Date.now()});
 
                     $timeout(autoIncarament, 2000);
                 };
                 autoIncarament();
+
+                $scope.options = [
+                    {name : 'name', label : 'שם'},
+                    {name : 'created_at', label : 'תאריך', filter : function(val){ return $filter('date')(val);}},
+                    {name : 'id', label : 'מספר סידורי'}
+                ];
             };
         </script>
     </footer>

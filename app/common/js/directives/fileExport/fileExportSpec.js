@@ -18,7 +18,7 @@ describe('directives', function() {
             beforeEach(inject(function(_$compile_){
                 $compile = _$compile_;
 
-                elementCsv = $compile('<a file-export="contacts" file-export-type="csv">Excel</a> ')($rootScope);
+                elementCsv = $compile('<a file-export="contacts" file-export-type="csv" file-export-options="options">Excel</a> ')($rootScope);
                 elementHtml = $compile('<a file-export="contacts" file-export-type="html">Excel</a> ')($rootScope);
                 $rootScope.$digest();
 
@@ -28,6 +28,7 @@ describe('directives', function() {
 
             afterEach(function(){
                 if (typeof $rootScope.contacts != 'undefined') delete $rootScope.contacts;
+                if (typeof $rootScope.options != 'undefined') delete $rootScope.options;
             });
 
             var isIE = function(){
@@ -43,13 +44,13 @@ describe('directives', function() {
             };
 
             //AJAX test blob content with objectURL
-            var getBlobContent = function(onSuccess){
+            var getBlobContent = function(element, onSuccess){
                 var xhr = new XMLHttpRequest();
-                xhr.open('GET', elementCsv.attr('href'), true);
+                xhr.open('GET', element.attr('href'), true);
                 //xhr.responseType = 'blob';
 
                 xhr.onload = function(e) {
-                    if (this.status == 200) onSuccess(this.response);
+                    if (this.readyState == 4 && this.status == 200) onSuccess(this.response);
                 };
 
                 xhr.send();
@@ -82,7 +83,7 @@ describe('directives', function() {
                 var navigator = $window.navigator;
                 $window.navigator = {userAgent : 'MSIE'};
 
-                var newelementCsv = $compile('<a file-export="contacts" file-export-type="csv">Excel</a> ')($rootScope);
+                var newelementCsv = $compile('<a file-export="contacts" file-export-type="csv" file-export-options="options">Excel</a> ')($rootScope);
                 expect(newelementCsv.hasClass('disabled')).toBe(true);
 
                 $window.navigator = navigator;
@@ -121,24 +122,55 @@ describe('directives', function() {
                     elementHtml.click();
                     expect(elementHtml.attr('href')).toMatch('blob:');
 
-                    getBlobContent(function(res){
-                        expect(res).toBe('1,Ronen Cohen');
+                    getBlobContent(elementCsv, function(res){
+                        expect(res).toMatch('1,Ronen Cohen');
                     });
 
-                    var href = elementCsv.attr('href');
 
                     spyOn($window.URL, 'revokeObjectURL');
                     $rootScope.$apply(function(scope){
                         scope.contacts = [{id : 1, name : 'Miri Kaplan'}, {id : 2, name : 'Ronen Cohen'}];
                     });
+
+                    var href = elementCsv.attr('href');
                     elementCsv.click();
                     expect($window.URL.revokeObjectURL).toHaveBeenCalledWith(href);
 
+                    getBlobContent(elementCsv, function(res){
+                        expect(res).toMatch('1,Miri Kaplan');
+                        expect(res).toMatch('2,Ronen Cohen');
+                    });
 
+                    var el = angular.element('<div>Miri Kaplan</div>');
+                    angular.element(document.body).append(el);
 
-                    getBlobContent(function(res){
-                        expect(res).toContain('1,Miri Kaplan');
-                        expect(res).toContain('2,Ronen Cohen');
+                    href = elementHtml.attr('href');
+                    elementHtml.click();
+                    expect($window.URL.revokeObjectURL).toHaveBeenCalledWith(href);
+
+                    el.remove();
+
+                    getBlobContent(elementHtml, function(res){
+                        expect(res).toMatch('Miri Kaplan');
+                    });
+
+                    //TODO: check order, track option.filter function was called
+                });
+
+                it('should get csv with Name, Date column', function(){
+                    $rootScope.$apply(function(scope){
+                        scope.contacts = [{created_at : Date.now(), id : 1, name : 'Miri Kaplan'}, {id : 2, created_at : Date.now(), name : 'Ronen Cohen'}];
+                        scope.options = [
+                            {name : 'name', label : 'Name'},
+                            {name : 'created_at', label : 'Date'}
+                        ];
+                    });
+
+                    //debugger;
+
+                    elementCsv.click();
+                    getBlobContent(elementCsv, function(res){
+                        expect(res).toMatch("Name,Date\n");
                     });
                 });
             }
