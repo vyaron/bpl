@@ -140,20 +140,22 @@ angular.module('bplApp.directives')
             pageEl.find('.hide-print, script').remove();
 
             //TODO: convert href data to dataURI
+            // Base tag? Base64? samples: cheque img
 
             return '<!DOCTYPE HTML><html><head><style type="text/css">' + getCssContent() + '</style></head><body>' + pageEl.html() + '</body></html>';
         };
 
         var getBlob = function(scope){
-            var blobParts = [], blobOptions = {}, content;
+            var blobParts = ["\ufeff"], blobOptions = {}, content;
 
             //get content
             if (scope.type == CSV) content = getCsvContent(scope);
             else if (scope.type == HTML) content = getHtmlContent();
 
             if (content) blobParts.push(content);
-            blobOptions = {type: 'text/' + scope.type};
+            blobOptions = {type: "text/" + scope.type + ";charset=UTF-8"};
 
+            // Blob is IE10+ , if we need to support IE9, need server side fallback to get content and return as the matching content-type
             return (blobParts.length && blobOptions.type) ? new Blob(blobParts, blobOptions) : null;
         };
 

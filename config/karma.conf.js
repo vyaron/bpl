@@ -35,6 +35,8 @@ module.exports = function(config) {
         'app/common/js/services/**/*.js',
         'app/resources/*.js',
 
+        'app/PubSubChannels.js',
+
         'app/widgets/**/*.js',
         'app/widgets/**/*.html',
 
