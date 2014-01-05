@@ -7,7 +7,11 @@
  * @requires $on
  *
  * @description
- * Cross widget communication
+ * Cross widget communication, Infra to widgets communications (i.e. - error handler publishes an event when some error occurs)
+ * Note: this component is not meant to be used as a general mechanism for communicating between any directive.
+ * i.e. - when a datepicker reports a date-change, it will do it via a controller function and not as a pub-sub event.
+ *
+ * For usage's simplicity The PubSub loads the Channels Service that hold the dictionary for all Channels.
  *
  * # General usage
  * Allow widgets to subscribe to events and publish events, support receiving arguments (an undetermined num of arguments)
@@ -16,7 +20,7 @@
  *
  * angular.module('bplApp.widgets')
  *  .controller('contacts', ['$scope', 'PubSub', function($scope, PubSub){
- *      PubSub.subscribe($scope, PubSub.CHANEL_ACCOUNT_SELECTED, function(accountId){
+ *      PubSub.subscribe(PubSub.CHANEL_ACCOUNT_SELECTED, $scope, function(accountId){
  *          alert('account ' + accountId + ' selected');
  *      })
  *  }]);
@@ -70,7 +74,7 @@ angular.module('bplApp.services')
          * Subscribes the given $scope to a channel, the given callback will be called with the args received in publish.
          *
          * @param {string} channel Name of the channel from the channels list
-         * @param {Object} $scope The Scope
+         * @param {Object} $scope The Isolated Scope of a widget
          * @param {function()} Callback Te callback to call when an event is triggered on this channel
          */
 		subscribe: function(channel, $scope, callback){
@@ -86,7 +90,7 @@ angular.module('bplApp.services')
          * @methodOf bplApp.PubSub
          *
          * @description
-         * Unsubscribe the given $scope from a channel
+         * Unsubscribe the given isolated $scope from a channel
          *
          * @param {string} channel Name of the channel from the channels list
          * @param {Object} $scope The Scope
