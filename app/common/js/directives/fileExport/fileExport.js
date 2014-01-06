@@ -178,11 +178,9 @@ angular.module('bplApp.directives')
 
             element.removeClass(DISABLED_CLASS);
 
-            //TODO: check newVal vs oldVal
             element.unbind('click');
             if (isBrowserSupportMsSaveBlob()){
                 element.bind('click', function(){
-                    d(isDataReady(scope.data));
                     if (isDataReady(scope.data)) $window.navigator.msSaveBlob(getBlob(scope), fileNameWithExtension)
                 });
             } else {
