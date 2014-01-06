@@ -14,36 +14,40 @@ describe('bplApp.services', function (){
     }));
 
     describe('PubSub', function (){
-        it ('should have subscribe function', function(){
+        it ('should have subscribe, publish, unsubscribe functions', function(){
             expect(PubSub.subscribe).toEqual(jasmine.any(Function));
-        });
-
-        it ('should track $on was called with right parameters', function(){
-            PubSub.subscribe('chanel1', $scope, function(){});
-            expect($scope.$on).toHaveBeenCalledWith('chanel1', jasmine.any(Function));
-        });
-
-        it ('should have publish function', function(){
             expect(PubSub.publish).toEqual(jasmine.any(Function));
-        });
-
-        it ('should track $on was called with right chanel and parameter', function(){
-            PubSub.subscribe('chanel1', $scope, function(){});
-
-            PubSub.publish('chanel1', 101);
-            expect($scope.$broadcast).toHaveBeenCalledWith('chanel1',101);
-        });
-
-        it ('should have unsubscribe function', function(){
             expect(PubSub.unsubscribe).toEqual(jasmine.any(Function));
         });
 
-        it ('should track $on was not called', function(){
-            PubSub.subscribe('chanel1', $scope, function(){});
-            PubSub.unsubscribe('chanel1', $scope);
+        it ('should track callBackFunc was called with right parameter', function(){
+            var callBackFunc = jasmine.createSpy('callBackFunc');
+            PubSub.subscribe('chanel1', callBackFunc);
+            PubSub.publish('chanel1', 2);
+            expect(callBackFunc).toHaveBeenCalled();
+            expect(callBackFunc.mostRecentCall.args[1]).toBe(2);
+        });
 
-            PubSub.publish('chanel1', 101);
-            expect($scope.$broadcast).not.toHaveBeenCalled();
+        it ('should track callBackFunc not have been called', function(){
+            var callBackFunc = jasmine.createSpy('callBackFunc');
+            PubSub.subscribe('chanel1', callBackFunc);
+            PubSub.unsubscribe('chanel1');
+            PubSub.publish('chanel1', 2);
+            expect(callBackFunc).not.toHaveBeenCalled();
+        });
+
+        it ('should call callback properly', function(){
+            var callBackFunc = jasmine.createSpy('callBackFunc');
+            PubSub.subscribe('chanel1', callBackFunc);
+
+            PubSub.subscribe('chanel1', angular.noop);
+            PubSub.subscribe('chanel1', angular.noop);
+            PubSub.subscribe('chanel1', angular.noop);
+            PubSub.subscribe('chanel1', angular.noop);
+            PubSub.subscribe('chanel1', angular.noop);
+
+            PubSub.publish('chanel1', 2);
+            expect(callBackFunc.callCount).toEqual(1);
         });
     });
 });

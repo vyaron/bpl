@@ -10,7 +10,7 @@
  * <div doc-module-components="bplApp"></div>
  */
 // This is our main module
-angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.services', 'bplApp.resources', 'bplApp.directives', 'bplApp.widgets', 'ui.bootstrap', 'ngTable'])
+angular.module('bplApp', ['ngResource', 'ngCookies', 'bplApp.filters', 'bplApp.services', 'bplApp.resources', 'bplApp.directives', 'bplApp.widgets', 'ui.bootstrap'])
 
 .factory('$exceptionHandler', function () {
     return function (exception, cause) {
@@ -48,4 +48,4 @@ angular.module('bplApp.controllers', []);
 angular.module('bplApp.directives', []);
 angular.module('bplApp.services', ['ngResource']).value('REST_URL', 'data');
 angular.module('bplApp.resources', ['ngResource', 'bplApp.services']);
-angular.module('bplApp.widgets', ['bplApp.resources', 'ui.bootstrap', 'ngTable', 'bplApp.filters']);
+angular.module('bplApp.widgets', ['bplApp.resources', 'ui.bootstrap', 'bplApp.filters']);

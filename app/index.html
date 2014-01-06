@@ -24,32 +24,38 @@
 
     <!--widget css files (should actually be loaded dynamically)-->
     <link rel="stylesheet" type="text/css" media="screen" href="widgets/contacts/contacts.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="widgets/moves/moves.rtl.css"/>
     <link rel="stylesheet" type="text/css" media="print" href="common/css/print.css"/>
 </head>
 <body class="ng-cloak">
 
 <div ng-controller="TestCtrl">
-    <div class="hide-print">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cupiditate dolore dolores fugit nostrum rem similique! Aperiam consectetur consequuntur cupiditate id in magni nulla provident quasi saepe, sint? Labore, maxime?</div>
-    <ul>
-        <li class="dropdown">
-            <a class="dropdown-toggle">Export</a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a file-export="contacts" file-export-type="csv">download CSV</a>
-                </li>
-                <li>
-                    <a file-export file-export-type="html">download HTML</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <file-exports data="contacts" options="options"></file-exports>
 
     <hr/>
-    <a class="btn btn-primary" file-export="contacts" file-export-type="csv" file-export-options="options">download CSV</a>
-    <a class="btn btn-primary" file-export="contacts" file-export-type="html">download HTML</a>
 
-    <hr/>
+    <!--<a file-export="items" file-export-type="csv" file-export-options="options">Download CSV</a>-->
+    <!--<div class="hide-print">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cupiditate dolore dolores fugit nostrum rem similique! Aperiam consectetur consequuntur cupiditate id in magni nulla provident quasi saepe, sint? Labore, maxime?</div>-->
+    <!--<ul>-->
+        <!--<li class="dropdown">-->
+            <!--<a class="dropdown-toggle">Export</a>-->
+            <!--<ul class="dropdown-menu">-->
+                <!--<li>-->
+                    <!--<a file-export="items" file-export-type="csv" file-export-options="options">download CSV</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a>download HTML</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</li>-->
+    <!--</ul>-->
+
+
+
+    <!--<hr/>-->
+    <!--<a class="btn btn-primary" file-export="contacts" file-export-type="csv" file-export-options="options">download CSV</a>-->
+    <!--<a class="btn btn-primary" file-export="contacts" file-export-type="html">download HTML</a>-->
+
+    <!--<hr/>-->
 </div>
 
 <div error-handler-demo></div>
@@ -103,7 +109,7 @@
         <script type="text/javascript" src="common/bower_components/angular-i18n/angular-locale_he.js"></script>
         <script type="text/javascript" src="common/bower_components/angular-ui-bootstrap/dist/ui-bootstrap-tpls-0.7.0.js"></script>
         <!--<script type="text/javascript" src="common/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
-        <script type="text/javascript" src="common/bower_components/ng-table/ng-table.src.js"></script>
+        <!--<script type="text/javascript" src="common/bower_components/ng-table/ng-table.src.js"></script>-->
 
         <script type="text/javascript"  src="common/lib/stacktracejs/stacktrace.js"></script>
 
@@ -112,6 +118,7 @@
         <script src="common/js/filters/filters.js"></script>
         <script src="common/js/directives/directives.js"></script>
         <script src="common/js/directives/fileExport/fileExport.js"></script>
+        <script src="common/js/directives/fileExports/fileExports.js"></script>
         <!--services-->
         <script src="common/js/services/ErrorHandler/ErrorHandler.js"></script>
         <script src="common/js/services/PubSub/PubSub.js"></script>
@@ -146,14 +153,25 @@
         <script src="widgets/contacts/Contacts.js"></script>
         <script src="widgets/contacts/i18n.js"></script>
 
-        <script src="widgets/moves/moves.js"></script>
-        <script src="widgets/moves/i18n.js"></script>
-
-
         <script src="widgets/errorHandlerDemo/errorHandlerDemo.js"></script>
 
         <script>
             var TestCtrl = function($scope, $timeout, $filter){
+//                var niceDate = function(val){
+//                    return $filter('date')(val);
+//                };
+//
+//                $scope.items = [
+//                    {name : 'Ronen Cohen', created_at : Date.now()},
+//                    {name : 'Miriam Kaplan', created_at : Date.now()},
+//                    {name : 'David Levi', created_at : Date.now()}
+//                ];
+//
+//                $scope.options = [
+//                    {name : 'created_at', label : 'תאריך', filter : niceDate},
+//                    {name : 'name', label : 'חבר'}
+//                ];
+
                 $scope.contacts = [{id : 1, name : 'Ronen Cohen'}];
 
                 var autoIncarament = function(){

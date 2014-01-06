@@ -73,7 +73,7 @@ angular.module('bplApp.widgets')
         }
     };
 
-    PubSub.subscribe(PubSub.CONTACTS, $scope, function(e){
+    PubSub.subscribe(PubSub.CONTACTS, function(e){
         $scope.setPage($scope.page);
     });
 }])

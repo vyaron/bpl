@@ -7,6 +7,7 @@
  * @requires $on
  *
  * @description
+ * The list of subscribed scopes is kept and managed in the PubSub service
  * Cross widget communication, Infra to widgets communications (i.e. - error handler publishes an event when some error occurs)
  * Note: this component is not meant to be used as a general mechanism for communicating between any directive.
  * i.e. - when a datepicker reports a date-change, it will do it via a controller function and not as a pub-sub event.
@@ -35,7 +36,10 @@
 
 angular.module('bplApp.services')
 .factory('PubSub', function($rootScope, PubSubChannels){
-    var chanel2scopes = {};
+    var scope, channel2deregistrations= {};
+    function getScope(){
+        return scope ? scope : scope = $rootScope.$new();
+    }
 
     var PubSub = angular.extend({}, PubSubChannels);
 
@@ -50,14 +54,11 @@ angular.module('bplApp.services')
      *
      * @param {string} Name of the channel from the channels list
      * @param {...*} Optional (un-determined size) list of args
+     * @return {Object} Event object, see ng.$rootScope.Scope#methods_$on
      */
     PubSub.publish = function(channel){
-        var channel = arguments[0];
-        if ( channel in chanel2scopes) {
-            for (var i=0; i< chanel2scopes[channel].length; i++){
-                chanel2scopes[channel][i].$broadcast.apply(chanel2scopes[channel][i], arguments);
-            }
-        }
+        var scope = getScope();
+        return scope.$broadcast.apply(scope, arguments);
     };
 
     /**
@@ -69,14 +70,19 @@ angular.module('bplApp.services')
      * Subscribes the given $scope to a channel, the given callback will be called with the args received in publish.
      *
      * @param {string} channel Name of the channel from the channels list
-     * @param {Object} $scope The Isolated Scope of a widget
      * @param {function()} Callback Te callback to call when an event is triggered on this channel
+     * @return {function()} Returns a deregistration function for this listener.
      */
-    PubSub.subscribe = function(channel, $scope, callback){
-        if (!(channel in chanel2scopes)) chanel2scopes[channel] = [];
-        chanel2scopes[channel].push($scope);
+    PubSub.subscribe = function(channel, callback){
+//        if (!(channel in chanel2scopes)) chanel2scopes[channel] = [];
+//        chanel2scopes[channel].push($scope);
+        var scope = getScope();
+        var deregistration = scope.$on(channel, callback);
 
-        $scope.$on(channel, callback);
+        if (! (channel in channel2deregistrations)) channel2deregistrations[channel] = [];
+        channel2deregistrations[channel].push(deregistration);
+
+        return deregistration;
     };
 
     /**
@@ -88,16 +94,13 @@ angular.module('bplApp.services')
      * Unsubscribe the given isolated $scope from a channel
      *
      * @param {string} channel Name of the channel from the channels list
-     * @param {Object} $scope The Scope
      */
-    PubSub.unsubscribe = function(channel, $scope){
-        if (channel in chanel2scopes){
-            for (var i=0; i < chanel2scopes[channel].length; i++){
-                if (chanel2scopes[channel][i] == $scope) {
-                    chanel2scopes[channel].splice(i,1);
-                    break;
-                }
+    PubSub.unsubscribe = function(channel){
+        if (channel in channel2deregistrations){
+            for (var i=0; i < channel2deregistrations[channel].length; i++){
+                channel2deregistrations[channel][i]();
             }
+            delete channel2deregistrations[channel];
         }
     };
 

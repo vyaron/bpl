@@ -1,0 +1,16 @@
+<ul class="file-exports">
+    <li class="dropdown">
+        <a class="dropdown-toggle">{{'Export' | trans}}</a>
+        <ul class="dropdown-menu">
+            <li>
+                <a file-export="data" file-export-type="csv" file-export-options="options">{{'download CSV' | trans}}</a>
+            </li>
+            <li>
+                <a file-export="data" file-export-type="html">{{'download HTML' | trans}}</a>
+            </li>
+            <li>
+                <a ng-click="print()">{{'Print' | trans}}</a>
+            </li>
+        </ul>
+    </li>
+</ul>

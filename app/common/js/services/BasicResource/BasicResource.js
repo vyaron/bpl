@@ -5,7 +5,7 @@
  * @requires $resource
  *
  * @description
- * The DataService is in-charge of all server side communication via AJAX,
+ * The BasicResourceService is in-charge of all server side communication via AJAX,
  * It should be based on $resource, but eliminate the common code needed for each resource.
  * This is the basic resource based on $resource.
  * Every data that is retrieved from the REST API is retrieved via a specific resource, and every resource
