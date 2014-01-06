@@ -39,8 +39,7 @@ module.exports = function(config) {
 
         'app/widgets/**/*.js',
         'app/widgets/**/*.html',
-
-        'app/templates/*.html',
+        'app/common/js/directives/**/*.html',
 
 
         //'test/unit/**/*.js',
@@ -59,7 +58,7 @@ module.exports = function(config) {
 
       preprocessors: {
           'app/widgets/**/*.html': 'ng-html2js',
-          'app/templates/**/*.html': 'ng-html2js'//,
+          'app/common/js/directives/**/*.html': 'ng-html2js'//,
           //'app/common/js/services/**/*': ['coverage']
       },
 

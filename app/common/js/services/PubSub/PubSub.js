@@ -7,7 +7,6 @@
  * @requires $on
  *
  * @description
- * The list of subscribed scopes is kept and managed in the PubSub service
  * Cross widget communication, Infra to widgets communications (i.e. - error handler publishes an event when some error occurs)
  * Note: this component is not meant to be used as a general mechanism for communicating between any directive.
  * i.e. - when a datepicker reports a date-change, it will do it via a controller function and not as a pub-sub event.
@@ -21,7 +20,7 @@
  *
  * angular.module('bplApp.widgets')
  *  .controller('contacts', ['$scope', 'PubSub', function($scope, PubSub){
- *      PubSub.subscribe(PubSub.CHANEL_ACCOUNT_SELECTED, $scope, function(accountId){
+ *      PubSub.subscribe(PubSub.CHANEL_ACCOUNT_SELECTED, function(accountId){
  *          alert('account ' + accountId + ' selected');
  *      })
  *  }]);
@@ -50,7 +49,7 @@ angular.module('bplApp.services')
      *
      * @description
      * Publishes the message (with args) to all subscribers of this channel.
-     * do not use $rootScope – from performance reasons, but keep a list of subscribed $scopes.
+     * PubSub use internal $scope - from performance reasons.
      *
      * @param {string} Name of the channel from the channels list
      * @param {...*} Optional (un-determined size) list of args
@@ -67,7 +66,7 @@ angular.module('bplApp.services')
      * @methodOf bplApp.PubSub
      *
      * @description
-     * Subscribes the given $scope to a channel, the given callback will be called with the args received in publish.
+     * Subscribes the given channel, the given callback will be called with the args received in publish.
      *
      * @param {string} channel Name of the channel from the channels list
      * @param {function()} Callback Te callback to call when an event is triggered on this channel
@@ -91,7 +90,7 @@ angular.module('bplApp.services')
      * @methodOf bplApp.PubSub
      *
      * @description
-     * Unsubscribe the given isolated $scope from a channel
+     * Unsubscribe the given channel
      *
      * @param {string} channel Name of the channel from the channels list
      */

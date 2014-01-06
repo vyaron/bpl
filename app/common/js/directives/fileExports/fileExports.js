@@ -11,6 +11,7 @@ angular.module('bplApp.directives')
     .directive('fileExports', [function(){
         return {
             restrict : 'EA',
+            replace : true,
             scope : {
               data : '=',
               options : '='

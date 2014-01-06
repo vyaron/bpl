@@ -33,7 +33,7 @@ angular.module('bplApp.directives')
         var getOptions = function(scope){
             var options;
 
-            if (Array.isArray(scope.options)) options = scope.options;
+            if (Array.isArray(scope.options) && scope.options.length) options = scope.options;
             else {
                 var item = Array.isArray(scope.data) ? scope.data[0] : scope.data;
                 if (item){
@@ -84,19 +84,23 @@ angular.module('bplApp.directives')
             var options = getOptions(scope);
 
             var content = '';
-            for (var i=0; i<options.length; i++){
-                content += CSV_SEP + options[i].label;
+
+            if (options && options.length){
+                for (var i=0; i<options.length; i++){
+                    content += CSV_SEP + options[i].label;
+                }
+
+                content += NEW_LINE;
+
+                //remove first comma
+                content = content.substr(1);
+
+                content += Array.isArray(scope.data) ? getCsvLines(scope, options) : getCsvLine(scope.data, options);
+
+                //remove last new line
+                content = content.substr(0, content.length - NEW_LINE.length);
             }
 
-            content += NEW_LINE;
-
-            //remove first comma
-            content = content.substr(1);
-
-            content += Array.isArray(scope.data) ? getCsvLines(scope, options) : getCsvLine(scope.data, options);
-
-            //remove last new line
-            content = content.substr(0, content.length - NEW_LINE.length);
             return content;
         };
 
@@ -178,19 +182,26 @@ angular.module('bplApp.directives')
             element.unbind('click');
             if (isBrowserSupportMsSaveBlob()){
                 element.bind('click', function(){
-                    $window.navigator.msSaveBlob(getBlob(scope), fileNameWithExtension)
+                    d(isDataReady(scope.data));
+                    if (isDataReady(scope.data)) $window.navigator.msSaveBlob(getBlob(scope), fileNameWithExtension)
                 });
             } else {
                 element.bind('click', function(){
-                    var url = getObjectURL(scope);
-                    if (url) {
-                        revokeObjectURL(element.attr('href'));
-                        element.attr('href', url);
+                    if (isDataReady(scope.data)){
+                        var url = getObjectURL(scope);
+                        if (url) {
+                            revokeObjectURL(element.attr('href'));
+                            element.attr('href', url);
+                        }
+
+                        element.attr(DOWNLOAD_ATTR, fileNameWithExtension);
+                    } else {
+                        element.removeAttr(DOWNLOAD_ATTR);
+                        element.removeAttr('href');
                     }
 
-                    element.attr(DOWNLOAD_ATTR, fileNameWithExtension);
 
-                    if (scope.type == CSV) element.unbind('click');
+                    //if (scope.type == CSV) element.unbind('click');
                 });
             }
         };
@@ -204,16 +215,16 @@ angular.module('bplApp.directives')
             link : function(scope, element, attrs){
                 if (isBrowserSupportFileExport()){
                     if (scope.type == CSV){
-                        scope.$watch('data', function(newVal, oldVal){
-                            if (isDataReady(newVal)) {
+//                        scope.$watch('data', function(newVal, oldVal){
+//                            if (isDataReady(newVal)) {
                                 setClickEvent(scope, element);
-                            } else {
-                                element.addClass(DISABLED_CLASS);
-                                element.removeAttr(DOWNLOAD_ATTR);
-                                revokeObjectURL(element.attr('href'));
-                                element.removeAttr('href');
-                            }
-                        }, true);
+//                            } else {
+//                                element.addClass(DISABLED_CLASS);
+//                                element.removeAttr(DOWNLOAD_ATTR);
+//                                revokeObjectURL(element.attr('href'));
+//                                element.removeAttr('href');
+//                            }
+//                        }, true);
                     } else if (scope.type == HTML){
                         setClickEvent(scope, element);
                     }
