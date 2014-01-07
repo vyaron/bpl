@@ -1,6 +1,47 @@
-@import "../bower_components/bootswatch/cyborg/bootstrap.css";
-//@import "../bower_components/bootstrap-rtl/less/bootstrap-rtl.less";
-@import "app.common.less";
+@import (less) "../bower_components/bootstrap/less/bootstrap.less";
+@import (less) "../lib/bootstrap-rtl/bootstrap-rtl.css";
+@import (less) "app.common.less";
+
+/* these rules below relate to the actual UI components that need fixing when in rtl page and should be included when using the components in BPL enviroment*/
+.modal-footer .btn + .btn {
+  margin-left: 0px;
+  margin-right: 5px;
+}
+
+.form-control {
+  text-align: right;
+}
+.carousel, .timepicker{
+  direction: ltr;
+}
+.accordion-toggle,.rating i{
+  cursor: pointer;
+}
+
+
+
+/*these rules below relate to the docs page only*/
+
+header.jumbotron {
+  background-image: -webkit-gradient(
+    linear,
+    right bottom,
+    left bottom,
+    color-stop(0, #2C302F),
+    color-stop(1, #DB2C23)
+  );
+  background-image: -o-linear-gradient(left, #2C302F 0%, #DB2C23 100%);
+  background-image: -moz-linear-gradient(left, #2C302F 0%, #DB2C23 100%);
+  background-image: -webkit-linear-gradient(left, #2C302F 0%, #DB2C23 100%);
+  background-image: -ms-linear-gradient(left, #2C302F 0%, #DB2C23 100%);
+  background-image: linear-gradient(to left, #2C302F 0%, #DB2C23 100%);
+
+}
+
+
+pre,code,.description {
+  direction: ltr;
+}
 
 body{direction: rtl; text-align: right;}
 .ng-table th.sortable div{padding-right: 0; padding-left: 18px;}

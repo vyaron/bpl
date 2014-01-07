@@ -37,7 +37,7 @@ angular.module('bplApp.services')
 .factory('PubSub', function($rootScope, PubSubChannels){
     var scope, channel2deregistrations= {};
     function getScope(){
-        return scope ? scope : scope = $rootScope.$new();
+        return scope ? scope : scope = $rootScope.$new(true);
     }
 
     var PubSub = angular.extend({}, PubSubChannels);
@@ -78,29 +78,7 @@ angular.module('bplApp.services')
         var scope = getScope();
         var deregistration = scope.$on(channel, callback);
 
-        if (! (channel in channel2deregistrations)) channel2deregistrations[channel] = [];
-        channel2deregistrations[channel].push(deregistration);
-
         return deregistration;
-    };
-
-    /**
-     * @ngdoc method
-     * @name bplApp.PubSub#unsubscribe
-     * @methodOf bplApp.PubSub
-     *
-     * @description
-     * Unsubscribe the given channel
-     *
-     * @param {string} channel Name of the channel from the channels list
-     */
-    PubSub.unsubscribe = function(channel){
-        if (channel in channel2deregistrations){
-            for (var i=0; i < channel2deregistrations[channel].length; i++){
-                channel2deregistrations[channel][i]();
-            }
-            delete channel2deregistrations[channel];
-        }
     };
 
     return PubSub;

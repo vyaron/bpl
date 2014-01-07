@@ -104,23 +104,23 @@ angular.module('bplApp.directives')
             return content;
         };
 
-        var cssContent;
-        var getCssContent = function(){
-            if (!cssContent){
-                var xmlhttp = new XMLHttpRequest();
-
-                //Wrong URL in Karma
-                xmlhttp.open("GET","common/css/print.css",true);
-
-                xmlhttp.onreadystatechange = function(){
-                    if (this.readyState == 4 && this.status == 200) cssContent = this.responseText;
-                };
-
-                xmlhttp.send();
-            }
-
-            return cssContent;
-        };
+//        var cssContent;
+//        var getCssContent = function(){
+//            if (!cssContent){
+//                var xmlhttp = new XMLHttpRequest();
+//
+//                //Wrong URL in Karma
+//                xmlhttp.open("GET","common/css/print.css",true);
+//
+//                xmlhttp.onreadystatechange = function(){
+//                    if (this.readyState == 4 && this.status == 200) cssContent = this.responseText;
+//                };
+//
+//                xmlhttp.send();
+//            }
+//
+//            return cssContent;
+//        };
 
         var getHtmlContent = function(){
             //clear data
@@ -135,18 +135,24 @@ angular.module('bplApp.directives')
 //
 //            var element = $compile(template)(scope);
 //            scope.$digest();
-            var pageEl = angular.element(document.body).clone();
+            var bodyEl = angular.element(document.body).clone();
+            var headEl = angular.element(document.head).clone();
 
             //debugger;
 
             //TODO: clean HTML comments
             //Clean tags
-            pageEl.find('.hide-print, script').remove();
+            //pageEl.find('.hide-print, script').remove();
+            headEl.find('script, [media="screen"], base').remove();
+            bodyEl.find('.hide-print, script').remove();
+
+            headEl.find('[media="print"]').removeAttr('media');
 
             //TODO: convert href data to dataURI
             // Base tag? Base64? samples: cheque img
 
-            return '<!DOCTYPE HTML><html><head><style type="text/css">' + getCssContent() + '</style></head><body>' + pageEl.html() + '</body></html>';
+            var baseUrl = $window.location.origin + $window.location.pathname;
+            return '<!DOCTYPE HTML><html><head><base href="' + baseUrl + '"/>' + headEl.html() + '</head><body>' + bodyEl.html() + '</body></html>';
         };
 
         var getBlob = function(scope){

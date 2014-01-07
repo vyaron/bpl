@@ -14,10 +14,9 @@ describe('bplApp.services', function (){
     }));
 
     describe('PubSub', function (){
-        it ('should have subscribe, publish, unsubscribe functions', function(){
+        it ('should have subscribe, publish functions', function(){
             expect(PubSub.subscribe).toEqual(jasmine.any(Function));
             expect(PubSub.publish).toEqual(jasmine.any(Function));
-            expect(PubSub.unsubscribe).toEqual(jasmine.any(Function));
         });
 
         it ('should track callBackFunc was called with right parameter', function(){
@@ -30,8 +29,8 @@ describe('bplApp.services', function (){
 
         it ('should track callBackFunc not have been called', function(){
             var callBackFunc = jasmine.createSpy('callBackFunc');
-            PubSub.subscribe('chanel1', callBackFunc);
-            PubSub.unsubscribe('chanel1');
+            var deregistrationFunc = PubSub.subscribe('chanel1', callBackFunc);
+            deregistrationFunc();
             PubSub.publish('chanel1', 2);
             expect(callBackFunc).not.toHaveBeenCalled();
         });

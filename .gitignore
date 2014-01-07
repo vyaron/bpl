@@ -5,3 +5,5 @@ logs/*
 .idea/*
 !.gitkeep
 .DS_Store
+
+/coverage

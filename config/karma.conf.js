@@ -58,24 +58,24 @@ module.exports = function(config) {
 
       preprocessors: {
           'app/widgets/**/*.html': 'ng-html2js',
-          'app/common/js/directives/**/*.html': 'ng-html2js'//,
-          //'app/common/js/services/**/*': ['coverage']
+          'app/common/js/directives/**/*.html': 'ng-html2js',
+          'app/common/js/services/**/*': ['coverage']
       },
 
       ngHtml2JsPreprocessor: {
-          // strip this from the file path
+          //strip this from the file path
           stripPrefix: 'app/'
       },
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress'],
-      //reporters: ['progress', 'coverage'],
+    //reporters: ['progress'],
+      reporters: ['progress', 'coverage'],
 
-//  coverageReporter: {
-//      type : 'html',
-//      dir : 'coverage/'
-//  },
+  coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
+  },
 
     // web server port
     port: 9876,

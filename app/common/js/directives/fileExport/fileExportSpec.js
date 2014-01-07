@@ -160,10 +160,10 @@ describe('directives', function() {
 
                 it('should get csv with Name, Date column', function(){
                     $rootScope.$apply(function(scope){
-                        scope.contacts = [{created_at : Date.now(), id : 1, name : 'Miri Kaplan'}, {id : 2, created_at : Date.now(), name : 'Ronen Cohen'}];
+                        scope.contacts = [{created_at : Date.now(), id : 1, name : 'Miri Kaplan'}, {id : 2, created_at : Date.now(), name : 'Ronen Cohen'}, {id : 2, name : 'Ronen Cohen'}];
                         scope.options = [
                             {name : 'name', label : 'Name'},
-                            {name : 'created_at', label : 'Date'}
+                            {name : 'created_at', label : 'Date', filter : angular.noop}
                         ];
                     });
 

@@ -18,6 +18,7 @@ describe('bplApp.services', function (){
 
             PubSub = jasmine.createSpyObj('PubSub', ['publish']);
             PubSub.CONTACTS = 'onContactsChange';
+            PubSub.CUSTOMERS_BASIC = 'onCustomersBasicChange';
 
             Range = jasmine.createSpy('Range');
 
@@ -116,8 +117,9 @@ describe('bplApp.services', function (){
             $httpBackend.flush();
         });
 
-        it ('should publish on channel CONTACTS', function(){
+        it ('should publish on right channels', function(){
             $httpBackend.whenPOST('http://bpl.local/data/contacts').respond({});
+            $httpBackend.whenPOST('http://bpl.local/data/customers/basic').respond({});
             $httpBackend.whenPUT('http://bpl.local/data/contacts/1').respond({});
             $httpBackend.whenDELETE('http://bpl.local/data/contacts/1').respond(null);
 
@@ -128,6 +130,11 @@ describe('bplApp.services', function (){
             $httpBackend.flush();
             expect(PubSub.publish.mostRecentCall.args[0]).toEqual(PubSub.CONTACTS);
             expect(PubSub.publish.calls.length).toBe(3);
+
+            BasicResource({resourceName : 'customers', subResourceName : 'basic'}).save({name : 'Ronen Cohen'});
+            $httpBackend.flush();
+
+            expect(PubSub.publish.mostRecentCall.args[0]).toEqual(PubSub.CUSTOMERS_BASIC);
         });
 
         it ('should call Range factory', function(){

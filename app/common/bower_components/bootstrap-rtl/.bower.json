@@ -1,0 +1,15 @@
+{
+  "name": "bootstrap-rtl",
+  "homepage": "https://github.com/morteza/bootstrap-rtl",
+  "version": "0.9.8",
+  "_release": "0.9.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.9.8",
+    "commit": "983a18e7a56956810adf83c53570d7edc941e8af"
+  },
+  "_source": "git://github.com/morteza/bootstrap-rtl.git",
+  "_target": "~0.9.8",
+  "_originalSource": "bootstrap-rtl",
+  "_direct": true
+}

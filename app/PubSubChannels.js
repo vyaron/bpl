@@ -2,6 +2,8 @@
 
 angular.module('bplApp.services').constant('PubSubChannels', {
         CONTACTS : 'onContactsChanged',
+        CUSTOMERS_BASIC : 'onCustomersBasicChanged',
+
 		CHANEL_ACCOUNT_SELECTED     : 'cnlAccountSelected',
         CHANEL_SEVERE_ERROR         : 'cnlSevereError',
 
