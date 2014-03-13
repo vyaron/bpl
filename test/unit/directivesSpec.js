@@ -2,7 +2,7 @@
 
 /* jasmine specs for directives go here */
 
-describe('directives', function() {
+xdescribe('directives', function() {
     var $compile, $rootScope, template;
     beforeEach(module('bplApp.directives', 'common/templates/hello.html'));
 

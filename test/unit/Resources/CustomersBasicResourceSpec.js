@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Resources', function() {
+xdescribe('Resources', function() {
     describe('CustomersBasicResource', function() {
         var $httpBackend, CustomersBasicResource;
         var dummyCustomerBasic = {'first_name' : 'Ronen', 'last_name' : 'Cohen'};

@@ -2,7 +2,7 @@
 
 /* jasmine specs for filters go here */
 
-describe('filter', function() {
+xdescribe('filter', function() {
   beforeEach(module('bplApp.filters'));
 
 

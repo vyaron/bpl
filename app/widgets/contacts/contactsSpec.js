@@ -38,7 +38,7 @@ describe('widgets', function() {
             }));
 
             it('should contain add button', function(){
-                var btn = element.find('.btn-add:first');
+                var btn = element.find('.btn-add');
                 expect(btn.length).toBe(1);
 
                 spyOn($scope, 'add');
@@ -191,91 +191,4 @@ describe('widgets', function() {
         });
     });
 
-//
-//    describe('contacts', function() {
-
-//
-//        describe('contactsPopup controller', function() {
-//            var $modalInstance, ServerValidation, contact;
-//
-//            beforeEach(function(){
-//                contact = new ContactsResource({id : 1, name : 'Ronen Cohen'});
-//
-//                $modalInstance = {
-//                    dismiss : function(){},
-//                    close : function(){}
-//                };
-//
-//                ServerValidation = jasmine.createSpy('ServerValidation');
-//
-//                spyOn($modalInstance, 'dismiss');
-//                spyOn($modalInstance, 'close');
-//                spyOn(contact, '$update');
-//
-//                var contactsPopupCtrl = $controller('contactsPopup', {
-//                    '$scope' : $scope,
-//                    '$modalInstance' : $modalInstance,
-//                    'ServerValidation' : ServerValidation,
-//                    'translateFilter' : {},
-//                    'contact' : contact
-//                });
-//            });
-//
-//            it('should contain contact object', function(){
-//                expect($scope.contact).toBeDefined();
-//                expect($scope.contact).toEqual(contact);
-//            });
-//
-//            it('should contain save function', function(){
-//                expect($scope.save).toBeDefined();
-//            });
-//
-//            it("tracks that the contact.$update was called", function(){
-//                $scope.save();
-//                expect(contact.$update).toHaveBeenCalled();
-//            });
-//
-//            it("tracks that the contact.$save was called", function(){
-//                delete contact.id;
-//
-//                spyOn(contact, '$save');
-//                $scope.save();
-//
-//                expect(contact.$save).toHaveBeenCalled();
-//            });
-//
-//            it("tracks that the $modalInstance.close was called", function(){
-//                delete contact.id;
-//
-//                $httpBackend.whenPOST('data/contacts').respond({});
-//                $scope.save();
-//
-//                $httpBackend.flush();
-//
-//                expect($modalInstance.close).toHaveBeenCalled();
-//            });
-//
-//            it("tracks that the ServerValidation.handleRes was called", function(){
-//                delete contact.id;
-//
-//                var errors = {name : 'required'};
-//                $httpBackend.whenPOST('data/contacts').respond(500, {errors : errors});
-//
-//                $scope.save();
-//
-//                $httpBackend.flush();
-//
-//                expect(ServerValidation.mostRecentCall.args[1].data).toEqual({errors : errors});
-//            });
-//
-//            it('should contain cancel function', function(){
-//                expect($scope.cancel).toBeDefined();
-//            });
-//
-//            it("tracks that the $modalInstance.dismiss was called with 'cancel' param", function() {
-//                $scope.cancel();
-//                expect($modalInstance.dismiss).toHaveBeenCalledWith('cancel');
-//            });
-//        });
-//    });
 });

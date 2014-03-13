@@ -15,7 +15,7 @@
 //  });
 //});
 
-describe('DataService Services', function(){
+xdescribe('DataService Services', function(){
     //var mockResource;
     var $httpBackend, ENTITIES, DataService;
 

@@ -19,10 +19,10 @@ describe('bplApp.services', function (){
         });
 
         it ('tracks that the $setValidity and $dirty called with right params', function(){
-            var res = {data : {errors : {email : 'email', pass : 'required'}}};
+            var res = {data : {errors : {email : 'invalid-email', pass : 'required'}}};
             ServerValidation(form, res);
 
-            expect(form.email.$setValidity).toHaveBeenCalledWith('email', false);
+            expect(form.email.$setValidity).toHaveBeenCalledWith('invalid-email', false);
             expect(form.email.$dirty).toBe(true);
 
             expect(form.pass.$setValidity).toHaveBeenCalledWith('required', false);

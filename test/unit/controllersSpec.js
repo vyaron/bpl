@@ -2,7 +2,7 @@
 
 /* jasmine specs for controllers go here */
 
-describe('controllers', function(){
+xdescribe('controllers', function(){
   beforeEach(module('bplApp.controllers'));
 
 

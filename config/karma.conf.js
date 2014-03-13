@@ -1,5 +1,8 @@
-// Karma configuration
-// Generated on Wed Nov 13 2013 11:25:51 GMT+0200 (Jerusalem Standard Time)
+// README
+// npm install -g ng-html2js
+// npm install -g karma-ng-html2js-preprocessor
+// npm install -g karma-coverage
+
 
 module.exports = function(config) {
   config.set({
